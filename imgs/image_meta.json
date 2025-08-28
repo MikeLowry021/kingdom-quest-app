@@ -1,0 +1,366 @@
+[
+  {
+    "query": "A simple default map marker icon for biblical locations, suitable for Google Maps",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/971392020/vector/map-pointer-icon-with-church-on-white-background.jpg?s=612x612&w=0&k=20&c=Aig4GRouxWFdUNJX7vcxYdLYDiDgixN2QF7KWAIsYnM=",
+      "file_path": "/workspace/imgs/purple_biblical_church_map_marker_icon.png",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 18214,
+      "width": 612,
+      "height": 612,
+      "total_pixels": 374544,
+      "basic_score": 0.8099248654029122
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is an excellent match for the search query and prompt. It's a clear, simple map marker icon featuring a church with a cross, highly relevant for biblical or religious locations. The image quality is perfect, being a crisp vector graphic with no watermarks.",
+      "file_name": "purple_biblical_church_map_marker_icon.png",
+      "caption": "A clean, vector illustration of a purple map pin icon. The pin features a white circular inset containing a stylized silhouette of a church with a cross on its steeple, designed to signify a religious or biblical location. It stands against a pure white background with a subtle drop shadow, ideal for digital maps and interfaces.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A simple default map marker icon for biblical locations, suitable for Google Maps",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/1251388387/vector/church-and-map-pointer-logo-design.jpg?s=612x612&w=0&k=20&c=TJwvcszNE3Ey_wo16w64gEL8ESTl2IU-JImHC_KqyJM=",
+      "file_path": "/workspace/imgs/biblical_cross_tree_map_marker_icon.png",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 14829,
+      "width": 612,
+      "height": 612,
+      "total_pixels": 374544,
+      "basic_score": 0.8094738354191701
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 100.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is highly relevant to the search query and prompt, featuring a clear map marker icon with a prominent cross and tree-like leaves, strongly indicating a biblical or religious location. It's a clean, high-clarity vector graphic, professional in appearance, and completely free of watermarks. Its simple, default style makes it suitable for map applications like Google Maps.",
+      "file_name": "biblical_cross_tree_map_marker_icon.png",
+      "caption": "A simple, clean vector icon featuring a dark grey map pin. Inside the white circular area of the marker, a black Christian cross is prominently displayed, surrounded by small, vibrant leaves in shades of green, orange, and light blue, set against a pure white background. This minimalist design is ideal for indicating biblical, Christian, or religious locations on a digital map interface.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A safe, child-friendly illustration of ancient Jerusalem with the Temple, suitable for a Christian educational app",
+    "image_info": {
+      "url": "https://www.meisterdrucke.ie/kunstwerke/1260px/Unknown_artist_-_Bible_of_Royaumont_Old_Testament_Temple_of_Solomon_-_Solomon_built_the_Temple_in_-_%28MeisterDrucke-1024745%29.jpg",
+      "file_path": "/workspace/imgs/ancient_jerusalem_temple_historical_illustration.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 436637,
+      "width": 1260,
+      "height": 856,
+      "total_pixels": 1078560,
+      "basic_score": 0.9601609511549364
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a highly relevant and detailed historical illustration of ancient Jerusalem, prominently featuring the Temple complex, perfectly matching the search query. Its hand-colored engraving style is clear, vibrant, and lacks any watermarks. The artistic interpretation is safe and child-friendly, making it exceptionally suitable for a Christian educational app.",
+      "file_name": "ancient_jerusalem_temple_historical_illustration.jpg",
+      "caption": "A detailed 17th-century hand-colored engraving depicting a panoramic view of ancient Jerusalem, with the grand Temple complex at its center. The illustration shows various courtyards, structures, and small figures representing people engaging in daily activities. Surrounding the Temple are the terraced hillsides and buildings of the city, with a radiant sun rising in the background. This historical artwork provides an evocative representation suitable for educational contexts.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A safe, child-friendly illustration of ancient Jerusalem with the Temple, suitable for a Christian educational app",
+    "image_info": {
+      "url": "https://artlevin.com/wp-content/uploads/The-Second-Jerusalem-Temple-Ascending-into-the-Clouds.jpg",
+      "file_path": "/workspace/imgs/ancient-jerusalem-temple-illustration-aerial-view.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 126421,
+      "width": 1168,
+      "height": 900,
+      "total_pixels": 1051200,
+      "basic_score": 0.9356340097835355
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 90.0,
+      "watermark_score": 85.0,
+      "overall_score": 92.0,
+      "explanation": "The illustration is highly relevant, clearly depicting the ancient Jerusalem Temple from an aerial perspective, fulfilling the 'ancient Jerusalem Temple illustration' query. Its vibrant, stylized artistic approach is child-friendly and suitable for a Christian educational app. Clarity is excellent, and while there's a small, unobtrusive artist's signature, it's not a distracting watermark.",
+      "file_name": "ancient-jerusalem-temple-illustration-aerial-view.jpg",
+      "caption": "An vibrant aerial illustration of the ancient Jerusalem Temple complex, depicting the grand temple building with smoke and fire rising from an altar, surrounded by detailed courtyards filled with numerous small figures, and fortified walls. The depiction showcases the architectural scale and activity of the historical site under a blue sky with scattered clouds.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A safe, child-friendly illustration of ancient Jerusalem with the Temple, suitable for a Christian educational app",
+    "image_info": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Reconstruction_of_Solomon%27s_Temple.jpg",
+      "file_path": "/workspace/imgs/ancient_jerusalem_temple_line_drawing.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 135788,
+      "width": 1489,
+      "height": 914,
+      "total_pixels": 1360946,
+      "basic_score": 0.904065797177267
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is a highly relevant, clear, and child-friendly line illustration of an ancient temple, strongly resembling common depictions of the Jerusalem Temple. Its simplified style and lack of watermarks make it ideal for a Christian educational app, aligning perfectly with the prompt's requirements.",
+      "file_name": "ancient_jerusalem_temple_line_drawing.jpg",
+      "caption": "A clean, black and white line drawing illustrating an ancient temple, consistent with historical descriptions of the Jerusalem Temple. The building features two prominent ornate columns with decorative capitals at its main entrance, a detailed doorway with an open door, and a set of steps leading up to the facade. The simplified architectural style makes it suitable for educational purposes and children's content.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A safe, child-friendly illustration of ancient Jerusalem with the Temple, suitable for a Christian educational app",
+    "image_info": {
+      "url": "https://artlevin.com/wp-content/uploads/The-second-Jewish-Temple-by-Alex-Levin.jpg",
+      "file_path": "/workspace/imgs/ancient-jerusalem-temple-illustration-worship.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 298264,
+      "width": 1200,
+      "height": 800,
+      "total_pixels": 960000,
+      "basic_score": 0.9506457779984002
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is an excellent illustration perfectly matching the search query 'ancient Jerusalem Temple illustration.' It is highly clear, detailed, and completely free of watermarks. The vibrant, majestic depiction of the Temple and its surroundings makes it ideal for a Christian educational app, fulfilling the 'safe, child-friendly' aspect without graphic details of sacrifices, focusing instead on the architectural grandeur and gathering of people. The overall quality is exceptional.",
+      "file_name": "ancient-jerusalem-temple-illustration-worship.jpg",
+      "caption": "A detailed, vibrant illustration depicting the ancient Temple in Jerusalem, bustling with crowds of people engaged in worship. The majestic golden temple building dominates the left, featuring intricate architectural details and tall columns. In the foreground, a large altar emits a significant column of smoke towards the sky, symbolizing offerings. The vast courtyard is filled with numerous figures dressed in ancient attire, some raising their hands in devotion. In the distance, the sprawling ancient city of Jerusalem extends under a serene sky. The scene evokes a sense of historical grandeur and religious significance.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A safe, child-friendly illustration of ancient Bethlehem, suitable for a Christian educational app",
+    "image_info": {
+      "url": "https://media.istockphoto.com/id/847442354/vector/ancient-view-of-bethlehem-wood-engraving-published-in-1886.jpg?s=612x612&w=0&k=20&c=fIqhfnYZoypNvmh7dLMyMIOoPQCtTxveBmvJoPzPAvs=",
+      "file_path": "/workspace/imgs/ancient_bethlehem_historical_engraving_illustration.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 62491,
+      "width": 612,
+      "height": 554,
+      "total_pixels": 339048,
+      "basic_score": 0.8010967095325506
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 90.0,
+      "overall_score": 95.0,
+      "explanation": "The image is a perfect match for the search query and prompt. It is a historical engraving clearly depicting Bethlehem, appearing ancient and suitable for a child-friendly Christian educational app. The clarity is excellent for its style, and while there is text 'Bethlehem.' as a title and a faint publisher's mark (Stiftung) at the bottom, these are part of the original artwork and not obstructive watermarks.",
+      "file_name": "ancient_bethlehem_historical_engraving_illustration.jpg",
+      "caption": "A detailed grayscale panoramic historical engraving depicting ancient Bethlehem, with its traditional architecture nestled among the rolling Judean hills. The foreground features a winding road with travelers, including figures on camels and donkeys, and lush vegetation. The sky is filled with classic cloud formations rendered in lines, typical of 19th-century illustrations. This serene and historically accurate scene is ideal for educational purposes.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A view of ancient Jerusalem with the Temple for a Bible app",
+    "image_info": {
+      "url": "https://www.myjewishlearning.com/wp-content/uploads/2021/04/temple-1558x900.jpeg",
+      "file_path": "/workspace/imgs/ancient-jerusalem-second-temple-model.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 174411,
+      "width": 1558,
+      "height": 900,
+      "total_pixels": 1402200,
+      "basic_score": 0.9032229324767607
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is an excellent match for the search query and prompt, clearly depicting a detailed model of the Second Temple within ancient Jerusalem. It is highly clear, well-composed, and free of watermarks, making it very suitable for a Bible app.",
+      "file_name": "ancient-jerusalem-second-temple-model.jpg",
+      "caption": "An intricate and detailed miniature model of the Second Temple in Jerusalem, prominently featuring the grand white stone temple building with golden rooftop accents. The model includes the surrounding courtyards, walls, and other structures of ancient Jerusalem, providing a comprehensive historical representation of the holy city during the Second Temple period. The background shows densely packed residential areas, capturing the scale and complexity of the ancient metropolis.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A view of ancient Jerusalem with the Temple for a Bible app",
+    "image_info": {
+      "url": "https://israelmyglory.org/wp-content/uploads/2018/01/CityoftheGreatKing-1000x540.jpg",
+      "file_path": "/workspace/imgs/ancient_jerusalem_second_temple_reconstruction_aerial.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 331651,
+      "width": 1000,
+      "height": 540,
+      "total_pixels": 540000,
+      "basic_score": 0.8880575536223698
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image is an excellent match for the search query and prompt, depicting a detailed and clear reconstruction of the Second Temple in ancient Jerusalem from an aerial perspective. The clarity is very good for an illustrative style, and there are no visible watermarks. The composition is highly professional and suitable for a Bible app.",
+      "file_name": "ancient_jerusalem_second_temple_reconstruction_aerial.jpg",
+      "caption": "An aerial view of a detailed historical reconstruction of the Second Temple complex in ancient Jerusalem, surrounded by the city walls and the hilly, arid landscape. The illustration highlights the grandeur and intricate layout of the temple courts, buildings, and surrounding fortifications, typical of biblical era architecture.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A view of ancient Jerusalem with the Temple for a Bible app",
+    "image_info": {
+      "url": "https://romanjews.com/wp-content/uploads/2019/10/Artists-Impression-of-the-Second-Temple-of-Jerusalem-1200x800.jpg",
+      "file_path": "/workspace/imgs/ancient_jerusalem_temple_reconstruction_art.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 229995,
+      "width": 1200,
+      "height": 800,
+      "total_pixels": 960000,
+      "basic_score": 0.9450919128605947
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 98.0,
+      "explanation": "The image is an exceptionally relevant and high-quality artistic rendering of the ancient Jerusalem Temple, perfectly matching the search query and prompt. It features excellent clarity, vibrant colors, and a strong composition, making it ideal for a Bible app. There are no watermarks or logos.",
+      "file_name": "ancient_jerusalem_temple_reconstruction_art.jpg",
+      "caption": "A vibrant artistic rendering of the Second Temple in ancient Jerusalem, showcasing its grand architecture and bustling courtyard during a ritual. The meticulously detailed golden temple structure stands prominently on the left, while a thick column of smoke ascends from a large altar in the foreground, indicating a sacrifice. Numerous figures in traditional attire are gathered across the expansive courtyard, engaged in various acts of worship and community. In the background, the sprawling ancient city of Jerusalem extends under a dramatic, colorful sky, completing a comprehensive and vivid depiction of the biblical era.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A view of ancient Jerusalem with the Temple for a Bible app",
+    "image_info": {
+      "url": "http://free.messianicbible.com/wp-content/uploads/2014/07/Second-Temple-medium.jpg",
+      "file_path": "/workspace/imgs/ancient-jerusalem-second-temple-model.jpg_5f",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 1011214,
+      "width": 1698,
+      "height": 1131,
+      "total_pixels": 1920438,
+      "basic_score": 0.7906546393644646
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 100.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 95.0,
+      "explanation": "The image perfectly matches the search query and prompt. It provides a clear, high-quality, and detailed view of a model of ancient Jerusalem with the Second Temple, making it ideal for a Bible app. The clarity is excellent, and there are no watermarks.",
+      "file_name": "ancient-jerusalem-second-temple-model.jpg",
+      "caption": "A highly detailed and vibrant miniature model of the Second Temple in ancient Jerusalem, showcasing the grandeur of the temple structure with its golden ornate roof and white walls, surrounded by the meticulously recreated buildings of the ancient city. The model provides an excellent visual representation of the historical site.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A view of ancient Bethlehem for a Bible app",
+    "image_info": {
+      "url": "https://www.grunge.com/img/gallery/what-bethlehem-really-looked-like-in-the-bible/l-intro-1628264091.jpg",
+      "file_path": "/workspace/imgs/ancient_monastery_holy_land_bible_app.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 693973,
+      "width": 1600,
+      "height": 896,
+      "total_pixels": 1433600,
+      "basic_score": 0.9244535501369389
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 75.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image is visually stunning and excellent in quality, perfectly fitting the 'ancient' aesthetic and suitable for a Bible app. However, it depicts a monastery (likely Mar Saba) in the Judean Desert, which is near Bethlehem but not a direct view of the city of Bethlehem itself. This slight geographical mismatch reduces the relevance score, but its overall professional quality is very high.",
+      "file_name": "ancient_monastery_holy_land_bible_app.jpg",
+      "caption": "A breathtaking panoramic view of the ancient Mar Saba Monastery, nestled into the rocky cliffs of the Kidron Valley in the Judean Desert, near Bethlehem. The sprawling complex of stone buildings and fortifications, dating back centuries, ascends the rugged hillside under a clear blue sky with scattered clouds, evoking a sense of timeless history and spiritual significance.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A view of ancient Bethlehem for a Bible app",
+    "image_info": {
+      "url": "https://thisweekinpalestine.com/wp-content/uploads/2021/02/274-007-b.jpg",
+      "file_path": "/workspace/imgs/ancient_bethlehem_town_market_historic_view.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 333466,
+      "width": 975,
+      "height": 498,
+      "total_pixels": 485550,
+      "basic_score": 0.8672130975585852
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 98.0,
+      "clarity_score": 78.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is highly relevant to the search query 'ancient Bethlehem' and perfectly fits the prompt for a 'Bible app' due to its authentic historical aesthetic. It depicts a bustling, old Middle Eastern town, consistent with historical representations of Bethlehem. While the clarity reflects an older photographic technique (likely a hand-tinted photochrome), it is sufficient and adds to the antique charm. There are no visible watermarks. The composition is excellent, capturing a wide, evocative scene.",
+      "file_name": "ancient_bethlehem_town_market_historic_view.jpg",
+      "caption": "A panoramic, historic view of a bustling Middle Eastern town, widely identified as ancient Bethlehem, showing a vibrant market square filled with people, donkeys, and goods. Traditional stone buildings, including a prominent minaret and other religious structures, ascend a hillside under a clear blue sky, capturing the authentic daily life and architectural style of the biblical city in an earlier era. The image offers a compelling visual for historical or religious contexts.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "A view of ancient Bethlehem for a Bible app",
+    "image_info": {
+      "url": "https://thisweekinpalestine.com/wp-content/uploads/2019/12/06-001-1024x751-2.jpg",
+      "file_path": "/workspace/imgs/historic_bethlehem_marketplace_photochrom_ancient_city.jpg",
+      "img_format": "JPEG",
+      "mode": "RGB",
+      "file_size": 229884,
+      "width": 1024,
+      "height": 751,
+      "total_pixels": 769024,
+      "basic_score": 0.9269654981525796
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 80.0,
+      "watermark_score": 85.0,
+      "overall_score": 90.0,
+      "explanation": "The image is highly relevant as it explicitly depicts Bethlehem in a historical context, fitting the 'ancient Bethlehem' query and 'Bible app' prompt. Clarity is excellent for a photochrom print of its age. A historical identification number is present in the corner, which is not a traditional intrusive watermark but does slightly reduce the score. Overall, it's a high-quality, evocative historical image.",
+      "file_name": "historic_bethlehem_marketplace_photochrom_ancient_city.jpg",
+      "caption": "An expansive view of Bethlehem, likely from the late 19th or early 20th century, captured in a hand-colored photochrom print. The image showcases the historical city with its characteristic stone buildings, a prominent minaret, and a bustling marketplace teeming with people, animals, and vendors. This scene provides an evocative glimpse into the past, ideal for illustrating the historical and biblical context of the Holy Land.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]

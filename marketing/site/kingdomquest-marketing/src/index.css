@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* KingdomQuest Brand Colors - WCAG AA+ Compliant */
+    --background: 0 0% 100%;
+    --foreground: 210 17% 4%; /* Deep charcoal for excellent readability */
+ 
+    --card: 40 4% 98%; /* Soft tertiary background */
+    --card-foreground: 210 17% 4%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 17% 4%;
+ 
+    --primary: 210 50% 24%; /* Royal Navy Blue #1e3a5f */
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 43 74% 52%; /* Gold #d4af37 */
+    --secondary-foreground: 210 50% 24%; /* Navy text on gold */
+ 
+    --tertiary: 35 17% 62%; /* Sandstone Beige #b8a082 */
+    --tertiary-foreground: 210 17% 4%;
+    
+    --accent: 158 64% 39%; /* Emerald Green #10b981 */
+    --accent-foreground: 0 0% 98%;
+
+    --muted: 40 4% 94%; /* Light tertiary for muted areas */
+    --muted-foreground: 35 13% 25%; /* Tertiary-900 for muted text */
+ 
+    --destructive: 0 84% 60%; /* Error red */
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 35 17% 89%; /* Tertiary-200 for subtle borders */
+    --input: 35 17% 89%;
+    --ring: 210 50% 24%; /* Primary for focus rings */
+ 
+    --radius: 0.5rem;
+    
+    /* Brand Color Tokens */
+    --color-primary: #1e3a5f;
+    --color-secondary: #d4af37;
+    --color-tertiary: #b8a082;
+    --color-accent: #10b981;
+    
+    /* Success/Warning/Error Colors */
+    --color-success: #22c55e;
+    --color-warning: #f97316;
+    --color-error: #ef4444;
+    
+    /* Typography Scale - Accessibility Optimized */
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-base: 1rem; /* 16px - Minimum for accessibility */
+    --font-size-lg: 1.125rem; /* 18px - Preferred for body text */
+    --font-size-xl: 1.25rem; /* 20px */
+    --font-size-2xl: 1.5rem; /* 24px */
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-4xl: 2.25rem; /* 36px */
+    
+    /* Touch Target Sizes */
+    --touch-target-sm: 2.75rem; /* 44px - WCAG minimum */
+    --touch-target-md: 3rem; /* 48px - Comfortable */
+    --touch-target-lg: 4rem; /* 64px - Children/seniors */
+    
+    /* Sidebar compatibility */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+ 
+  .dark {
+    --background: 210 17% 4%; /* Deep charcoal background */
+    --foreground: 0 0% 98%; /* Soft white text */
+ 
+    --card: 210 17% 8%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 210 17% 4%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 210 100% 96%; /* Light version of navy for dark mode */
+    --primary-foreground: 210 50% 24%; /* Original navy */
+ 
+    --secondary: 43 74% 52%; /* Keep gold consistent */
+    --secondary-foreground: 210 17% 4%; /* Dark text on gold */
+ 
+    --tertiary: 35 17% 62%; /* Keep sandstone consistent */
+    --tertiary-foreground: 210 17% 4%;
+    
+    --accent: 158 64% 52%; /* Brighter emerald for dark mode */
+    --accent-foreground: 210 17% 4%;
+
+    --muted: 210 17% 12%; /* Darker muted areas */
+    --muted-foreground: 35 17% 75%; /* Light tertiary for muted text */
+ 
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 210 17% 12%; /* Dark borders */
+    --input: 210 17% 12%;
+    --ring: 210 100% 96%; /* Light ring for dark mode */
+    
+    /* Dark mode sidebar */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Nunito', system-ui, sans-serif;
+    font-size: var(--font-size-lg); /* 18px for better accessibility */
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  /* Minimum font sizes for accessibility */
+  p, span, div {
+    font-size: var(--font-size-base); /* 16px minimum */
+  }
+  
+  small {
+    font-size: var(--font-size-sm); /* 14px minimum for small text */
+  }
+}
+
+/* KingdomQuest Brand Gradients */
+.gradient-primary {
+  background: linear-gradient(135deg, #1e3a5f, #10b981);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #d4af37, #1e3a5f);
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, #1e3a5f, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-brand {
+  box-shadow: 0 4px 6px -1px rgba(30, 58, 95, 0.1), 0 2px 4px -1px rgba(30, 58, 95, 0.06);
+}
+
+.shadow-gold {
+  box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2), 0 2px 4px -1px rgba(212, 175, 55, 0.1);
+}
+
+/* Enhanced Accessibility improvements */
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary: 210 100% 15%; /* Darker navy for high contrast */
+    --accent: 158 100% 25%; /* Darker emerald for high contrast */
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Brand button variants */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  min-height: var(--touch-target-sm);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #152d49;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px -2px rgba(30, 58, 95, 0.2);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  transition: all 0.2s ease-in-out;
+  min-height: var(--touch-target-sm);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: #b8971f;
+  border-color: #b8971f;
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  min-height: var(--touch-target-sm);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn-accent:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px -2px rgba(16, 185, 129, 0.2);
+}
+
+img {
+  object-position: top;
+}
+
+.fixed {
+  position: fixed;
+}

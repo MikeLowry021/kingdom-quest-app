@@ -1,0 +1,337 @@
+{
+  "id": "story-noahs-ark",
+  "title": "Noah's Ark: God's Promise of Safety",
+  "description": "The story of Noah's obedience to God and the great flood that covered the earth",
+  "bibleReference": {
+    "book": "Genesis",
+    "chapter": 6,
+    "verses": "1-9:17",
+    "translation": "KJV"
+  },
+  "ageRating": "all",
+  "difficulty": "intermediate",
+  "tags": ["flood", "obedience", "covenant", "animals", "rainbow", "Noah", "ark", "Genesis"],
+  "scenes": [
+    {
+      "id": "scene-001",
+      "title": "God Calls Noah",
+      "narrative": "In the days of Noah, the earth was filled with violence and wickedness. But Noah found grace in the eyes of the Lord, for he was a just man and perfect in his generations. God spoke to Noah saying, 'Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch.'",
+      "order": 1,
+      "interactions": [
+        {
+          "type": "reflection",
+          "content": "Noah was different from the people around him. How can we be like Noah and follow God even when others don't?",
+          "options": []
+        }
+      ],
+      "mediaItems": [
+        {
+          "id": "media-noah-call",
+          "type": "image",
+          "url": "/content/noahs-ark/media/images/noah_called_by_god.png",
+          "contentType": "image/png",
+          "title": "God Calls Noah",
+          "altText": "Noah kneeling in prayer as God speaks to him from heaven",
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        },
+        {
+          "id": "media-noah-call-audio",
+          "type": "audio",
+          "url": "/content/noahs-ark/media/audio/scene_001_narrative.mp3",
+          "contentType": "audio/mpeg",
+          "title": "God Calls Noah - Narration",
+          "duration": 45,
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        }
+      ]
+    },
+    {
+      "id": "scene-002",
+      "title": "Building the Ark",
+      "narrative": "Noah obeyed God's command and began building the massive ark. It was 300 cubits long, 50 cubits wide, and 30 cubits high. Noah worked faithfully, following every detail that God had given him. The people around him mocked and laughed, but Noah continued to build in faith.",
+      "order": 2,
+      "interactions": [
+        {
+          "type": "choice",
+          "content": "If you were Noah's neighbor, what would you do when you saw him building this huge boat?",
+          "options": [
+            {
+              "text": "Offer to help him build it",
+              "nextSceneId": "scene-003"
+            },
+            {
+              "text": "Ask him why he's building it",
+              "nextSceneId": "scene-003"
+            },
+            {
+              "text": "Laugh and walk away",
+              "nextSceneId": "scene-003"
+            }
+          ]
+        }
+      ],
+      "mediaItems": [
+        {
+          "id": "media-ark-building",
+          "type": "image",
+          "url": "/content/noahs-ark/media/images/building_the_ark.png",
+          "contentType": "image/png",
+          "title": "Building the Ark",
+          "altText": "Noah and his family working together to build the large wooden ark",
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        },
+        {
+          "id": "media-building-audio",
+          "type": "audio",
+          "url": "/content/noahs-ark/media/audio/scene_002_narrative.mp3",
+          "contentType": "audio/mpeg",
+          "title": "Building the Ark - Narration",
+          "duration": 52,
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        }
+      ]
+    },
+    {
+      "id": "scene-003",
+      "title": "The Animals Come",
+      "narrative": "When the ark was finished, God commanded Noah to take two of every kind of animal, and seven pairs of clean animals. Amazingly, the animals came to Noah by themselves - lions walked peacefully with lambs, birds flew in pairs, and elephants marched alongside mice. God brought them all to the ark.",
+      "order": 3,
+      "interactions": [
+        {
+          "type": "activity",
+          "content": "Can you name some of the animals that might have come to Noah's ark? Think of animals from different places around the world!",
+          "options": []
+        }
+      ],
+      "mediaItems": [
+        {
+          "id": "media-animals-coming",
+          "type": "image",
+          "url": "/content/noahs-ark/media/images/animals_entering_ark.png",
+          "contentType": "image/png",
+          "title": "Animals Coming to the Ark",
+          "altText": "Various animals walking peacefully together toward the ark in pairs",
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        },
+        {
+          "id": "media-animals-audio",
+          "type": "audio",
+          "url": "/content/noahs-ark/media/audio/scene_003_narrative.mp3",
+          "contentType": "audio/mpeg",
+          "title": "Animals Coming - Narration",
+          "duration": 48,
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        }
+      ]
+    },
+    {
+      "id": "scene-004",
+      "title": "The Great Flood Begins",
+      "narrative": "After Noah, his family, and all the animals were safely inside, the Lord shut them in. Then it began to rain as it had never rained before. The fountains of the great deep were broken up, and the windows of heaven were opened. For forty days and forty nights, the rain poured down until all the high hills and mountains were covered.",
+      "order": 4,
+      "interactions": [
+        {
+          "type": "reflection",
+          "content": "How do you think Noah felt when he was safe inside the ark while the flood covered the earth? What can we learn about trusting God's protection?",
+          "options": []
+        }
+      ],
+      "mediaItems": [
+        {
+          "id": "media-flood-begins",
+          "type": "image",
+          "url": "/content/noahs-ark/media/images/great_flood.png",
+          "contentType": "image/png",
+          "title": "The Great Flood",
+          "altText": "Heavy rain and rising flood waters covering the earth with the ark floating safely",
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        },
+        {
+          "id": "media-flood-audio",
+          "type": "audio",
+          "url": "/content/noahs-ark/media/audio/scene_004_narrative.mp3",
+          "contentType": "audio/mpeg",
+          "title": "Great Flood - Narration",
+          "duration": 55,
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        }
+      ]
+    },
+    {
+      "id": "scene-005",
+      "title": "Life on the Ark",
+      "narrative": "For many months, Noah and his family lived on the ark, caring for all the animals. They fed them, cleaned their areas, and kept them healthy. God took care of everyone inside the ark. Noah trusted God completely, even though he couldn't see land anywhere.",
+      "order": 5,
+      "interactions": [
+        {
+          "type": "activity",
+          "content": "Imagine you're helping Noah care for the animals. What jobs would you need to do each day to keep all the animals happy and healthy?",
+          "options": []
+        }
+      ],
+      "mediaItems": [
+        {
+          "id": "media-ark-life",
+          "type": "image",
+          "url": "/content/noahs-ark/media/images/life_inside_ark.png",
+          "contentType": "image/png",
+          "title": "Life Inside the Ark",
+          "altText": "Noah's family caring for animals inside the ark with different levels for different animals",
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        },
+        {
+          "id": "media-life-audio",
+          "type": "audio",
+          "url": "/content/noahs-ark/media/audio/scene_005_narrative.mp3",
+          "contentType": "audio/mpeg",
+          "title": "Life on Ark - Narration",
+          "duration": 42,
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        }
+      ]
+    },
+    {
+      "id": "scene-006",
+      "title": "The Dove Returns",
+      "narrative": "After many days, Noah sent out a dove to see if the waters had receded. The first time, the dove returned with nothing. Seven days later, Noah sent the dove out again. This time, it returned in the evening with a fresh olive leaf in its beak! Noah knew that the waters were going down and plants were growing again.",
+      "order": 6,
+      "interactions": [
+        {
+          "type": "reflection",
+          "content": "The olive leaf was a sign of hope for Noah. What are some signs of hope that God gives us today?",
+          "options": []
+        }
+      ],
+      "mediaItems": [
+        {
+          "id": "media-dove-returns",
+          "type": "image",
+          "url": "/content/noahs-ark/media/images/dove_with_olive_branch.png",
+          "contentType": "image/png",
+          "title": "The Dove Returns with Hope",
+          "altText": "A white dove flying toward the ark carrying a green olive branch in its beak",
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        },
+        {
+          "id": "media-dove-audio",
+          "type": "audio",
+          "url": "/content/noahs-ark/media/audio/scene_006_narrative.mp3",
+          "contentType": "audio/mpeg",
+          "title": "Dove Returns - Narration",
+          "duration": 47,
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        }
+      ],
+      "mapMarker": {
+        "id": "marker-ararat",
+        "title": "Mount Ararat Region",
+        "description": "The traditional landing place of Noah's ark in ancient Armenia",
+        "location": {
+          "coordinates": [44.2982, 39.7016],
+          "placeNameAncient": "Mountains of Ararat",
+          "placeNameModern": "Mount Ararat, Turkey",
+          "region": "Armenia"
+        },
+        "type": "naturalFeature",
+        "createdAt": "2025-08-25T21:22:47Z",
+        "updatedAt": "2025-08-25T21:22:47Z"
+      }
+    },
+    {
+      "id": "scene-007",
+      "title": "God's Rainbow Promise",
+      "narrative": "When Noah and his family finally left the ark, the first thing Noah did was build an altar and offer sacrifices to thank God. God was pleased with Noah's thankful heart. Then God made a covenant with Noah and all living creatures, promising never again to destroy the earth by flood. As a sign of this promise, God set a rainbow in the clouds.",
+      "order": 7,
+      "interactions": [
+        {
+          "type": "prayer",
+          "content": "Let's thank God like Noah did! 'Dear God, thank you for keeping your promises and for taking care of us. Help us to always obey you like Noah did. Amen.'",
+          "options": []
+        }
+      ],
+      "mediaItems": [
+        {
+          "id": "media-rainbow-covenant",
+          "type": "image",
+          "url": "/content/noahs-ark/media/images/rainbow_covenant.png",
+          "contentType": "image/png",
+          "title": "God's Rainbow Promise",
+          "altText": "A beautiful rainbow arcing over the ark on dry land with Noah's family and animals",
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        },
+        {
+          "id": "media-rainbow-audio",
+          "type": "audio",
+          "url": "/content/noahs-ark/media/audio/scene_007_narrative.mp3",
+          "contentType": "audio/mpeg",
+          "title": "Rainbow Promise - Narration",
+          "duration": 58,
+          "createdAt": "2025-08-25T21:22:47Z",
+          "updatedAt": "2025-08-25T21:22:47Z"
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "id": "quiz-noahs-ark-main",
+    "title": "Noah's Ark Knowledge Quiz",
+    "description": "Test your knowledge of Noah's Ark story",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "q-001",
+        "text": "Why did God choose Noah to build the ark?",
+        "type": "multiple-choice",
+        "bibleReference": {
+          "book": "Genesis",
+          "chapter": 6,
+          "verses": "8-9"
+        },
+        "options": [
+          {
+            "id": "opt-001",
+            "text": "Noah found grace in God's eyes and was righteous",
+            "isCorrect": true,
+            "explanation": "Genesis 6:8-9 tells us Noah found grace in the eyes of the LORD and was a just man, perfect in his generations, and walked with God."
+          },
+          {
+            "id": "opt-002",
+            "text": "Noah was the strongest man on earth",
+            "isCorrect": false,
+            "explanation": "The Bible doesn't say Noah was chosen for his physical strength, but for his righteousness."
+          },
+          {
+            "id": "opt-003",
+            "text": "Noah was the richest man alive",
+            "isCorrect": false,
+            "explanation": "Noah's wealth was not the reason God chose him."
+          },
+          {
+            "id": "opt-004",
+            "text": "Noah volunteered to build the ark",
+            "isCorrect": false,
+            "explanation": "God specifically chose and commanded Noah to build the ark."
+          }
+        ],
+        "points": 2
+      }
+    ],
+    "passingScore": 70,
+    "timeLimit": 0
+  },
+  "createdAt": "2025-08-25T21:22:47Z",
+  "updatedAt": "2025-08-25T21:22:47Z"
+}

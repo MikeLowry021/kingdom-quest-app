@@ -1,0 +1,22 @@
+CREATE TABLE prayers (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    category TEXT NOT NULL CHECK (category IN ('praise',
+    'thanksgiving',
+    'confession',
+    'supplication',
+    'intercession')),
+    bible_book TEXT,
+    bible_chapter INTEGER,
+    bible_verses TEXT,
+    bible_translation TEXT DEFAULT 'NIV',
+    age_rating TEXT CHECK (age_rating IN ('all',
+    'children',
+    'youth',
+    'adult')),
+    is_template BOOLEAN DEFAULT FALSE,
+    tags TEXT[],
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);

@@ -1,0 +1,127 @@
+{
+  "$id": "https://kingdomquest.example/schemas/MapMarker.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A geographic marker for biblical locations in the KingdomQuest app",
+  "properties": {
+    "createdAt": {
+      "description": "Creation timestamp",
+      "format": "date-time",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description of the location",
+      "type": "string"
+    },
+    "historicalDetails": {
+      "description": "Historical information about this location",
+      "type": "string"
+    },
+    "id": {
+      "description": "Unique identifier for the map marker",
+      "type": "string"
+    },
+    "location": {
+      "properties": {
+        "coordinates": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        },
+        "placeId": {
+          "description": "External mapping service place ID",
+          "type": "string"
+        },
+        "placeNameAncient": {
+          "description": "Ancient/biblical name of the location",
+          "type": "string"
+        },
+        "placeNameModern": {
+          "description": "Modern name of the location",
+          "type": "string"
+        },
+        "region": {
+          "description": "Biblical region (e.g., Judea, Galilee)",
+          "type": "string"
+        }
+      },
+      "required": [
+        "coordinates",
+        "placeNameAncient"
+      ],
+      "type": "object"
+    },
+    "mediaItems": {
+      "description": "Media items for this location",
+      "items": {
+        "$ref": "Media.schema.json"
+      },
+      "type": "array"
+    },
+    "relatedScriptures": {
+      "description": "Bible references related to this location",
+      "items": {
+        "properties": {
+          "book": {
+            "description": "Bible book name",
+            "type": "string"
+          },
+          "chapter": {
+            "description": "Chapter number",
+            "type": "integer"
+          },
+          "verses": {
+            "description": "Verse range (e.g., '1-10')",
+            "type": "string"
+          }
+        },
+        "required": [
+          "book",
+          "chapter",
+          "verses"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "tags": {
+      "description": "Tags for categorizing the marker",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "description": "Title of the map marker",
+      "type": "string"
+    },
+    "type": {
+      "description": "Type of location",
+      "enum": [
+        "city",
+        "landmark",
+        "building",
+        "naturalFeature",
+        "route"
+      ],
+      "type": "string"
+    },
+    "updatedAt": {
+      "description": "Last update timestamp",
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "location",
+    "createdAt",
+    "updatedAt"
+  ],
+  "title": "MapMarker",
+  "type": "object",
+  "version": "1.0.0"
+}

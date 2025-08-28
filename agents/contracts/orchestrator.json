@@ -1,0 +1,114 @@
+{
+  "agent_name": "Orchestrator",
+  "version": "1.0.0",
+  "description": "Central coordination agent that routes requests and manages workflow between specialized agents",
+  "capabilities": [
+    "Request routing",
+    "Workflow orchestration",
+    "State management",
+    "Error handling and recovery",
+    "Response aggregation"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["request_id", "user_id", "action"],
+    "properties": {
+      "request_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique identifier for the request"
+      },
+      "user_id": {
+        "type": "string",
+        "description": "User identifier"
+      },
+      "session_id": {
+        "type": "string",
+        "description": "Session identifier for context continuity"
+      },
+      "action": {
+        "type": "string",
+        "enum": ["story_quest", "quiz_challenge", "prayer_moment", "family_altar", "content_moderation", "user_progress"],
+        "description": "Primary action being requested"
+      },
+      "parameters": {
+        "type": "object",
+        "description": "Action-specific parameters"
+      },
+      "context": {
+        "type": "object",
+        "properties": {
+          "user_age_group": {"type": "string", "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]},
+          "family_mode": {"type": "boolean"},
+          "language": {"type": "string", "default": "en"},
+          "accessibility_needs": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["request_id", "status", "result"],
+    "properties": {
+      "request_id": {"type": "string"},
+      "status": {
+        "type": "string",
+        "enum": ["success", "partial_success", "error", "pending"]
+      },
+      "result": {
+        "type": "object",
+        "description": "Aggregated results from all involved agents"
+      },
+      "agents_used": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "List of agents involved in processing"
+      },
+      "execution_time_ms": {"type": "number"},
+      "next_suggested_actions": {
+        "type": "array",
+        "items": {"type": "string"}
+      }
+    }
+  },
+  "sample_request": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "user_id": "user_12345",
+    "session_id": "session_67890",
+    "action": "story_quest",
+    "parameters": {
+      "story_theme": "david_and_goliath",
+      "difficulty_level": "intermediate",
+      "include_quiz": true
+    },
+    "context": {
+      "user_age_group": "child_9_12",
+      "family_mode": true,
+      "language": "en",
+      "accessibility_needs": ["audio_descriptions"]
+    }
+  },
+  "sample_response": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "status": "success",
+    "result": {
+      "story_content": "Generated story content...",
+      "visual_assets": ["image_1.jpg", "image_2.jpg"],
+      "audio_narration": "narration.mp3",
+      "quiz_questions": [{"question": "What weapon did David choose?", "options": ["Sword", "Sling", "Bow"]}]
+    },
+    "agents_used": ["TheologyGuard", "StoryWeaver", "VisualPsalmist", "AudioPsalmist", "QuizMaster"],
+    "execution_time_ms": 2340,
+    "next_suggested_actions": ["take_quiz", "share_with_family", "pray_together"]
+  },
+  "error_codes": {
+    "1000": "Invalid request format",
+    "1001": "Missing required parameters",
+    "1002": "User authentication failed",
+    "1003": "Content safety violation detected",
+    "1004": "Age-inappropriate content requested",
+    "1005": "Agent service unavailable",
+    "1006": "Request timeout",
+    "1007": "Rate limit exceeded"
+  }
+}

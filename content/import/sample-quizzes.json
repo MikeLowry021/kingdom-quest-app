@@ -1,0 +1,109 @@
+[
+  {
+    "title": "The Good Shepherd Quiz",
+    "description": "Test your understanding of Jesus as the Good Shepherd",
+    "bibleReference": {
+      "book": "John",
+      "chapter": 10,
+      "verses": "1-16"
+    },
+    "difficulty": "beginner",
+    "timeLimit": 300,
+    "passingScore": 75,
+    "questions": [
+      {
+        "text": "What does Jesus call Himself in John 10?",
+        "type": "multiple-choice",
+        "points": 2,
+        "bibleReference": {
+          "book": "John",
+          "chapter": 10,
+          "verse": "11"
+        },
+        "explanation": "Jesus identifies Himself as the Good Shepherd who cares for His sheep.",
+        "options": [
+          {
+            "text": "The Good Shepherd",
+            "isCorrect": true,
+            "explanation": "Correct! Jesus calls Himself the Good Shepherd."
+          },
+          {
+            "text": "The King of Kings",
+            "isCorrect": false,
+            "explanation": "While Jesus is the King of Kings, in this passage He calls Himself the Good Shepherd."
+          },
+          {
+            "text": "The Light of the World",
+            "isCorrect": false,
+            "explanation": "Jesus is the Light of the World, but in John 10 He focuses on being the Good Shepherd."
+          }
+        ]
+      },
+      {
+        "text": "Jesus says His sheep hear His voice and follow Him.",
+        "type": "true-false",
+        "points": 1,
+        "bibleReference": {
+          "book": "John",
+          "chapter": 10,
+          "verse": "27"
+        },
+        "explanation": "Jesus teaches that His followers know and respond to His voice.",
+        "options": [
+          {
+            "text": "True",
+            "isCorrect": true,
+            "explanation": "Correct! Jesus said 'My sheep hear my voice, and I know them, and they follow me.'"
+          },
+          {
+            "text": "False",
+            "isCorrect": false,
+            "explanation": "This statement is true according to John 10:27."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "David's Courage Quiz",
+    "description": "Learn about David's faith when facing Goliath",
+    "bibleReference": {
+      "book": "1 Samuel",
+      "chapter": 17,
+      "verses": "1-58"
+    },
+    "difficulty": "intermediate",
+    "timeLimit": 450,
+    "passingScore": 70,
+    "questions": [
+      {
+        "text": "Why was David confident he could defeat Goliath?",
+        "type": "multiple-choice",
+        "points": 3,
+        "bibleReference": {
+          "book": "1 Samuel",
+          "chapter": 17,
+          "verse": "37"
+        },
+        "explanation": "David's confidence came from his trust in God's power and past faithfulness.",
+        "options": [
+          {
+            "text": "He trusted in God's strength",
+            "isCorrect": true,
+            "explanation": "Correct! David said 'The Lord who delivered me from the paw of the lion and from the paw of the bear will deliver me from the hand of this Philistine.'"
+          },
+          {
+            "text": "He was very tall and strong",
+            "isCorrect": false,
+            "explanation": "David was actually young and smaller than Goliath. His strength came from God."
+          },
+          {
+            "text": "He had the best weapons",
+            "isCorrect": false,
+            "explanation": "David used only a simple sling and stone. His confidence was in God, not weapons."
+          }
+        ]
+      }
+    ]
+  }
+]

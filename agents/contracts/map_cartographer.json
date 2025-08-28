@@ -1,0 +1,220 @@
+{
+  "agent_name": "MapCartographer",
+  "version": "1.0.0",
+  "description": "Creates interactive biblical maps, timelines, and geographical visualizations for educational content",
+  "capabilities": [
+    "Biblical location mapping",
+    "Historical timeline creation",
+    "Interactive journey visualization",
+    "Cultural context mapping",
+    "Age-appropriate geographical education"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["map_request", "target_age_group"],
+    "properties": {
+      "map_request": {
+        "type": "object",
+        "properties": {
+          "map_type": {
+            "type": "string",
+            "enum": ["biblical_location", "journey_path", "timeline", "cultural_context", "region_overview"]
+          },
+          "content_focus": {"type": "string", "description": "Biblical story or theme to map"},
+          "locations": {"type": "array", "items": {"type": "string"}, "description": "Specific places to highlight"},
+          "time_period": {"type": "string", "description": "Biblical era or specific timeframe"},
+          "characters_involved": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "target_age_group": {
+        "type": "string",
+        "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]
+      },
+      "visualization_preferences": {
+        "type": "object",
+        "properties": {
+          "style": {"type": "string", "enum": ["simple", "detailed", "interactive", "artistic"], "default": "simple"},
+          "include_modern_references": {"type": "boolean", "default": false},
+          "color_scheme": {"type": "string", "enum": ["earth_tones", "vibrant", "pastel", "high_contrast"]},
+          "annotation_level": {"type": "string", "enum": ["minimal", "moderate", "detailed"], "default": "moderate"}
+        }
+      },
+      "educational_features": {
+        "type": "object",
+        "properties": {
+          "include_distances": {"type": "boolean", "default": false},
+          "show_elevation": {"type": "boolean", "default": false},
+          "cultural_notes": {"type": "boolean", "default": true},
+          "biblical_events_overlay": {"type": "boolean", "default": true}
+        }
+      },
+      "accessibility_requirements": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["high_contrast", "large_labels", "audio_descriptions", "screen_reader_compatible"]
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["map_assets", "educational_content"],
+    "properties": {
+      "map_assets": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "asset_id": {"type": "string"},
+            "asset_type": {"type": "string", "enum": ["static_map", "interactive_map", "timeline", "overlay"]},
+            "file_path": {"type": "string"},
+            "format": {"type": "string", "enum": ["svg", "png", "html", "json"]},
+            "dimensions": {"type": "string"},
+            "interactive_features": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      },
+      "educational_content": {
+        "type": "object",
+        "properties": {
+          "location_descriptions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "location_name": {"type": "string"},
+                "biblical_significance": {"type": "string"},
+                "historical_context": {"type": "string"},
+                "modern_name": {"type": "string"},
+                "coordinates": {"type": "object", "properties": {"lat": {"type": "number"}, "lng": {"type": "number"}}}
+              }
+            }
+          },
+          "journey_details": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "segment_id": {"type": "string"},
+                "from_location": {"type": "string"},
+                "to_location": {"type": "string"},
+                "estimated_distance": {"type": "string"},
+                "travel_method": {"type": "string"},
+                "biblical_events": {"type": "array", "items": {"type": "string"}},
+                "cultural_insights": {"type": "string"}
+              }
+            }
+          },
+          "timeline_events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "event_id": {"type": "string"},
+                "date_description": {"type": "string"},
+                "event_title": {"type": "string"},
+                "event_description": {"type": "string"},
+                "biblical_reference": {"type": "string"},
+                "location": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "historical_accuracy_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "age_appropriateness_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "educational_value_rating": {"type": "string", "enum": ["high", "medium", "low"]},
+          "sources_consulted": {"type": "array", "items": {"type": "string"}},
+          "theological_review_status": {"type": "string", "enum": ["approved", "pending", "requires_revision"]}
+        }
+      },
+      "accessibility_features": {
+        "type": "object",
+        "properties": {
+          "alt_text_descriptions": {"type": "array", "items": {"type": "string"}},
+          "audio_tour_script": {"type": "string"},
+          "high_contrast_version_available": {"type": "boolean"},
+          "screen_reader_compatible": {"type": "boolean"}
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "map_request": {
+      "map_type": "journey_path",
+      "content_focus": "David's journey from Bethlehem to face Goliath",
+      "locations": ["Bethlehem", "Valley of Elah", "Israelite camp"],
+      "time_period": "1000 BCE - King Saul's reign",
+      "characters_involved": ["David", "King Saul", "Goliath"]
+    },
+    "target_age_group": "child_9_12",
+    "visualization_preferences": {
+      "style": "simple",
+      "color_scheme": "earth_tones",
+      "annotation_level": "moderate"
+    },
+    "educational_features": {
+      "cultural_notes": true,
+      "biblical_events_overlay": true
+    },
+    "accessibility_requirements": ["large_labels", "high_contrast"]
+  },
+  "sample_response": {
+    "map_assets": [
+      {
+        "asset_id": "david_journey_map",
+        "asset_type": "interactive_map",
+        "file_path": "maps/david_goliath_journey.svg",
+        "format": "svg",
+        "dimensions": "800x600",
+        "interactive_features": ["hover_tooltips", "clickable_locations", "journey_animation"]
+      }
+    ],
+    "educational_content": {
+      "location_descriptions": [
+        {
+          "location_name": "Bethlehem",
+          "biblical_significance": "David's hometown and birthplace",
+          "historical_context": "Small shepherd town in Judah",
+          "modern_name": "Bethlehem, West Bank",
+          "coordinates": {"lat": 31.7054, "lng": 35.2024}
+        }
+      ],
+      "journey_details": [
+        {
+          "segment_id": "bethlehem_to_valley",
+          "from_location": "Bethlehem",
+          "to_location": "Valley of Elah",
+          "estimated_distance": "15 miles (24 km)",
+          "travel_method": "on foot",
+          "biblical_events": ["Jesse sends David with food for his brothers"],
+          "cultural_insights": "Young shepherds often carried messages and supplies between family members"
+        }
+      ]
+    },
+    "metadata": {
+      "historical_accuracy_score": 0.92,
+      "age_appropriateness_score": 0.95,
+      "educational_value_rating": "high",
+      "sources_consulted": ["Biblical Atlas", "Archaeological Survey of Israel"],
+      "theological_review_status": "approved"
+    },
+    "accessibility_features": {
+      "alt_text_descriptions": ["Map showing David's journey from Bethlehem to Valley of Elah..."],
+      "audio_tour_script": "Welcome to David's journey map. We begin in Bethlehem...",
+      "high_contrast_version_available": true,
+      "screen_reader_compatible": true
+    }
+  },
+  "error_codes": {
+    "7000": "Invalid location or geographical data",
+    "7001": "Historical period information unavailable",
+    "7002": "Map generation failed due to technical issues",
+    "7003": "Biblical accuracy concerns in geographical content",
+    "7004": "Accessibility requirements cannot be met"
+  }
+}

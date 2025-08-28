@@ -1,0 +1,747 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KingdomQuest Analytics Events Schema",
+  "description": "Event tracking schema for KingdomQuest faith-based family app, compatible with PostHog/Segment",
+  "version": "1.0.0",
+  "events": {
+    "user_signed_up": {
+      "description": "User creates a new account",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "description": "Unique user identifier",
+          "required": true
+        },
+        "signup_method": {
+          "type": "string",
+          "enum": ["email", "google", "apple", "facebook"],
+          "description": "Method used to sign up",
+          "required": true
+        },
+        "age_group": {
+          "type": "string",
+          "enum": ["child_4_12", "teen_13_17", "adult_18_plus", "parent_guardian"],
+          "description": "User's age category for content personalization",
+          "required": true
+        },
+        "referral_source": {
+          "type": "string",
+          "enum": ["organic", "church_partnership", "family_invite", "app_store", "social_media", "advertisement"],
+          "description": "How the user discovered the app",
+          "required": false
+        },
+        "preferred_language": {
+          "type": "string",
+          "description": "User's preferred language (ISO 639-1)",
+          "default": "en",
+          "required": false
+        },
+        "timezone": {
+          "type": "string",
+          "description": "User's timezone",
+          "required": false
+        },
+        "church_affiliation": {
+          "type": "string",
+          "description": "Church or organization affiliation (anonymized)",
+          "required": false
+        }
+      }
+    },
+    
+    "family_group_created": {
+      "description": "Family creates or joins a family group",
+      "properties": {
+        "family_group_id": {
+          "type": "string",
+          "description": "Unique family group identifier",
+          "required": true
+        },
+        "creator_user_id": {
+          "type": "string",
+          "description": "User who created the family group",
+          "required": true
+        },
+        "family_size": {
+          "type": "integer",
+          "description": "Number of initial family members",
+          "minimum": 1,
+          "maximum": 20,
+          "required": true
+        },
+        "age_diversity": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["child_4_12", "teen_13_17", "adult_18_plus"]
+          },
+          "description": "Age groups present in the family",
+          "required": true
+        },
+        "family_goals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["daily_prayer", "scripture_reading", "faith_discussions", "church_attendance", "community_service", "holiday_traditions"]
+          },
+          "description": "Selected family spiritual goals",
+          "required": false
+        },
+        "privacy_settings": {
+          "type": "object",
+          "properties": {
+            "child_protection_enabled": {
+              "type": "boolean",
+              "description": "COPPA-compliant child protection active"
+            },
+            "content_filtering_level": {
+              "type": "string",
+              "enum": ["strict", "moderate", "relaxed"]
+            }
+          },
+          "required": false
+        }
+      }
+    },
+    
+    "story_play_started": {
+      "description": "User begins a Bible story or faith content",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "story_id": {
+          "type": "string",
+          "description": "Unique identifier for the story content",
+          "required": true
+        },
+        "story_title": {
+          "type": "string",
+          "description": "Human-readable story title",
+          "required": true
+        },
+        "story_category": {
+          "type": "string",
+          "enum": ["old_testament", "new_testament", "parables", "psalms", "wisdom", "prophets", "gospels", "epistles"],
+          "description": "Biblical category of the story",
+          "required": true
+        },
+        "age_target": {
+          "type": "string",
+          "enum": ["child_4_12", "teen_13_17", "adult_18_plus", "family_all_ages"],
+          "description": "Target age group for the content",
+          "required": true
+        },
+        "content_type": {
+          "type": "string",
+          "enum": ["interactive_story", "video", "audio", "illustrated_reading", "game"],
+          "description": "Format of the story content",
+          "required": true
+        },
+        "session_type": {
+          "type": "string",
+          "enum": ["solo", "family_together", "parent_child", "peer_group"],
+          "description": "Type of viewing/reading session",
+          "required": false
+        },
+        "family_group_id": {
+          "type": "string",
+          "description": "Family group if session is shared",
+          "required": false
+        },
+        "accessibility_features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["audio_description", "closed_captions", "large_text", "high_contrast", "screen_reader"]
+          },
+          "description": "Accessibility features in use",
+          "required": false
+        }
+      }
+    },
+    
+    "story_completed": {
+      "description": "User finishes a Bible story or faith content",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "story_id": {
+          "type": "string",
+          "required": true
+        },
+        "completion_time_seconds": {
+          "type": "integer",
+          "description": "Total time spent on story in seconds",
+          "minimum": 1,
+          "required": true
+        },
+        "engagement_score": {
+          "type": "number",
+          "description": "Calculated engagement score (0-1)",
+          "minimum": 0,
+          "maximum": 1,
+          "required": false
+        },
+        "completion_percentage": {
+          "type": "number",
+          "description": "Percentage of content consumed (0-100)",
+          "minimum": 0,
+          "maximum": 100,
+          "required": true
+        },
+        "family_members_present": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other family members who participated",
+          "required": false
+        },
+        "reflection_questions_answered": {
+          "type": "integer",
+          "description": "Number of reflection questions answered",
+          "minimum": 0,
+          "required": false
+        },
+        "bookmark_added": {
+          "type": "boolean",
+          "description": "Whether user bookmarked the story",
+          "default": false,
+          "required": false
+        }
+      }
+    },
+    
+    "quiz_started": {
+      "description": "User begins a faith-based quiz or assessment",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "quiz_id": {
+          "type": "string",
+          "description": "Unique quiz identifier",
+          "required": true
+        },
+        "quiz_type": {
+          "type": "string",
+          "enum": ["story_comprehension", "bible_trivia", "character_matching", "verse_memory", "moral_choice", "faith_reflection"],
+          "description": "Type of quiz content",
+          "required": true
+        },
+        "difficulty_level": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced"],
+          "description": "Quiz difficulty setting",
+          "required": true
+        },
+        "related_story_id": {
+          "type": "string",
+          "description": "Story that quiz is based on",
+          "required": false
+        },
+        "total_questions": {
+          "type": "integer",
+          "description": "Total number of questions in quiz",
+          "minimum": 1,
+          "required": true
+        },
+        "family_challenge": {
+          "type": "boolean",
+          "description": "Whether this is a family group challenge",
+          "default": false,
+          "required": false
+        }
+      }
+    },
+    
+    "quiz_completed": {
+      "description": "User finishes a faith-based quiz",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "quiz_id": {
+          "type": "string",
+          "required": true
+        },
+        "score": {
+          "type": "number",
+          "description": "Quiz score (0-100)",
+          "minimum": 0,
+          "maximum": 100,
+          "required": true
+        },
+        "questions_answered": {
+          "type": "integer",
+          "description": "Number of questions answered",
+          "minimum": 0,
+          "required": true
+        },
+        "correct_answers": {
+          "type": "integer",
+          "description": "Number of correct answers",
+          "minimum": 0,
+          "required": true
+        },
+        "completion_time_seconds": {
+          "type": "integer",
+          "description": "Time taken to complete quiz",
+          "minimum": 1,
+          "required": true
+        },
+        "hints_used": {
+          "type": "integer",
+          "description": "Number of hints/helps used",
+          "minimum": 0,
+          "required": false
+        },
+        "retry_count": {
+          "type": "integer",
+          "description": "Number of times quiz was retried",
+          "minimum": 0,
+          "required": false
+        },
+        "achievement_unlocked": {
+          "type": "string",
+          "description": "Achievement badge earned",
+          "required": false
+        }
+      }
+    },
+    
+    "prayer_logged": {
+      "description": "User logs a prayer or prayer request",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "prayer_id": {
+          "type": "string",
+          "description": "Unique prayer entry identifier",
+          "required": true
+        },
+        "prayer_type": {
+          "type": "string",
+          "enum": ["gratitude", "petition", "intercession", "confession", "praise", "general"],
+          "description": "Category of prayer",
+          "required": true
+        },
+        "privacy_level": {
+          "type": "string",
+          "enum": ["private", "family_only", "community_shared", "anonymous_shared"],
+          "description": "Sharing level for the prayer",
+          "required": true
+        },
+        "family_group_id": {
+          "type": "string",
+          "description": "Family group if shared with family",
+          "required": false
+        },
+        "prayer_tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["family", "health", "guidance", "protection", "provision", "relationships", "work_school", "spiritual_growth", "church", "world_events"]
+          },
+          "description": "Categories/tags for the prayer",
+          "required": false
+        },
+        "response_count": {
+          "type": "integer",
+          "description": "Number of prayer responses/agreements received",
+          "minimum": 0,
+          "required": false
+        },
+        "answered_prayer": {
+          "type": "boolean",
+          "description": "User marked prayer as answered",
+          "default": false,
+          "required": false
+        }
+      }
+    },
+    
+    "altar_streak_day": {
+      "description": "Family completes daily family altar/devotion",
+      "properties": {
+        "family_group_id": {
+          "type": "string",
+          "description": "Family group identifier",
+          "required": true
+        },
+        "streak_day": {
+          "type": "integer",
+          "description": "Current consecutive day count",
+          "minimum": 1,
+          "required": true
+        },
+        "participants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "user_id": {"type": "string"},
+              "age_group": {"type": "string", "enum": ["child_4_12", "teen_13_17", "adult_18_plus"]}
+            }
+          },
+          "description": "Family members who participated",
+          "required": true
+        },
+        "activities_completed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["scripture_reading", "prayer", "discussion", "song", "reflection", "service_planning"]
+          },
+          "description": "Family altar activities completed",
+          "required": true
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "description": "Total family altar time in minutes",
+          "minimum": 1,
+          "required": true
+        },
+        "milestone_achieved": {
+          "type": "string",
+          "enum": ["week_1", "week_2", "month_1", "month_3", "month_6", "year_1"],
+          "description": "Streak milestone reached",
+          "required": false
+        }
+      }
+    },
+    
+    "verse_shared": {
+      "description": "User shares a Bible verse or faith content",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "verse_reference": {
+          "type": "string",
+          "description": "Bible verse reference (e.g., 'John 3:16')",
+          "required": true
+        },
+        "verse_translation": {
+          "type": "string",
+          "enum": ["NIV", "ESV", "NASB", "NLT", "MSG", "KJV", "NKJV"],
+          "description": "Bible translation used",
+          "required": false
+        },
+        "share_method": {
+          "type": "string",
+          "enum": ["family_group", "community_post", "external_social", "direct_message", "email", "copy_link"],
+          "description": "How the verse was shared",
+          "required": true
+        },
+        "personal_note": {
+          "type": "boolean",
+          "description": "Whether user added personal reflection",
+          "default": false,
+          "required": false
+        },
+        "context_story_id": {
+          "type": "string",
+          "description": "Related story if shared from story context",
+          "required": false
+        },
+        "recipient_count": {
+          "type": "integer",
+          "description": "Number of people shared with",
+          "minimum": 1,
+          "required": false
+        },
+        "engagement_responses": {
+          "type": "integer",
+          "description": "Number of likes/hearts/amens received",
+          "minimum": 0,
+          "required": false
+        }
+      }
+    },
+    
+    "content_reported": {
+      "description": "User reports inappropriate or concerning content",
+      "properties": {
+        "reporter_user_id": {
+          "type": "string",
+          "description": "User who reported the content",
+          "required": true
+        },
+        "content_type": {
+          "type": "string",
+          "enum": ["story", "quiz", "prayer", "comment", "user_profile", "shared_content"],
+          "description": "Type of content being reported",
+          "required": true
+        },
+        "content_id": {
+          "type": "string",
+          "description": "Identifier of the reported content",
+          "required": true
+        },
+        "report_reason": {
+          "type": "string",
+          "enum": ["inappropriate_language", "theological_concern", "age_inappropriate", "bullying", "spam", "technical_issue", "privacy_violation", "other"],
+          "description": "Reason for reporting",
+          "required": true
+        },
+        "severity_level": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"],
+          "description": "Reporter's assessment of severity",
+          "required": true
+        },
+        "additional_context": {
+          "type": "boolean",
+          "description": "Whether additional context was provided",
+          "default": false,
+          "required": false
+        },
+        "auto_flagged": {
+          "type": "boolean",
+          "description": "Whether content was auto-flagged by system",
+          "default": false,
+          "required": false
+        }
+      }
+    },
+    
+    "language_changed": {
+      "description": "User changes their language preference",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "previous_language": {
+          "type": "string",
+          "description": "Previous language code (ISO 639-1)",
+          "required": true
+        },
+        "new_language": {
+          "type": "string",
+          "description": "New language code (ISO 639-1)",
+          "required": true
+        },
+        "change_reason": {
+          "type": "string",
+          "enum": ["user_preference", "family_setting", "accessibility", "content_availability"],
+          "description": "Reason for language change",
+          "required": false
+        },
+        "family_group_affected": {
+          "type": "boolean",
+          "description": "Whether change affects family group settings",
+          "default": false,
+          "required": false
+        },
+        "content_availability_score": {
+          "type": "number",
+          "description": "Percentage of content available in new language (0-100)",
+          "minimum": 0,
+          "maximum": 100,
+          "required": false
+        }
+      }
+    },
+    
+    "a11y_pref_set": {
+      "description": "User sets accessibility preferences",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "accessibility_features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["screen_reader", "large_text", "high_contrast", "reduced_motion", "audio_descriptions", "closed_captions", "keyboard_navigation", "voice_control"]
+          },
+          "description": "Accessibility features enabled",
+          "required": true
+        },
+        "font_size_multiplier": {
+          "type": "number",
+          "description": "Text size multiplier (1.0 = normal)",
+          "minimum": 0.8,
+          "maximum": 3.0,
+          "required": false
+        },
+        "color_theme": {
+          "type": "string",
+          "enum": ["default", "high_contrast", "dark_mode", "light_mode", "sepia"],
+          "description": "Color theme preference",
+          "required": false
+        },
+        "audio_preferences": {
+          "type": "object",
+          "properties": {
+            "narration_speed": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 2.0
+            },
+            "sound_effects_enabled": {
+              "type": "boolean"
+            },
+            "background_music_enabled": {
+              "type": "boolean"
+            }
+          },
+          "required": false
+        },
+        "family_override": {
+          "type": "boolean",
+          "description": "Whether settings override family defaults",
+          "default": false,
+          "required": false
+        }
+      }
+    },
+    
+    "subscription_started": {
+      "description": "User begins a premium subscription",
+      "properties": {
+        "user_id": {
+          "type": "string",
+          "required": true
+        },
+        "subscription_tier": {
+          "type": "string",
+          "enum": ["family_basic", "family_premium", "church_group", "school_license"],
+          "description": "Type of subscription",
+          "required": true
+        },
+        "billing_period": {
+          "type": "string",
+          "enum": ["monthly", "yearly", "lifetime"],
+          "description": "Subscription billing frequency",
+          "required": true
+        },
+        "price_paid": {
+          "type": "number",
+          "description": "Amount paid for subscription",
+          "minimum": 0,
+          "required": true
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code (ISO 4217)",
+          "required": true
+        },
+        "payment_method": {
+          "type": "string",
+          "enum": ["credit_card", "paypal", "apple_pay", "google_pay", "bank_transfer"],
+          "description": "Payment method used",
+          "required": true
+        },
+        "trial_converted": {
+          "type": "boolean",
+          "description": "Whether this converted from a free trial",
+          "default": false,
+          "required": false
+        },
+        "family_group_size": {
+          "type": "integer",
+          "description": "Number of family members covered",
+          "minimum": 1,
+          "required": false
+        },
+        "referral_discount_applied": {
+          "type": "boolean",
+          "description": "Whether referral discount was used",
+          "default": false,
+          "required": false
+        },
+        "church_partnership_discount": {
+          "type": "boolean",
+          "description": "Whether church partnership discount applied",
+          "default": false,
+          "required": false
+        }
+      }
+    }
+  },
+  
+  "privacy_compliance": {
+    "description": "Privacy and compliance considerations for event tracking",
+    "coppa_compliance": {
+      "child_data_minimization": "For users under 13, collect only essential data with verified parental consent",
+      "parental_consent_required": "All child accounts require verifiable parental consent before data collection",
+      "data_retention_limit": "Child data automatically purged upon account closure or parent request"
+    },
+    "gdpr_compliance": {
+      "lawful_basis": "Legitimate interest for app functionality, consent for marketing",
+      "data_portability": "Users can export all their data in machine-readable format",
+      "right_to_deletion": "Complete data deletion within 30 days of request"
+    },
+    "popia_compliance": {
+      "data_minimization": "Collect only data necessary for stated purpose",
+      "consent_management": "Clear, specific consent for each data processing purpose",
+      "data_security": "Appropriate technical and organizational measures for data protection"
+    },
+    "data_retention": {
+      "active_users": "Retain data while account is active plus 12 months",
+      "inactive_users": "Delete data after 24 months of inactivity",
+      "child_accounts": "Delete data immediately upon parent request or account closure",
+      "analytics_data": "Aggregate analytics data retained for 36 months, individual data for 12 months"
+    }
+  },
+  
+  "analytics_configuration": {
+    "description": "Configuration settings for analytics platforms",
+    "posthog_settings": {
+      "session_recording": "Disabled for child accounts, optional for adults with consent",
+      "feature_flags": "Used for A/B testing with privacy-safe cohorts",
+      "data_residency": "EU instance for GDPR compliance"
+    },
+    "segment_settings": {
+      "destinations": ["PostHog", "Amplitude", "Internal Analytics"],
+      "pii_filtering": "Automatic PII detection and filtering enabled",
+      "consent_management": "Integrated with OneTrust/similar consent platform"
+    }
+  },
+  
+  "ab_testing_framework": {
+    "description": "A/B testing event schema and methodology",
+    "test_events": {
+      "experiment_started": {
+        "properties": {
+          "experiment_id": {"type": "string", "required": true},
+          "variant": {"type": "string", "required": true},
+          "user_id": {"type": "string", "required": true},
+          "age_cohort": {"type": "string", "required": true}
+        }
+      },
+      "experiment_converted": {
+        "properties": {
+          "experiment_id": {"type": "string", "required": true},
+          "conversion_event": {"type": "string", "required": true},
+          "time_to_convert_seconds": {"type": "integer", "required": true}
+        }
+      }
+    },
+    "planned_experiments": {
+      "age_mode_ux": {
+        "description": "Test different UI adaptations for age groups",
+        "variants": ["simplified_child", "standard_child", "gamified_child"],
+        "success_metrics": ["story_completion_rate", "session_duration", "return_rate"]
+      },
+      "quiz_difficulty": {
+        "description": "Test optimal quiz difficulty progression",
+        "variants": ["adaptive_difficulty", "linear_progression", "user_choice"],
+        "success_metrics": ["quiz_completion_rate", "retry_frequency", "frustration_indicators"]
+      }
+    }
+  }
+}

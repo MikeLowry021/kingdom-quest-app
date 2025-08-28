@@ -1,0 +1,41 @@
+{
+  "id": "quiz-children-005",
+  "title": "The Dove",
+  "description": "Questions about the dove and olive leaf for children",
+  "difficulty": "beginner",
+  "questions": [
+    {
+      "id": "q-050",
+      "text": "What did the dove bring back to Noah?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 8,
+        "verses": "11"
+      },
+      "options": [
+        {
+          "id": "opt-050",
+          "text": "An olive leaf",
+          "isCorrect": true,
+          "explanation": "Genesis 8:11 says the dove came back 'and, lo, in her mouth was an olive leaf pluckt off.'"
+        },
+        {
+          "id": "opt-051",
+          "text": "A flower",
+          "isCorrect": false,
+          "explanation": "The dove brought back an olive leaf, not a flower."
+        },
+        {
+          "id": "opt-052",
+          "text": "Nothing",
+          "isCorrect": false,
+          "explanation": "The dove brought back an olive leaf as a sign that plants were growing again."
+        }
+      ],
+      "points": 1
+    }
+  ],
+  "passingScore": 50,
+  "timeLimit": 0
+}

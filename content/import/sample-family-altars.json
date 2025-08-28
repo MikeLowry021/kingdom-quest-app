@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Trusting God Like David",
+    "description": "A family devotion about courage and faith based on David and Goliath",
+    "bibleReference": {
+      "book": "1 Samuel",
+      "chapter": 17,
+      "verses": "45-47"
+    },
+    "duration": 20,
+    "ageGroups": ["children", "youth", "adult"],
+    "themes": ["courage", "faith", "trust"],
+    "content": {
+      "opening": "Dear God, thank You for bringing our family together. Help us learn about trusting You like David did. Amen.",
+      "bibleStudy": "Read 1 Samuel 17:45-47 together. David told Goliath that he came in the name of the Lord, not with sword or spear.",
+      "keyTruth": "God is bigger than any problem we face, just like He was bigger than Goliath.",
+      "application": "When we face scary or difficult situations, we can remember that God is with us and will help us."
+    },
+    "discussionQuestions": [
+      "What are some 'giants' or big problems kids might face today?",
+      "How can we trust God when we're afraid?",
+      "What did David remember about God that gave him courage?"
+    ],
+    "activities": [
+      {
+        "name": "Giant Problem, Big God",
+        "description": "Draw or write about a problem you're facing, then draw God's love surrounding it."
+      },
+      {
+        "name": "Memory Verse Actions",
+        "description": "Learn 1 Samuel 17:47 with hand motions to help remember God's power."
+      }
+    ],
+    "prayerSuggestions": [
+      "Thank God for always being bigger than our problems",
+      "Ask God to help us be brave like David",
+      "Pray for family members facing difficult situations"
+    ]
+  },
+  {
+    "title": "Jesus Our Good Shepherd",
+    "description": "A gentle family devotion about Jesus' loving care for us",
+    "bibleReference": {
+      "book": "John",
+      "chapter": 10,
+      "verses": "11-16"
+    },
+    "duration": 15,
+    "ageGroups": ["early_childhood", "children", "adult"],
+    "themes": ["love", "protection", "guidance"],
+    "content": {
+      "opening": "Heavenly Father, thank You for loving our family. Help us understand how much You care for us. Amen.",
+      "bibleStudy": "Read John 10:11-16 together. Talk about how a shepherd takes care of sheep.",
+      "keyTruth": "Jesus loves us and takes care of us like a good shepherd takes care of his sheep.",
+      "application": "We can trust Jesus to guide us, protect us, and provide for our needs every day."
+    },
+    "discussionQuestions": [
+      "How does a shepherd take care of sheep?",
+      "How does Jesus take care of us like a shepherd?",
+      "What does it mean that Jesus knows us by name?"
+    ],
+    "activities": [
+      {
+        "name": "Sheep and Shepherd Game",
+        "description": "Play follow the leader, with parents as shepherds guiding children safely around the house."
+      },
+      {
+        "name": "Thank You Jesus Book",
+        "description": "Make a small book drawing ways Jesus takes care of your family."
+      }
+    ],
+    "prayerSuggestions": [
+      "Thank Jesus for being our Good Shepherd",
+      "Ask Jesus to help us follow Him",
+      "Thank God for our family and His love for us"
+    ]
+  }
+]

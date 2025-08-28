@@ -1,0 +1,89 @@
+import createMiddleware from 'next-intl/middleware';
+
+// Define the supported locales
+export const locales = ['en', 'af', 'es'] as const;
+export const defaultLocale = 'en' as const;
+
+// Locale configuration
+export const localeNames = {
+  en: 'English',
+  af: 'Afrikaans',
+  es: 'Español'
+} as const;
+
+// RTL locale configuration
+export const rtlLocales = [] as const; // Add RTL locales here when ready (e.g., 'ar', 'he', 'fa')
+
+// Direction detection
+export function getDirectionForLocale(locale: string): 'ltr' | 'rtl' {
+  return rtlLocales.includes(locale as any) ? 'rtl' : 'ltr';
+}
+
+// Create the middleware with localization support
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales,
+  
+  // Used when no locale matches
+  defaultLocale,
+  
+  // Always show the locale in the URL
+  localePrefix: 'always',
+  
+  // Pathnames configuration for localized routes (optional)
+  pathnames: {
+    '/': '/',
+    '/auth': {
+      en: '/auth',
+      af: '/aanmeld',
+      es: '/autenticacion'
+    },
+    '/stories': {
+      en: '/stories',
+      af: '/verhale',
+      es: '/historias'
+    },
+    '/quiz': {
+      en: '/quiz',
+      af: '/kwis',
+      es: '/cuestionario'
+    },
+    '/altar': {
+      en: '/altar',
+      af: '/altaar',
+      es: '/altar'
+    },
+    '/profile': {
+      en: '/profile',
+      af: '/profiel',
+      es: '/perfil'
+    },
+    '/map': {
+      en: '/map',
+      af: '/kaart',
+      es: '/mapa'
+    },
+    '/admin': {
+      en: '/admin',
+      af: '/admin',
+      es: '/admin'
+    }
+  }
+});
+
+// Middleware configuration
+export const config = {
+  // Match only internationalized pathnames
+  matcher: [
+    // Enable a redirect to a matching locale at the root
+    '/',
+    
+    // Set a cookie to remember the previous locale for
+    // all requests that have a locale prefix
+    '/(af|es|en)/:path*',
+    
+    // Enable redirects that add missing locales
+    // (e.g. `/pathnames` -> `/en/pathnames`)
+    '/((?!_next|_vercel|.*\\..*).*)',
+  ],
+};

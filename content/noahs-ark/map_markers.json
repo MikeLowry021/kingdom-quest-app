@@ -1,0 +1,51 @@
+{
+  "id": "marker-mount-ararat",
+  "title": "Mount Ararat - The Ark's Resting Place",
+  "description": "The traditional landing place of Noah's ark in the mountains of Armenia",
+  "location": {
+    "coordinates": [44.2982, 39.7016],
+    "placeNameAncient": "Mountains of Ararat",
+    "placeNameModern": "Mount Ararat, Turkey",
+    "region": "Ancient Armenia"
+  },
+  "type": "naturalFeature",
+  "historicalDetails": "Mount Ararat is traditionally considered the resting place of Noah's ark according to Genesis 8:4. The mountain consists of two peaks: Greater Ararat (5,137m) and Lesser Ararat (3,896m). Located in eastern Turkey near the Armenian and Iranian borders, this volcanic mountain has been a symbol of Armenian heritage and biblical history for millennia. Archaeological expeditions have searched this area extensively, though the ark itself has not been definitively found. The region was known in ancient times as Urartu, which corresponds to the biblical Ararat.",
+  "relatedScriptures": [
+    {
+      "book": "Genesis",
+      "chapter": 8,
+      "verses": "4"
+    },
+    {
+      "book": "2 Kings",
+      "chapter": 19,
+      "verses": "37"
+    },
+    {
+      "book": "Isaiah",
+      "chapter": 37,
+      "verses": "38"
+    },
+    {
+      "book": "Jeremiah",
+      "chapter": 51,
+      "verses": "27"
+    }
+  ],
+  "mediaItems": [
+    {
+      "id": "media-ararat-view",
+      "type": "image",
+      "url": "/content/noahs-ark/media/images/mount_ararat.png",
+      "contentType": "image/png",
+      "title": "Mount Ararat Landscape",
+      "altText": "Snow-capped Mount Ararat rising majestically from the Armenian plateau",
+      "tags": ["Mount Ararat", "ark landing", "biblical geography"],
+      "createdAt": "2025-08-25T21:22:47Z",
+      "updatedAt": "2025-08-25T21:22:47Z"
+    }
+  ],
+  "tags": ["Noah", "ark", "mountain", "Armenia", "Turkey", "biblical geography", "Genesis"],
+  "createdAt": "2025-08-25T21:22:47Z",
+  "updatedAt": "2025-08-25T21:22:47Z"
+}

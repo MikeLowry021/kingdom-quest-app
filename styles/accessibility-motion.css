@@ -1,0 +1,286 @@
+/* 
+ * Accessibility and Motion Preferences CSS
+ * This file ensures the app respects user's motion preferences
+ * and provides fallbacks for reduced motion scenarios
+ */
+
+/* Base reduced motion preference handling */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Specific component motion reductions */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable auto-play animations */
+  .animate-spin,
+  .animate-pulse,
+  .animate-bounce,
+  .animate-ping {
+    animation: none !important;
+  }
+
+  /* Remove parallax and transform animations */
+  .parallax,
+  .floating,
+  .hover-lift {
+    transform: none !important;
+  }
+
+  /* Simplify hover states */
+  .hover-transition {
+    transition: none !important;
+  }
+
+  /* Remove carousel auto-advance */
+  .carousel-auto {
+    animation-play-state: paused !important;
+  }
+
+  /* Static loading states */
+  .loading-skeleton {
+    animation: none !important;
+    opacity: 0.6 !important;
+  }
+}
+
+/* Enhanced focus indicators for better accessibility */
+@media (prefers-reduced-motion: reduce) {
+  :focus {
+    outline: 3px solid var(--focus-color, #0066cc) !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+  }
+  
+  :focus:not(:focus-visible) {
+    outline: none !important;
+  }
+}
+
+/* Respect motion preferences in custom animations */
+.motion-safe-fade {
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-fade {
+    transition: none;
+  }
+}
+
+.motion-safe-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-scale {
+    transition: none;
+    transform: none !important;
+  }
+}
+
+.motion-safe-slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-slide {
+    transition: none;
+    transform: translateX(0) !important;
+  }
+}
+
+/* Loading states that respect motion preferences */
+.loading-accessible {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-accessible::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-accessible::before {
+    animation: none;
+    background: rgba(0, 0, 0, 0.1);
+    left: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Image loading and lazy loading styles */
+.image-lazy-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-lazy-placeholder {
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+}
+
+.image-lazy-loading {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-lazy-loaded {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-lazy-loading,
+  .image-lazy-loaded {
+    transition: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Button and interactive element enhancements */
+.interactive-element {
+  transition: all 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-element {
+    transition: none !important;
+  }
+  
+  /* But keep focus indicators */
+  .interactive-element:focus {
+    outline: 2px solid currentColor !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* Toast and notification animations */
+.toast-enter {
+  animation: toast-slide-in 0.3s ease-out;
+}
+
+.toast-exit {
+  animation: toast-slide-out 0.3s ease-in;
+}
+
+@keyframes toast-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast-enter,
+  .toast-exit {
+    animation: none !important;
+  }
+}
+
+/* Modal and dialog animations */
+.modal-backdrop {
+  transition: opacity 0.2s ease-out;
+}
+
+.modal-content {
+  transition: transform 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop,
+  .modal-content {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Scroll behavior preferences */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ensure images respect aspect ratios during lazy loading */
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+}
+
+.aspect-ratio-container::before {
+  content: '';
+  display: block;
+  padding-bottom: var(--aspect-ratio, 56.25%); /* 16:9 default */
+}
+
+.aspect-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .image-lazy-placeholder {
+    background-color: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+  }
+}
+
+/* Print styles - disable animations in print */
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

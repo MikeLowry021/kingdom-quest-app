@@ -1,0 +1,56 @@
+{
+  "createdAt": "2025-05-25T08:00:00Z",
+  "description": "The ancient city where Jesus performed his first miracle",
+  "historicalDetails": "Cana was a village in Galilee where, according to the Gospel of John, Jesus performed his first miracle, turning water into wine at a wedding feast. The exact location is debated among scholars, with several possible sites identified in modern-day Israel.",
+  "id": "marker-002",
+  "location": {
+    "coordinates": [
+      32.8316,
+      35.3447
+    ],
+    "placeId": "ChIJn5h7-FSXHRURUqcJcwNRvUE",
+    "placeNameAncient": "Cana of Galilee",
+    "placeNameModern": "Kafr Kanna",
+    "region": "Galilee"
+  },
+  "mediaItems": [
+    {
+      "altText": "Archaeological remains at the traditional site of Cana",
+      "contentType": "image/jpeg",
+      "createdAt": "2025-05-20T11:30:00Z",
+      "id": "media-005",
+      "tags": [
+        "Cana",
+        "archaeology",
+        "wedding",
+        "miracle"
+      ],
+      "title": "Cana Archaeological Site",
+      "type": "image",
+      "updatedAt": "2025-05-20T11:30:00Z",
+      "url": "https://example.com/images/cana-archaeology.jpg"
+    }
+  ],
+  "relatedScriptures": [
+    {
+      "book": "John",
+      "chapter": 2,
+      "verses": "1-11"
+    },
+    {
+      "book": "John",
+      "chapter": 4,
+      "verses": "46-54"
+    }
+  ],
+  "tags": [
+    "miracles",
+    "wedding",
+    "Galilee",
+    "wine",
+    "Jesus"
+  ],
+  "title": "Cana of Galilee",
+  "type": "city",
+  "updatedAt": "2025-08-05T16:20:00Z"
+}

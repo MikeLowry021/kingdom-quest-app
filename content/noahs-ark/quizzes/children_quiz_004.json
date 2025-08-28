@@ -1,0 +1,41 @@
+{
+  "id": "quiz-children-004",
+  "title": "Noah's Family",
+  "description": "Questions about Noah's family for children",
+  "difficulty": "beginner",
+  "questions": [
+    {
+      "id": "q-040",
+      "text": "Who went into the ark with Noah?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 7,
+        "verses": "7"
+      },
+      "options": [
+        {
+          "id": "opt-040",
+          "text": "His wife, sons, and their wives",
+          "isCorrect": true,
+          "explanation": "Genesis 7:7 says Noah, his sons, his wife, and his sons' wives went into the ark."
+        },
+        {
+          "id": "opt-041",
+          "text": "Only Noah",
+          "isCorrect": false,
+          "explanation": "Noah's whole family went into the ark with him."
+        },
+        {
+          "id": "opt-042",
+          "text": "All his neighbors",
+          "isCorrect": false,
+          "explanation": "Only Noah's immediate family entered the ark."
+        }
+      ],
+      "points": 1
+    }
+  ],
+  "passingScore": 50,
+  "timeLimit": 0
+}

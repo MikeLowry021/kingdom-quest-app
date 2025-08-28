@@ -1,0 +1,41 @@
+{
+  "id": "quiz-children-003",
+  "title": "The Rainbow Promise",
+  "description": "Questions about God's rainbow promise for children",
+  "difficulty": "beginner",
+  "questions": [
+    {
+      "id": "q-030",
+      "text": "What did God put in the sky as a sign of His promise?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 9,
+        "verses": "13"
+      },
+      "options": [
+        {
+          "id": "opt-030",
+          "text": "A rainbow",
+          "isCorrect": true,
+          "explanation": "Genesis 9:13 says 'I do set my bow in the cloud, and it shall be for a token of a covenant.'"
+        },
+        {
+          "id": "opt-031",
+          "text": "The sun",
+          "isCorrect": false,
+          "explanation": "God put a rainbow in the clouds, not the sun."
+        },
+        {
+          "id": "opt-032",
+          "text": "Stars",
+          "isCorrect": false,
+          "explanation": "God's sign was a rainbow, not stars."
+        }
+      ],
+      "points": 1
+    }
+  ],
+  "passingScore": 50,
+  "timeLimit": 0
+}

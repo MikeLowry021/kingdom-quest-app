@@ -1,0 +1,39 @@
+{
+  "ageRating": "all",
+  "bibleReference": {
+    "book": "Psalms",
+    "chapter": 23,
+    "translation": "NIV",
+    "verses": "1-6"
+  },
+  "category": "praise",
+  "content": "Heavenly Father,\n\nYou are my shepherd; I shall not want.\nYou make me lie down in green pastures.\nYou lead me beside still waters, restoring my soul.\n\nEven when I walk through the darkest valley,\nI will fear no evil, for you are with me;\nYour rod and your staff, they comfort me.\n\nYou prepare a table before me in the presence of my enemies;\nYou anoint my head with oil; my cup overflows.\n\nSurely your goodness and mercy shall follow me all the days of my life,\nAnd I shall dwell in your house forever.\n\nIn Jesus' name, Amen.",
+  "createdAt": "2025-07-20T14:15:00Z",
+  "id": "prayer-002",
+  "isTemplate": true,
+  "mediaItems": [
+    {
+      "altText": "Peaceful shepherd's field with sheep grazing",
+      "contentType": "image/jpeg",
+      "createdAt": "2025-07-18T10:00:00Z",
+      "id": "media-003",
+      "tags": [
+        "psalm 23",
+        "shepherd",
+        "peace"
+      ],
+      "title": "Green Pastures",
+      "type": "image",
+      "updatedAt": "2025-07-18T10:00:00Z",
+      "url": "https://example.com/images/green-pastures.jpg"
+    }
+  ],
+  "tags": [
+    "psalm 23",
+    "shepherd",
+    "comfort",
+    "guidance"
+  ],
+  "title": "Shepherd's Prayer",
+  "updatedAt": "2025-07-20T14:15:00Z"
+}

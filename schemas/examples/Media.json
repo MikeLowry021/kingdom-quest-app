@@ -1,0 +1,22 @@
+{
+  "altText": "Interactive 3D model of Solomon's Temple with detailed architecture",
+  "attribution": "KingdomQuest Archaeological Team",
+  "caption": "Explore the detailed 3D reconstruction of Solomon's Temple based on biblical descriptions and archaeological findings.",
+  "contentType": "model/gltf-binary",
+  "createdAt": "2025-06-15T09:20:00Z",
+  "filename": "solomons_temple_3d.glb",
+  "id": "media-004",
+  "size": 15728640,
+  "tags": [
+    "temple",
+    "Jerusalem",
+    "Solomon",
+    "3D",
+    "architecture",
+    "history"
+  ],
+  "title": "Solomon's Temple 3D Model",
+  "type": "document",
+  "updatedAt": "2025-08-10T11:45:00Z",
+  "url": "https://example.com/models/solomons_temple_3d.glb"
+}

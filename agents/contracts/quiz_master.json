@@ -1,0 +1,203 @@
+{
+  "agent_name": "QuizMaster",
+  "version": "1.0.0",
+  "description": "Creates engaging, educational quizzes and assessments based on biblical content",
+  "capabilities": [
+    "Multiple choice question generation",
+    "Interactive quiz creation",
+    "Difficulty level adaptation",
+    "Progress tracking integration",
+    "Age-appropriate assessment design"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["content_basis", "target_age_group"],
+    "properties": {
+      "content_basis": {
+        "type": "object",
+        "properties": {
+          "story_content": {"type": "string", "description": "Story or lesson content to base quiz on"},
+          "biblical_references": {"type": "array", "items": {"type": "string"}},
+          "learning_objectives": {"type": "array", "items": {"type": "string"}},
+          "key_concepts": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "target_age_group": {
+        "type": "string",
+        "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]
+      },
+      "quiz_parameters": {
+        "type": "object",
+        "properties": {
+          "question_count": {"type": "integer", "minimum": 3, "maximum": 20, "default": 5},
+          "difficulty_level": {"type": "string", "enum": ["easy", "medium", "hard"], "default": "medium"},
+          "question_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["multiple_choice", "true_false", "fill_blank", "matching", "ordering"]
+            },
+            "default": ["multiple_choice"]
+          },
+          "include_explanations": {"type": "boolean", "default": true},
+          "adaptive_difficulty": {"type": "boolean", "default": false}
+        }
+      },
+      "customization": {
+        "type": "object",
+        "properties": {
+          "theme": {"type": "string", "description": "Visual theme for quiz presentation"},
+          "time_limit_seconds": {"type": "integer"},
+          "allow_retries": {"type": "boolean", "default": true},
+          "show_progress": {"type": "boolean", "default": true}
+        }
+      },
+      "accessibility_features": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["screen_reader_friendly", "high_contrast", "large_text", "audio_questions"]
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["quiz_data", "metadata"],
+    "properties": {
+      "quiz_data": {
+        "type": "object",
+        "properties": {
+          "quiz_id": {"type": "string"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "instructions": {"type": "string"},
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "question_id": {"type": "string"},
+                "question_type": {"type": "string"},
+                "question_text": {"type": "string"},
+                "options": {"type": "array", "items": {"type": "string"}},
+                "correct_answer": {"type": "string"},
+                "explanation": {"type": "string"},
+                "biblical_reference": {"type": "string"},
+                "difficulty_level": {"type": "string"},
+                "points_value": {"type": "integer"},
+                "media_attachments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "media_type": {"type": "string"},
+                      "file_path": {"type": "string"},
+                      "alt_text": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "estimated_duration_minutes": {"type": "number"},
+          "total_points": {"type": "integer"},
+          "passing_score_percentage": {"type": "number", "default": 70},
+          "difficulty_distribution": {
+            "type": "object",
+            "properties": {
+              "easy": {"type": "integer"},
+              "medium": {"type": "integer"},
+              "hard": {"type": "integer"}
+            }
+          },
+          "learning_objectives_covered": {"type": "array", "items": {"type": "string"}},
+          "biblical_coverage": {"type": "array", "items": {"type": "string"}},
+          "age_appropriateness_verified": {"type": "boolean"}
+        }
+      },
+      "scoring_rubric": {
+        "type": "object",
+        "properties": {
+          "point_system": {"type": "string"},
+          "bonus_criteria": {"type": "array", "items": {"type": "string"}},
+          "feedback_messages": {
+            "type": "object",
+            "properties": {
+              "excellent": {"type": "string"},
+              "good": {"type": "string"},
+              "needs_improvement": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "content_basis": {
+      "story_content": "David defeated Goliath with faith, courage, and God's strength, using only a sling and stone.",
+      "biblical_references": ["1 Samuel 17"],
+      "learning_objectives": ["Understanding faith in action", "Recognizing God's power"],
+      "key_concepts": ["Faith", "Courage", "Divine strength", "David", "Goliath"]
+    },
+    "target_age_group": "child_9_12",
+    "quiz_parameters": {
+      "question_count": 5,
+      "difficulty_level": "medium",
+      "question_types": ["multiple_choice", "true_false"],
+      "include_explanations": true
+    },
+    "accessibility_features": ["large_text", "screen_reader_friendly"]
+  },
+  "sample_response": {
+    "quiz_data": {
+      "quiz_id": "david_goliath_quiz_001",
+      "title": "David's Victory: A Test of Faith",
+      "description": "Test your knowledge about David's amazing victory over Goliath!",
+      "instructions": "Answer each question by selecting the best choice. Remember what you learned about David's faith!",
+      "questions": [
+        {
+          "question_id": "q1",
+          "question_type": "multiple_choice",
+          "question_text": "What weapon did David choose to fight Goliath?",
+          "options": ["A sword", "A sling and stones", "A spear", "A bow and arrows"],
+          "correct_answer": "A sling and stones",
+          "explanation": "David chose a simple sling and five smooth stones, trusting in God's power rather than human weapons.",
+          "biblical_reference": "1 Samuel 17:40",
+          "difficulty_level": "easy",
+          "points_value": 10
+        }
+      ]
+    },
+    "metadata": {
+      "estimated_duration_minutes": 8,
+      "total_points": 50,
+      "passing_score_percentage": 70,
+      "difficulty_distribution": {"easy": 2, "medium": 2, "hard": 1},
+      "learning_objectives_covered": ["Understanding faith in action", "Recognizing God's power"],
+      "biblical_coverage": ["1 Samuel 17"],
+      "age_appropriateness_verified": true
+    },
+    "scoring_rubric": {
+      "point_system": "standard",
+      "feedback_messages": {
+        "excellent": "Amazing! You really understand David's story of faith!",
+        "good": "Great job! You're learning about God's power through David.",
+        "needs_improvement": "Keep studying David's story - God has amazing things to teach you!"
+      }
+    }
+  },
+  "error_codes": {
+    "6000": "Insufficient content for quiz generation",
+    "6001": "Invalid difficulty level or parameters",
+    "6002": "Biblical content verification failed",
+    "6003": "Age-inappropriate questions detected",
+    "6004": "Question generation limit exceeded",
+    "6005": "Required learning objectives not met"
+  }
+}

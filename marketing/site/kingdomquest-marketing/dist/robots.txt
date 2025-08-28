@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kingdomquest.app/sitemap.xml
+
+# Prevent indexing of development files
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/

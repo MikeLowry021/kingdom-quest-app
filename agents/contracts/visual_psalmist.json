@@ -1,0 +1,153 @@
+{
+  "agent_name": "VisualPsalmist",
+  "version": "1.0.0",
+  "description": "Generates biblical illustrations, character art, and scene visualizations with theological accuracy",
+  "capabilities": [
+    "Biblical scene illustration",
+    "Character artwork generation",
+    "Age-appropriate visual content",
+    "Cultural sensitivity in imagery",
+    "Accessibility-compliant visuals"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["visual_request", "target_age_group"],
+    "properties": {
+      "visual_request": {
+        "type": "object",
+        "properties": {
+          "scene_description": {"type": "string"},
+          "characters": {"type": "array", "items": {"type": "string"}},
+          "setting": {"type": "string"},
+          "mood": {"type": "string", "enum": ["joyful", "peaceful", "dramatic", "contemplative", "celebratory"]}
+        }
+      },
+      "target_age_group": {
+        "type": "string",
+        "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]
+      },
+      "art_style": {
+        "type": "string",
+        "enum": ["cartoon", "illustration", "realistic", "watercolor", "stained_glass"],
+        "default": "illustration"
+      },
+      "cultural_context": {
+        "type": "string",
+        "description": "Cultural representation preferences"
+      },
+      "content_guidelines": {
+        "type": "object",
+        "properties": {
+          "modesty_standards": {"type": "boolean", "default": true},
+          "violence_level": {"type": "string", "enum": ["none", "minimal", "historical_context"], "default": "minimal"},
+          "diversity_inclusion": {"type": "boolean", "default": true}
+        }
+      },
+      "technical_specs": {
+        "type": "object",
+        "properties": {
+          "dimensions": {"type": "string", "default": "1024x1024"},
+          "format": {"type": "string", "enum": ["png", "jpg", "svg"], "default": "png"},
+          "accessibility_features": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["visual_assets", "metadata"],
+    "properties": {
+      "visual_assets": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "asset_id": {"type": "string"},
+            "file_path": {"type": "string"},
+            "asset_type": {"type": "string", "enum": ["main_scene", "character_portrait", "background", "prop"]},
+            "alt_text": {"type": "string"},
+            "dimensions": {"type": "string"},
+            "file_size_kb": {"type": "number"}
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "biblical_accuracy_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "age_appropriateness_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "cultural_sensitivity_notes": {"type": "array", "items": {"type": "string"}},
+          "theological_review_status": {"type": "string", "enum": ["approved", "pending", "requires_revision"]},
+          "generation_parameters": {"type": "object"},
+          "content_warnings": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "accessibility_descriptions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "asset_id": {"type": "string"},
+            "detailed_description": {"type": "string"},
+            "audio_description_script": {"type": "string"}
+          }
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "visual_request": {
+      "scene_description": "Young David standing confidently before the giant Goliath, holding a sling, with God's light shining upon him",
+      "characters": ["David", "Goliath"],
+      "setting": "Ancient battlefield between two hills",
+      "mood": "dramatic"
+    },
+    "target_age_group": "child_9_12",
+    "art_style": "illustration",
+    "content_guidelines": {
+      "modesty_standards": true,
+      "violence_level": "minimal",
+      "diversity_inclusion": true
+    },
+    "technical_specs": {
+      "dimensions": "1024x1024",
+      "format": "png",
+      "accessibility_features": ["high_contrast", "detailed_alt_text"]
+    }
+  },
+  "sample_response": {
+    "visual_assets": [
+      {
+        "asset_id": "david_goliath_main",
+        "file_path": "images/stories/david_goliath_scene.png",
+        "asset_type": "main_scene",
+        "alt_text": "Young David with shepherd's clothing faces giant Goliath in bronze armor on ancient battlefield",
+        "dimensions": "1024x1024",
+        "file_size_kb": 856
+      }
+    ],
+    "metadata": {
+      "biblical_accuracy_score": 0.94,
+      "age_appropriateness_score": 0.98,
+      "cultural_sensitivity_notes": ["Characters depicted with Middle Eastern features appropriate to biblical setting"],
+      "theological_review_status": "approved",
+      "generation_parameters": {"prompt_strength": 0.8, "style_weight": 0.7},
+      "content_warnings": []
+    },
+    "accessibility_descriptions": [
+      {
+        "asset_id": "david_goliath_main",
+        "detailed_description": "A young boy David stands courageously in the foreground...",
+        "audio_description_script": "The scene shows David, a small shepherd boy..."
+      }
+    ]
+  },
+  "error_codes": {
+    "4000": "Visual generation failed",
+    "4001": "Content safety violation in imagery",
+    "4002": "Cultural sensitivity concerns detected",
+    "4003": "Age-inappropriate visual content",
+    "4004": "Biblical accuracy concerns in visuals",
+    "4005": "Technical specifications not supported"
+  }
+}

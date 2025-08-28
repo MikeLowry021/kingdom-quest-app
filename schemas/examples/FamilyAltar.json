@@ -1,0 +1,69 @@
+{
+  "activityInstructions": "Create a modern retelling of the Prodigal Son story with your family members taking different roles. Act it out together and discuss how it feels to be each character.",
+  "ageRating": "all",
+  "bibleReference": {
+    "book": "Luke",
+    "chapter": 15,
+    "translation": "NIV",
+    "verses": "11-32"
+  },
+  "createdAt": "2025-07-10T16:45:00Z",
+  "discussionQuestions": [
+    {
+      "ageGroup": "children",
+      "question": "How do you think the father felt when his son came home?"
+    },
+    {
+      "ageGroup": "youth",
+      "question": "Have you ever made a mistake and needed forgiveness? How did it feel to be forgiven?"
+    },
+    {
+      "ageGroup": "adult",
+      "question": "How does this parable reflect God's attitude toward those who have strayed from Him?"
+    }
+  ],
+  "duration": 45,
+  "id": "altar-001",
+  "mediaItems": [
+    {
+      "altText": "Father embracing his returning son",
+      "contentType": "image/jpeg",
+      "createdAt": "2025-06-20T11:15:00Z",
+      "id": "media-002",
+      "tags": [
+        "prodigal son",
+        "forgiveness",
+        "embrace"
+      ],
+      "title": "The Return Home",
+      "type": "image",
+      "updatedAt": "2025-06-20T11:15:00Z",
+      "url": "https://example.com/images/prodigal-return.jpg"
+    }
+  ],
+  "prayer": {
+    "category": "thanksgiving",
+    "content": "Heavenly Father, we thank you for your endless love and forgiveness. Like the father in the parable, you welcome us back with open arms when we stray. Help us to extend that same grace and forgiveness to others in our lives. In Jesus' name, Amen.",
+    "createdAt": "2025-07-05T09:30:00Z",
+    "id": "prayer-001",
+    "isTemplate": true,
+    "tags": [
+      "forgiveness",
+      "thanksgiving",
+      "grace"
+    ],
+    "title": "Prayer of Thanksgiving for God's Forgiveness",
+    "updatedAt": "2025-07-05T09:30:00Z"
+  },
+  "scripture": "But while he was still a long way off, his father saw him and was filled with compassion for him; he ran to his son, threw his arms around him and kissed him. The son said to him, 'Father, I have sinned against heaven and against you. I am no longer worthy to be called your son.' But the father said to his servants, 'Quick! Bring the best robe and put it on him. Put a ring on his finger and sandals on his feet. Bring the fattened calf and kill it. Let's have a feast and celebrate. For this son of mine was dead and is alive again; he was lost and is found.' So they began to celebrate.",
+  "summary": "A family devotion exploring God's unconditional love and forgiveness through the Parable of the Prodigal Son.",
+  "tags": [
+    "forgiveness",
+    "parables",
+    "family",
+    "love",
+    "grace"
+  ],
+  "title": "Coming Home: The Prodigal Son Family Devotion",
+  "updatedAt": "2025-08-15T13:20:00Z"
+}

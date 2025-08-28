@@ -1,0 +1,20 @@
+CREATE TABLE map_markers (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    title TEXT NOT NULL,
+    description TEXT,
+    type TEXT NOT NULL CHECK (type IN ('city',
+    'landmark',
+    'building',
+    'naturalFeature',
+    'route')),
+    place_name_ancient TEXT NOT NULL,
+    place_name_modern TEXT,
+    region TEXT,
+    latitude NUMERIC NOT NULL,
+    longitude NUMERIC NOT NULL,
+    place_id TEXT,
+    historical_details TEXT,
+    tags TEXT[],
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
+);

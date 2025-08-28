@@ -1,0 +1,57 @@
+{
+  "id": "scene-004",
+  "interactions": [
+    {
+      "content": "What would you do if you were in the older brother's position?",
+      "options": [
+        {
+          "nextSceneId": "scene-005a",
+          "text": "Refuse to join the celebration"
+        },
+        {
+          "nextSceneId": "scene-005b",
+          "text": "Join the celebration reluctantly"
+        },
+        {
+          "nextSceneId": "scene-005c",
+          "text": "Embrace your brother wholeheartedly"
+        }
+      ],
+      "type": "choice"
+    }
+  ],
+  "mapMarker": {
+    "description": "The father's estate where the celebration takes place",
+    "id": "marker-003",
+    "location": {
+      "coordinates": [
+        31.7784,
+        35.2066
+      ],
+      "placeNameAncient": "Father's Estate",
+      "placeNameModern": "Unknown"
+    },
+    "title": "Father's Estate",
+    "type": "landmark"
+  },
+  "mediaItems": [
+    {
+      "altText": "Older brother standing outside the celebration",
+      "contentType": "image/jpeg",
+      "createdAt": "2025-07-25T14:00:00Z",
+      "id": "media-006",
+      "tags": [
+        "prodigal son",
+        "older brother",
+        "celebration"
+      ],
+      "title": "The Older Brother's Reaction",
+      "type": "image",
+      "updatedAt": "2025-07-25T14:00:00Z",
+      "url": "https://example.com/images/older-brother.jpg"
+    }
+  ],
+  "narrative": "The older son was in the field. When he came near the house, he heard music and dancing. So he called one of the servants and asked him what was going on. 'Your brother has come,' he replied, 'and your father has killed the fattened calf because he has him back safe and sound.' The older brother became angry and refused to go in.",
+  "order": 4,
+  "title": "The Older Brother's Response"
+}

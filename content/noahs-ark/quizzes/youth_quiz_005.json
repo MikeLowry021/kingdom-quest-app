@@ -1,0 +1,41 @@
+{
+  "id": "quiz-youth-005",
+  "title": "Noah's Faith Quiz 5",
+  "description": "Questions about faith and obedience for youth - Part 5",
+  "difficulty": "intermediate",
+  "questions": [
+    {
+      "id": "q-205",
+      "text": "What can we learn from Noah's example of faith?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Hebrews",
+        "chapter": 11,
+        "verses": "7"
+      },
+      "options": [
+        {
+          "id": "opt-215",
+          "text": "Faith leads to action and obedience",
+          "isCorrect": true,
+          "explanation": "Hebrews 11:7 shows Noah's faith led him to prepare the ark in reverent fear, becoming heir of righteousness."
+        },
+        {
+          "id": "opt-216",
+          "text": "Faith is only about believing",
+          "isCorrect": false,
+          "explanation": "True faith results in obedient action, as Noah demonstrated."
+        },
+        {
+          "id": "opt-217",
+          "text": "Faith doesn't require obedience",
+          "isCorrect": false,
+          "explanation": "Noah's faith was demonstrated through his complete obedience to God's commands."
+        }
+      ],
+      "points": 2
+    }
+  ],
+  "passingScore": 70,
+  "timeLimit": 0
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://kingdomquest.example/schemas/Story.schema.json",
+  "title": "Story",
+  "description": "A biblical story or narrative in the KingdomQuest app",
+  "type": "object",
+  "version": "1.0.0",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the story"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the story"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the story"
+    },
+    "bibleReference": {
+      "type": "object",
+      "properties": {
+        "book": {
+          "type": "string",
+          "description": "Bible book name"
+        },
+        "chapter": {
+          "type": "integer",
+          "description": "Chapter number"
+        },
+        "verses": {
+          "type": "string",
+          "description": "Verse range (e.g., '1-10')"
+        },
+        "translation": {
+          "type": "string",
+          "description": "Bible translation used",
+          "default": "NIV"
+        }
+      },
+      "required": [
+        "book",
+        "chapter",
+        "verses"
+      ]
+    },
+    "ageRating": {
+      "type": "string",
+      "enum": [
+        "all",
+        "children",
+        "youth",
+        "adult"
+      ],
+      "description": "Target age group for the story"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level of the story"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Topical tags for categorizing the story"
+    },
+    "scenes": {
+      "type": "array",
+      "items": {
+        "$ref": "Scene.schema.json"
+      },
+      "description": "Ordered list of scenes that make up the story"
+    },
+    "quiz": {
+      "$ref": "Quiz.schema.json",
+      "description": "Associated quiz for the story"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "bibleReference",
+    "ageRating",
+    "scenes",
+    "createdAt",
+    "updatedAt"
+  ]
+}

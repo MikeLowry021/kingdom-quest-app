@@ -1,0 +1,310 @@
+{
+  "agent_name": "CommunityHost",
+  "version": "1.0.0",
+  "description": "Manages family and community interactions, facilitates shared experiences and group activities",
+  "capabilities": [
+    "Family group coordination",
+    "Community event management",
+    "Shared activity facilitation",
+    "Prayer circle coordination",
+    "Achievement and progress sharing"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["activity_request", "participant_context"],
+    "properties": {
+      "activity_request": {
+        "type": "object",
+        "properties": {
+          "activity_type": {
+            "type": "string",
+            "enum": ["family_quest", "prayer_circle", "group_study", "sharing_moment", "achievement_celebration", "community_challenge"]
+          },
+          "content_basis": {"type": "string", "description": "Biblical story or theme for the activity"},
+          "duration_preference": {
+            "type": "string",
+            "enum": ["short_15min", "medium_30min", "long_45min", "extended_60min"]
+          },
+          "interaction_style": {
+            "type": "string",
+            "enum": ["guided", "open_discussion", "structured_activity", "creative_expression"]
+          }
+        }
+      },
+      "participant_context": {
+        "type": "object",
+        "properties": {
+          "family_composition": {
+            "type": "object",
+            "properties": {
+              "adults": {"type": "integer"},
+              "teens": {"type": "integer"},
+              "children_9_12": {"type": "integer"},
+              "children_6_8": {"type": "integer"},
+              "total_participants": {"type": "integer"}
+            }
+          },
+          "experience_levels": {
+            "type": "object",
+            "properties": {
+              "biblical_knowledge": {"type": "string", "enum": ["beginner", "intermediate", "advanced", "mixed"]},
+              "app_familiarity": {"type": "string", "enum": ["new", "regular", "experienced"]}
+            }
+          },
+          "special_considerations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["accessibility_needs", "language_preferences", "attention_span_concerns", "scheduling_constraints"]
+            }
+          },
+          "previous_activities": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "community_features": {
+        "type": "object",
+        "properties": {
+          "enable_sharing": {"type": "boolean", "default": true},
+          "privacy_level": {"type": "string", "enum": ["family_only", "friends", "community", "public"], "default": "family_only"},
+          "progress_tracking": {"type": "boolean", "default": true},
+          "achievement_unlocks": {"type": "boolean", "default": true}
+        }
+      },
+      "facilitation_preferences": {
+        "type": "object",
+        "properties": {
+          "adult_guidance_level": {"type": "string", "enum": ["minimal", "moderate", "high"], "default": "moderate"},
+          "child_participation_style": {"type": "string", "enum": ["observer", "participant", "leader_in_training"]},
+          "discussion_prompts": {"type": "boolean", "default": true},
+          "reflection_activities": {"type": "boolean", "default": true}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["activity_plan", "facilitation_guide"],
+    "properties": {
+      "activity_plan": {
+        "type": "object",
+        "properties": {
+          "activity_id": {"type": "string"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "estimated_duration_minutes": {"type": "number"},
+          "phases": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "phase_name": {"type": "string"},
+                "duration_minutes": {"type": "number"},
+                "description": {"type": "string"},
+                "age_specific_roles": {
+                  "type": "object",
+                  "properties": {
+                    "adults": {"type": "string"},
+                    "teens": {"type": "string"},
+                    "children": {"type": "string"}
+                  }
+                },
+                "materials_needed": {"type": "array", "items": {"type": "string"}},
+                "interaction_prompts": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          }
+        }
+      },
+      "facilitation_guide": {
+        "type": "object",
+        "properties": {
+          "pre_activity_preparation": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Steps to prepare before starting"
+          },
+          "discussion_starters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "question": {"type": "string"},
+                "target_age": {"type": "string"},
+                "follow_up_prompts": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "biblical_connections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "scripture_reference": {"type": "string"},
+                "connection_point": {"type": "string"},
+                "age_appropriate_explanation": {"type": "string"}
+              }
+            }
+          },
+          "engagement_strategies": {
+            "type": "object",
+            "properties": {
+              "for_shy_participants": {"type": "array", "items": {"type": "string"}},
+              "for_energetic_participants": {"type": "array", "items": {"type": "string"}},
+              "for_different_age_groups": {"type": "object"}
+            }
+          },
+          "wrap_up_activities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "activity_name": {"type": "string"},
+                "description": {"type": "string"},
+                "purpose": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "community_integration": {
+        "type": "object",
+        "properties": {
+          "sharing_opportunities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "share_type": {"type": "string"},
+                "content_template": {"type": "string"},
+                "privacy_settings": {"type": "string"}
+              }
+            }
+          },
+          "achievement_unlocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "achievement_name": {"type": "string"},
+                "criteria": {"type": "string"},
+                "reward_description": {"type": "string"}
+              }
+            }
+          },
+          "follow_up_suggestions": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "accessibility_adaptations": {
+        "type": "object",
+        "properties": {
+          "visual_impairment_support": {"type": "array", "items": {"type": "string"}},
+          "hearing_impairment_support": {"type": "array", "items": {"type": "string"}},
+          "mobility_adaptations": {"type": "array", "items": {"type": "string"}},
+          "cognitive_support_strategies": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "activity_request": {
+      "activity_type": "family_quest",
+      "content_basis": "David and Goliath - courage in facing challenges",
+      "duration_preference": "medium_30min",
+      "interaction_style": "structured_activity"
+    },
+    "participant_context": {
+      "family_composition": {
+        "adults": 2,
+        "teens": 0,
+        "children_9_12": 2,
+        "children_6_8": 1,
+        "total_participants": 5
+      },
+      "experience_levels": {
+        "biblical_knowledge": "intermediate",
+        "app_familiarity": "regular"
+      },
+      "special_considerations": ["attention_span_concerns"]
+    },
+    "community_features": {
+      "enable_sharing": true,
+      "privacy_level": "family_only",
+      "progress_tracking": true
+    },
+    "facilitation_preferences": {
+      "adult_guidance_level": "moderate",
+      "child_participation_style": "participant",
+      "discussion_prompts": true
+    }
+  },
+  "sample_response": {
+    "activity_plan": {
+      "activity_id": "family_quest_david_courage_001",
+      "title": "David's Courage Quest: Facing Our Giants Together",
+      "description": "A family activity exploring courage through David's story, with age-appropriate roles and discussions",
+      "estimated_duration_minutes": 30,
+      "phases": [
+        {
+          "phase_name": "Story Circle Opening",
+          "duration_minutes": 8,
+          "description": "Gather together to hear David's story with interactive elements",
+          "age_specific_roles": {
+            "adults": "Lead storytelling and guide discussion",
+            "children_9_12": "Act out key moments and ask questions",
+            "children_6_8": "Listen and participate in simple actions"
+          },
+          "materials_needed": ["Bible or story app", "Simple props for acting"],
+          "interaction_prompts": [
+            "What do you think David felt when he saw Goliath?",
+            "Show me how big Goliath might have been!"
+          ]
+        }
+      ]
+    },
+    "facilitation_guide": {
+      "pre_activity_preparation": [
+        "Gather family in comfortable circle",
+        "Have Bible or app ready",
+        "Prepare simple props (scarves, blocks for size comparison)"
+      ],
+      "discussion_starters": [
+        {
+          "question": "What's something that feels really big and scary to you?",
+          "target_age": "children_6_12",
+          "follow_up_prompts": ["How might God help you with that?", "Who could you ask for help?"]
+        }
+      ],
+      "biblical_connections": [
+        {
+          "scripture_reference": "1 Samuel 17:45",
+          "connection_point": "David trusted God's power, not his own strength",
+          "age_appropriate_explanation": "Just like David, we can ask God to help us be brave when things seem too hard"
+        }
+      ]
+    },
+    "community_integration": {
+      "sharing_opportunities": [
+        {
+          "share_type": "family_photo",
+          "content_template": "Our family learned about courage from David today!",
+          "privacy_settings": "family_only"
+        }
+      ],
+      "achievement_unlocks": [
+        {
+          "achievement_name": "Courage Champion Family",
+          "criteria": "Complete courage-themed family quest",
+          "reward_description": "Special David's Courage badge for all family members"
+        }
+      ]
+    }
+  },
+  "error_codes": {
+    "10000": "Invalid activity type or configuration",
+    "10001": "Family composition data incomplete",
+    "10002": "Content inappropriate for age mix",
+    "10003": "Accessibility requirements cannot be accommodated",
+    "10004": "Duration constraints conflict with activity requirements",
+    "10005": "Community features unavailable for privacy level"
+  }
+}

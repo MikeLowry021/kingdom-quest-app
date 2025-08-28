@@ -1,0 +1,355 @@
+{
+  "agent_name": "Analyst",
+  "version": "1.0.0",
+  "description": "Tracks user engagement, learning progress, and provides insights for personalized content optimization",
+  "capabilities": [
+    "User engagement analytics",
+    "Learning progress tracking",
+    "Content effectiveness analysis",
+    "Personalization recommendations",
+    "Family activity insights"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["analysis_request", "data_scope"],
+    "properties": {
+      "analysis_request": {
+        "type": "object",
+        "properties": {
+          "analysis_type": {
+            "type": "string",
+            "enum": ["user_progress", "content_effectiveness", "engagement_metrics", "learning_outcomes", "family_dynamics", "personalization_insights"]
+          },
+          "metrics_focus": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["completion_rates", "time_spent", "quiz_performance", "retention_patterns", "sharing_behavior", "prayer_engagement", "family_participation"]
+            }
+          },
+          "time_period": {
+            "type": "object",
+            "properties": {
+              "start_date": {"type": "string", "format": "date"},
+              "end_date": {"type": "string", "format": "date"},
+              "period_type": {"type": "string", "enum": ["daily", "weekly", "monthly", "custom"]}
+            }
+          },
+          "comparison_baseline": {
+            "type": "string",
+            "enum": ["previous_period", "age_group_average", "platform_average", "family_baseline"],
+            "description": "What to compare metrics against"
+          }
+        }
+      },
+      "data_scope": {
+        "type": "object",
+        "properties": {
+          "user_segments": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior", "families", "individuals"]
+            }
+          },
+          "content_categories": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["stories", "quizzes", "prayers", "family_activities", "community_interactions"]
+            }
+          },
+          "geographic_scope": {
+            "type": "string",
+            "enum": ["global", "regional", "country_specific", "language_specific"]
+          },
+          "privacy_compliance": {
+            "type": "object",
+            "properties": {
+              "anonymize_data": {"type": "boolean", "default": true},
+              "coppa_compliant": {"type": "boolean", "default": true},
+              "gdpr_compliant": {"type": "boolean", "default": true},
+              "family_consent_verified": {"type": "boolean"}
+            }
+          }
+        }
+      },
+      "analysis_parameters": {
+        "type": "object",
+        "properties": {
+          "statistical_confidence": {"type": "number", "minimum": 0.8, "maximum": 0.99, "default": 0.95},
+          "minimum_sample_size": {"type": "integer", "default": 30},
+          "include_predictive_modeling": {"type": "boolean", "default": false},
+          "segment_analysis": {"type": "boolean", "default": true},
+          "trend_identification": {"type": "boolean", "default": true}
+        }
+      },
+      "output_preferences": {
+        "type": "object",
+        "properties": {
+          "visualization_types": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["charts", "tables", "heatmaps", "trend_lines", "comparative_graphs"]}
+          },
+          "detail_level": {"type": "string", "enum": ["summary", "detailed", "comprehensive"], "default": "detailed"},
+          "include_recommendations": {"type": "boolean", "default": true},
+          "actionable_insights": {"type": "boolean", "default": true}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["analysis_results", "insights"],
+    "properties": {
+      "analysis_results": {
+        "type": "object",
+        "properties": {
+          "summary_metrics": {
+            "type": "object",
+            "properties": {
+              "total_users_analyzed": {"type": "integer"},
+              "analysis_period_days": {"type": "integer"},
+              "data_completeness_percentage": {"type": "number"},
+              "statistical_significance": {"type": "boolean"}
+            }
+          },
+          "key_performance_indicators": {
+            "type": "object",
+            "properties": {
+              "engagement_rate": {"type": "number", "description": "Percentage of active users"},
+              "content_completion_rate": {"type": "number"},
+              "average_session_duration_minutes": {"type": "number"},
+              "quiz_average_score": {"type": "number"},
+              "family_participation_rate": {"type": "number"},
+              "prayer_engagement_frequency": {"type": "number"},
+              "content_sharing_rate": {"type": "number"}
+            }
+          },
+          "segment_breakdowns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "segment_name": {"type": "string"},
+                "user_count": {"type": "integer"},
+                "performance_metrics": {"type": "object"},
+                "comparative_performance": {
+                  "type": "object",
+                  "properties": {
+                    "vs_baseline": {"type": "string"},
+                    "percentage_difference": {"type": "number"}
+                  }
+                }
+              }
+            }
+          },
+          "trend_analysis": {
+            "type": "object",
+            "properties": {
+              "engagement_trends": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "metric_name": {"type": "string"},
+                    "trend_direction": {"type": "string", "enum": ["increasing", "decreasing", "stable", "volatile"]},
+                    "trend_strength": {"type": "number"},
+                    "significance_level": {"type": "number"}
+                  }
+                }
+              },
+              "seasonal_patterns": {"type": "array", "items": {"type": "string"}},
+              "content_preferences_evolution": {"type": "object"}
+            }
+          }
+        }
+      },
+      "insights": {
+        "type": "object",
+        "properties": {
+          "key_findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "finding_category": {"type": "string"},
+                "description": {"type": "string"},
+                "impact_level": {"type": "string", "enum": ["high", "medium", "low"]},
+                "confidence_score": {"type": "number"},
+                "supporting_data": {"type": "object"}
+              }
+            }
+          },
+          "user_behavior_patterns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pattern_name": {"type": "string"},
+                "pattern_description": {"type": "string"},
+                "affected_segments": {"type": "array", "items": {"type": "string"}},
+                "implications": {"type": "string"}
+              }
+            }
+          },
+          "content_effectiveness": {
+            "type": "object",
+            "properties": {
+              "top_performing_content": {"type": "array", "items": {"type": "object"}},
+              "underperforming_content": {"type": "array", "items": {"type": "object"}},
+              "optimal_content_characteristics": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "learning_outcomes": {
+            "type": "object",
+            "properties": {
+              "knowledge_retention_rates": {"type": "object"},
+              "skill_development_progress": {"type": "object"},
+              "spiritual_growth_indicators": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      },
+      "recommendations": {
+        "type": "object",
+        "properties": {
+          "immediate_actions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "recommendation": {"type": "string"},
+                "priority": {"type": "string", "enum": ["high", "medium", "low"]},
+                "expected_impact": {"type": "string"},
+                "implementation_complexity": {"type": "string"},
+                "target_segments": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "personalization_strategies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "strategy_name": {"type": "string"},
+                "target_segment": {"type": "string"},
+                "implementation_approach": {"type": "string"},
+                "expected_outcomes": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "content_optimization": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "content_area": {"type": "string"},
+                "optimization_type": {"type": "string"},
+                "specific_changes": {"type": "array", "items": {"type": "string"}},
+                "success_metrics": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          }
+        }
+      },
+      "predictive_insights": {
+        "type": "object",
+        "properties": {
+          "user_retention_forecast": {
+            "type": "object",
+            "properties": {
+              "30_day_retention_prediction": {"type": "number"},
+              "90_day_retention_prediction": {"type": "number"},
+              "factors_influencing_retention": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "engagement_projections": {
+            "type": "object",
+            "properties": {
+              "next_month_activity_level": {"type": "string"},
+              "seasonal_adjustments_needed": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "growth_opportunities": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "analysis_request": {
+      "analysis_type": "engagement_metrics",
+      "metrics_focus": ["completion_rates", "time_spent", "quiz_performance", "family_participation"],
+      "time_period": {
+        "start_date": "2025-07-25",
+        "end_date": "2025-08-25",
+        "period_type": "monthly"
+      },
+      "comparison_baseline": "previous_period"
+    },
+    "data_scope": {
+      "user_segments": ["child_9_12", "families"],
+      "content_categories": ["stories", "quizzes", "family_activities"],
+      "geographic_scope": "global",
+      "privacy_compliance": {
+        "anonymize_data": true,
+        "coppa_compliant": true,
+        "family_consent_verified": true
+      }
+    },
+    "output_preferences": {
+      "detail_level": "detailed",
+      "include_recommendations": true,
+      "actionable_insights": true
+    }
+  },
+  "sample_response": {
+    "analysis_results": {
+      "summary_metrics": {
+        "total_users_analyzed": 15420,
+        "analysis_period_days": 31,
+        "data_completeness_percentage": 94.2,
+        "statistical_significance": true
+      },
+      "key_performance_indicators": {
+        "engagement_rate": 0.78,
+        "content_completion_rate": 0.85,
+        "average_session_duration_minutes": 18.5,
+        "quiz_average_score": 0.82,
+        "family_participation_rate": 0.67,
+        "prayer_engagement_frequency": 4.2,
+        "content_sharing_rate": 0.34
+      }
+    },
+    "insights": {
+      "key_findings": [
+        {
+          "finding_category": "Family Engagement",
+          "description": "Families with children 9-12 show 23% higher story completion rates when parents actively participate",
+          "impact_level": "high",
+          "confidence_score": 0.87,
+          "supporting_data": {"sample_size": 3420, "completion_rate_difference": 0.23}
+        }
+      ]
+    },
+    "recommendations": {
+      "immediate_actions": [
+        {
+          "recommendation": "Implement guided family discussion prompts in story interfaces",
+          "priority": "high",
+          "expected_impact": "Increase family participation by 15-20%",
+          "implementation_complexity": "medium",
+          "target_segments": ["families", "child_9_12"]
+        }
+      ]
+    }
+  },
+  "error_codes": {
+    "12000": "Insufficient data for requested analysis",
+    "12001": "Privacy compliance requirements not met",
+    "12002": "Statistical significance threshold not achieved",
+    "12003": "Requested time period contains data gaps",
+    "12004": "User segment too small for reliable analysis",
+    "12005": "Analysis type not supported for given data scope"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "quiz-children-001",
+  "title": "Noah and the Animals",
+  "description": "Simple questions about Noah's Ark for children",
+  "difficulty": "beginner",
+  "questions": [
+    {
+      "id": "q-001",
+      "text": "Who told Noah to build the ark?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 6,
+        "verses": "13-14"
+      },
+      "options": [
+        {
+          "id": "opt-001",
+          "text": "God",
+          "isCorrect": true,
+          "explanation": "Genesis 6:13-14 tells us that God spoke to Noah and told him to make an ark."
+        },
+        {
+          "id": "opt-002",
+          "text": "His wife",
+          "isCorrect": false,
+          "explanation": "Noah's wife did not tell him to build the ark. God gave this command to Noah."
+        },
+        {
+          "id": "opt-003",
+          "text": "The neighbors",
+          "isCorrect": false,
+          "explanation": "The neighbors did not tell Noah to build the ark. They actually made fun of him for building it."
+        }
+      ],
+      "points": 1
+    },
+    {
+      "id": "q-002",
+      "text": "How many of each animal did Noah take on the ark?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 7,
+        "verses": "2-3"
+      },
+      "options": [
+        {
+          "id": "opt-004",
+          "text": "Two of every kind",
+          "isCorrect": true,
+          "explanation": "Genesis 7:2-3 tells us Noah took two of every sort into the ark, male and female."
+        },
+        {
+          "id": "opt-005",
+          "text": "One of each animal",
+          "isCorrect": false,
+          "explanation": "Noah took two of each kind of animal, not just one."
+        },
+        {
+          "id": "opt-006",
+          "text": "Ten of each animal",
+          "isCorrect": false,
+          "explanation": "Noah did not take ten of each animal. He took two of every kind."
+        }
+      ],
+      "points": 1
+    }
+  ],
+  "passingScore": 50,
+  "timeLimit": 0
+}

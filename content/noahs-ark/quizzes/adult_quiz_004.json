@@ -1,0 +1,41 @@
+{
+  "id": "quiz-adult-004",
+  "title": "Theological Depth Quiz 4",
+  "description": "Deep theological questions about Noah's Ark - Part 4",
+  "difficulty": "advanced",
+  "questions": [
+    {
+      "id": "q-304",
+      "text": "How does the flood narrative prefigure God's ultimate plan of salvation?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "1 Peter",
+        "chapter": 3,
+        "verses": "20-21"
+      },
+      "options": [
+        {
+          "id": "opt-312",
+          "text": "The ark represents salvation through Christ, preserving the faithful",
+          "isCorrect": true,
+          "explanation": "1 Peter 3:20-21 connects Noah's salvation through water to baptism and salvation through Christ's resurrection."
+        },
+        {
+          "id": "opt-313",
+          "text": "It shows God's anger without redemption",
+          "isCorrect": false,
+          "explanation": "The flood demonstrates both judgment and mercy, pointing to God's redemptive plan."
+        },
+        {
+          "id": "opt-314",
+          "text": "It has no connection to salvation history",
+          "isCorrect": false,
+          "explanation": "The New Testament explicitly connects Noah's deliverance to Christian salvation themes."
+        }
+      ],
+      "points": 3
+    }
+  ],
+  "passingScore": 80,
+  "timeLimit": 0
+}

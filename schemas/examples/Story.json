@@ -1,0 +1,168 @@
+{
+  "ageRating": "all",
+  "bibleReference": {
+    "book": "Luke",
+    "chapter": 15,
+    "translation": "NIV",
+    "verses": "11-32"
+  },
+  "createdAt": "2025-08-01T10:00:00Z",
+  "description": "The parable of a father's unconditional love for his wayward son.",
+  "difficulty": "intermediate",
+  "id": "story-001",
+  "quiz": {
+    "description": "Test your knowledge of the Prodigal Son parable",
+    "difficulty": "intermediate",
+    "id": "quiz-001",
+    "questions": [
+      {
+        "bibleReference": {
+          "book": "Luke",
+          "chapter": 15,
+          "verses": "11-12"
+        },
+        "id": "q-001",
+        "options": [
+          {
+            "explanation": "The younger son asked for his share of the estate.",
+            "id": "opt-001",
+            "isCorrect": true,
+            "text": "His share of the estate"
+          },
+          {
+            "explanation": "The younger son never asked for money in the parable.",
+            "id": "opt-002",
+            "isCorrect": false,
+            "text": "Money to start a business"
+          },
+          {
+            "explanation": "The son didn't ask for his father's blessing.",
+            "id": "opt-003",
+            "isCorrect": false,
+            "text": "His father's blessing"
+          },
+          {
+            "explanation": "The son didn't ask to be the sole heir.",
+            "id": "opt-004",
+            "isCorrect": false,
+            "text": "To be the sole heir"
+          }
+        ],
+        "points": 2,
+        "text": "What did the younger son ask his father for?",
+        "type": "multiple-choice"
+      },
+      {
+        "bibleReference": {
+          "book": "Luke",
+          "chapter": 15,
+          "verses": "20"
+        },
+        "id": "q-002",
+        "options": [
+          {
+            "explanation": "The father ran to his son, showing extraordinary love and forgiveness.",
+            "id": "opt-005",
+            "isCorrect": true,
+            "text": "He ran to his son and embraced him"
+          },
+          {
+            "explanation": "The father didn't reject his son in the parable.",
+            "id": "opt-006",
+            "isCorrect": false,
+            "text": "He rejected him and sent him away"
+          },
+          {
+            "explanation": "The father didn't make his son work as a servant.",
+            "id": "opt-007",
+            "isCorrect": false,
+            "text": "He made him work as a servant"
+          },
+          {
+            "explanation": "The father didn't ignore his son.",
+            "id": "opt-008",
+            "isCorrect": false,
+            "text": "He ignored him"
+          }
+        ],
+        "points": 2,
+        "text": "How did the father react when he saw his son returning?",
+        "type": "multiple-choice"
+      }
+    ],
+    "title": "The Prodigal Son Quiz"
+  },
+  "scenes": [
+    {
+      "id": "scene-001",
+      "interactions": [
+        {
+          "content": "How do you think the father felt when his son asked for his inheritance early?",
+          "type": "reflection"
+        }
+      ],
+      "narrative": "There was a man who had two sons. The younger one said to his father, 'Father, give me my share of the estate.' So he divided his property between them.",
+      "order": 1,
+      "title": "The Son's Request"
+    },
+    {
+      "id": "scene-002",
+      "mapMarker": {
+        "description": "A distant land where the son squandered his wealth",
+        "id": "marker-001",
+        "location": {
+          "coordinates": [
+            31.7683,
+            35.2137
+          ],
+          "placeNameAncient": "Distant Country",
+          "placeNameModern": "Unknown"
+        },
+        "title": "Distant Country",
+        "type": "city"
+      },
+      "mediaItems": [
+        {
+          "altText": "Young man in ragged clothes watching pigs feed",
+          "contentType": "image/jpeg",
+          "createdAt": "2025-07-15T08:30:00Z",
+          "id": "media-001",
+          "tags": [
+            "prodigal son",
+            "pigs",
+            "famine"
+          ],
+          "title": "Son with the Pigs",
+          "type": "image",
+          "updatedAt": "2025-07-15T08:30:00Z",
+          "url": "https://example.com/images/prodigal-pigs.jpg"
+        }
+      ],
+      "narrative": "Not long after that, the younger son got together all he had, set off for a distant country and there squandered his wealth in wild living. After he had spent everything, there was a severe famine in that whole country, and he began to be in need.",
+      "order": 2,
+      "title": "The Son's Rebellion"
+    },
+    {
+      "id": "scene-003",
+      "interactions": [
+        {
+          "content": "Like the father in this story, God welcomes us back no matter how far we've strayed. Take a moment to thank God for His unconditional love.",
+          "type": "prayer"
+        }
+      ],
+      "narrative": "But while he was still a long way off, his father saw him and was filled with compassion for him; he ran to his son, threw his arms around him and kissed him.",
+      "order": 3,
+      "title": "The Father's Compassion"
+    }
+  ],
+  "tags": [
+    "parables",
+    "forgiveness",
+    "grace",
+    "father",
+    "Jesus",
+    "Luke"
+  ],
+  "title": "The Prodigal Son",
+  "updatedAt": "2025-08-20T14:25:00Z"
+}

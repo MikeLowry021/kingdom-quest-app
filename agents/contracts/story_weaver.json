@@ -1,0 +1,163 @@
+{
+  "agent_name": "StoryWeaver",
+  "version": "1.0.0",
+  "description": "Creates engaging, age-appropriate biblical stories and interactive narratives",
+  "capabilities": [
+    "Biblical story generation",
+    "Age-appropriate content adaptation",
+    "Interactive narrative creation",
+    "Character development",
+    "Moral lesson integration"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["story_theme", "target_age_group"],
+    "properties": {
+      "story_theme": {
+        "type": "string",
+        "description": "Biblical theme or character to focus on"
+      },
+      "target_age_group": {
+        "type": "string",
+        "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]
+      },
+      "story_length": {
+        "type": "string",
+        "enum": ["short", "medium", "long"],
+        "default": "medium"
+      },
+      "interactive_elements": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["decision_points", "character_dialogue", "moral_choices", "reflection_questions"]
+        }
+      },
+      "learning_objectives": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Key lessons or values to emphasize"
+      },
+      "cultural_context": {
+        "type": "string",
+        "description": "Cultural or regional adaptations needed"
+      },
+      "accessibility_features": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["audio_friendly", "visual_descriptions", "simplified_language", "large_text"]
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["story_content", "metadata"],
+    "properties": {
+      "story_content": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string"},
+          "narrative": {"type": "string"},
+          "chapters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "chapter_title": {"type": "string"},
+                "content": {"type": "string"},
+                "scene_descriptions": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "interactive_moments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "moment_type": {"type": "string"},
+                "prompt": {"type": "string"},
+                "options": {"type": "array", "items": {"type": "string"}},
+                "moral_lesson": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "estimated_duration_minutes": {"type": "number"},
+          "biblical_references": {"type": "array", "items": {"type": "string"}},
+          "key_characters": {"type": "array", "items": {"type": "string"}},
+          "moral_themes": {"type": "array", "items": {"type": "string"}},
+          "vocabulary_level": {"type": "string"},
+          "content_warnings": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "visual_scene_prompts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "scene_id": {"type": "string"},
+            "visual_description": {"type": "string"},
+            "style_guidance": {"type": "string"}
+          }
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "story_theme": "David and Goliath",
+    "target_age_group": "child_9_12",
+    "story_length": "medium",
+    "interactive_elements": ["decision_points", "reflection_questions"],
+    "learning_objectives": ["Trust in God's strength", "Courage in facing challenges", "Faith over fear"],
+    "accessibility_features": ["audio_friendly", "visual_descriptions"]
+  },
+  "sample_response": {
+    "story_content": {
+      "title": "David's Courageous Heart",
+      "narrative": "Young David, a shepherd boy with a heart full of faith...",
+      "chapters": [
+        {
+          "chapter_title": "The Challenge",
+          "content": "The Philistine giant Goliath stood before the army of Israel...",
+          "scene_descriptions": ["A vast battlefield with two armies facing each other", "A giant warrior in bronze armor"]
+        }
+      ],
+      "interactive_moments": [
+        {
+          "moment_type": "decision_point",
+          "prompt": "What should David do when he hears Goliath's challenge?",
+          "options": ["Run away in fear", "Trust God and step forward", "Wait for someone else"],
+          "moral_lesson": "God gives us courage to face our giants"
+        }
+      ]
+    },
+    "metadata": {
+      "estimated_duration_minutes": 15,
+      "biblical_references": ["1 Samuel 17"],
+      "key_characters": ["David", "Goliath", "King Saul"],
+      "moral_themes": ["Faith", "Courage", "Trust in God"],
+      "vocabulary_level": "elementary",
+      "content_warnings": []
+    },
+    "visual_scene_prompts": [
+      {
+        "scene_id": "battlefield",
+        "visual_description": "Ancient battlefield with two armies, mountains in background, dramatic sky",
+        "style_guidance": "Child-friendly illustration style, warm colors, non-violent depiction"
+      }
+    ]
+  },
+  "error_codes": {
+    "3000": "Invalid story theme provided",
+    "3001": "Content generation failed",
+    "3002": "Age-inappropriate content detected",
+    "3003": "Required biblical references missing",
+    "3004": "Story length constraints exceeded"
+  }
+}

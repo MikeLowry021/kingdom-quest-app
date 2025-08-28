@@ -1,0 +1,41 @@
+{
+  "id": "quiz-children-002",
+  "title": "The Great Flood",
+  "description": "Questions about the flood for children",
+  "difficulty": "beginner",
+  "questions": [
+    {
+      "id": "q-003",
+      "text": "How long did it rain during the flood?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 7,
+        "verses": "12"
+      },
+      "options": [
+        {
+          "id": "opt-007",
+          "text": "40 days and 40 nights",
+          "isCorrect": true,
+          "explanation": "Genesis 7:12 says 'And the rain was upon the earth forty days and forty nights.'"
+        },
+        {
+          "id": "opt-008",
+          "text": "7 days",
+          "isCorrect": false,
+          "explanation": "The rain lasted much longer than 7 days."
+        },
+        {
+          "id": "opt-009",
+          "text": "One year",
+          "isCorrect": false,
+          "explanation": "The rain itself lasted 40 days and 40 nights, not a full year."
+        }
+      ],
+      "points": 1
+    }
+  ],
+  "passingScore": 50,
+  "timeLimit": 0
+}

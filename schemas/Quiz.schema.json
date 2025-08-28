@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://kingdomquest.example/schemas/Quiz.schema.json",
+  "title": "Quiz",
+  "description": "A quiz related to biblical content in the KingdomQuest app",
+  "type": "object",
+  "version": "1.0.0",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the quiz"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the quiz"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the quiz"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level of the quiz"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the question"
+          },
+          "text": {
+            "type": "string",
+            "description": "Question text"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "multiple-choice",
+              "true-false",
+              "fill-in-blank",
+              "matching"
+            ],
+            "description": "Type of question"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "Option identifier"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "Option text"
+                },
+                "isCorrect": {
+                  "type": "boolean",
+                  "description": "Whether this option is correct"
+                },
+                "explanation": {
+                  "type": "string",
+                  "description": "Explanation for why this answer is correct or incorrect"
+                }
+              },
+              "required": [
+                "id",
+                "text",
+                "isCorrect"
+              ]
+            }
+          },
+          "bibleReference": {
+            "type": "object",
+            "properties": {
+              "book": {
+                "type": "string",
+                "description": "Bible book name"
+              },
+              "chapter": {
+                "type": "integer",
+                "description": "Chapter number"
+              },
+              "verses": {
+                "type": "string",
+                "description": "Verse range (e.g., '1-10')"
+              }
+            },
+            "required": [
+              "book",
+              "chapter",
+              "verses"
+            ]
+          },
+          "points": {
+            "type": "integer",
+            "description": "Points awarded for correct answer",
+            "default": 1
+          }
+        },
+        "required": [
+          "id",
+          "text",
+          "type",
+          "options"
+        ]
+      }
+    },
+    "passingScore": {
+      "type": "integer",
+      "description": "Minimum score to pass the quiz"
+    },
+    "timeLimit": {
+      "type": "integer",
+      "description": "Time limit in seconds, 0 for unlimited",
+      "default": 0
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "questions"
+  ]
+}

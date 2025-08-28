@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8f4e3" />
+  <path d="M160,440 L640,440 L640,500 L160,500 Z" fill="#d4b483" stroke="#8a7967" stroke-width="4" />
+  <path d="M240,360 L320,360 L320,440 L240,440 Z" fill="#e6c88a" stroke="#8a7967" stroke-width="4" />
+  <rect x="260" y="380" width="40" height="60" fill="#614b3a" />
+  <path d="M360,300 L440,300 L440,440 L360,440 Z" fill="#e6c88a" stroke="#8a7967" stroke-width="4" />
+  <rect x="380" y="340" width="40" height="60" fill="#614b3a" />
+  <path d="M480,360 L560,360 L560,440 L480,440 Z" fill="#e6c88a" stroke="#8a7967" stroke-width="4" />
+  <rect x="500" y="380" width="40" height="60" fill="#614b3a" />
+  <path d="M380,160 L460,160 L420,100 Z" fill="#d4b483" stroke="#8a7967" stroke-width="4" />
+  <rect x="380" y="160" width="80" height="140" fill="#d4b483" stroke="#8a7967" stroke-width="4" />
+  <circle cx="420" cy="240" r="20" fill="#e6c88a" stroke="#8a7967" stroke-width="4" />
+  <path d="M0,500 L800,500 L800,600 L0,600 Z" fill="#9b7653" stroke="#614b3a" stroke-width="4" />
+  <circle cx="100" cy="200" r="40" fill="#7d956d" stroke="#4a6741" stroke-width="4" />
+  <circle cx="100" cy="160" r="30" fill="#7d956d" stroke="#4a6741" stroke-width="4" />
+  <circle cx="100" cy="130" r="20" fill="#7d956d" stroke="#4a6741" stroke-width="4" />
+  <circle cx="700" cy="200" r="40" fill="#7d956d" stroke="#4a6741" stroke-width="4" />
+  <circle cx="700" cy="160" r="30" fill="#7d956d" stroke="#4a6741" stroke-width="4" />
+  <circle cx="700" cy="130" r="20" fill="#7d956d" stroke="#4a6741" stroke-width="4" />
+  <circle cx="300" cy="80" r="40" fill="#f8f7dc" />
+  <text x="400" y="550" font-family="Arial" font-size="32" text-anchor="middle" fill="#f8f4e3">Bethlehem - Birthplace of Jesus</text>
+</svg>

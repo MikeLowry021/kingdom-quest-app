@@ -1,0 +1,420 @@
+{
+  "registry_version": "1.0.0",
+  "last_updated": "2025-08-25T16:33:44Z",
+  "system_name": "KingdomQuest Multi-Agent System",
+  "description": "Comprehensive agent registry for the KingdomQuest Christ-centered family app platform",
+  "agents": [
+    {
+      "agent_id": "orchestrator",
+      "agent_name": "Orchestrator",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Request routing",
+        "Workflow orchestration",
+        "State management",
+        "Error handling and recovery",
+        "Response aggregation"
+      ],
+      "endpoints": {
+        "health": "/health",
+        "process_request": "/api/v1/orchestrate",
+        "status": "/api/v1/status"
+      },
+      "dependencies": ["all_agents"],
+      "resource_requirements": {
+        "cpu": "moderate",
+        "memory": "moderate",
+        "storage": "low",
+        "network": "high"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 10,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "theology_guard",
+      "agent_name": "TheologyGuard",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Scriptural accuracy validation",
+        "Theological content review",
+        "Doctrine compliance checking",
+        "Biblical reference verification"
+      ],
+      "endpoints": {
+        "validate": "/api/v1/validate",
+        "verify_references": "/api/v1/verify",
+        "health": "/health"
+      },
+      "dependencies": ["biblical_database", "doctrine_repository"],
+      "resource_requirements": {
+        "cpu": "high",
+        "memory": "high",
+        "storage": "moderate",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 3,
+        "max_instances": 8,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "story_weaver",
+      "agent_name": "StoryWeaver",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Biblical story generation",
+        "Age-appropriate content adaptation",
+        "Interactive narrative creation",
+        "Character development",
+        "Moral lesson integration"
+      ],
+      "endpoints": {
+        "generate_story": "/api/v1/generate",
+        "adapt_content": "/api/v1/adapt",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard", "content_templates"],
+      "resource_requirements": {
+        "cpu": "very_high",
+        "memory": "very_high",
+        "storage": "moderate",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 6,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "visual_psalmist",
+      "agent_name": "VisualPsalmist",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Biblical scene illustration",
+        "Character artwork generation",
+        "Age-appropriate visual content",
+        "Cultural sensitivity in imagery"
+      ],
+      "endpoints": {
+        "generate_visual": "/api/v1/generate",
+        "create_illustration": "/api/v1/illustrate",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard", "safety_moderator"],
+      "resource_requirements": {
+        "cpu": "very_high",
+        "memory": "very_high",
+        "storage": "high",
+        "network": "moderate",
+        "gpu": "required"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 5,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "audio_psalmist",
+      "agent_name": "AudioPsalmist",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Story narration generation",
+        "Biblical music composition",
+        "Multi-language audio support",
+        "Age-appropriate voice selection"
+      ],
+      "endpoints": {
+        "generate_audio": "/api/v1/generate",
+        "create_narration": "/api/v1/narrate",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard", "localizer"],
+      "resource_requirements": {
+        "cpu": "high",
+        "memory": "high",
+        "storage": "very_high",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 4,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "quiz_master",
+      "agent_name": "QuizMaster",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Multiple choice question generation",
+        "Interactive quiz creation",
+        "Difficulty level adaptation",
+        "Progress tracking integration"
+      ],
+      "endpoints": {
+        "create_quiz": "/api/v1/create",
+        "adapt_difficulty": "/api/v1/adapt",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard", "analyst"],
+      "resource_requirements": {
+        "cpu": "moderate",
+        "memory": "moderate",
+        "storage": "low",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 6,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "map_cartographer",
+      "agent_name": "MapCartographer",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Biblical location mapping",
+        "Historical timeline creation",
+        "Interactive journey visualization",
+        "Cultural context mapping"
+      ],
+      "endpoints": {
+        "create_map": "/api/v1/create",
+        "generate_timeline": "/api/v1/timeline",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard", "geographical_database"],
+      "resource_requirements": {
+        "cpu": "moderate",
+        "memory": "moderate",
+        "storage": "moderate",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 1,
+        "max_instances": 3,
+        "auto_scale": false
+      }
+    },
+    {
+      "agent_id": "ux_builder",
+      "agent_name": "UXBuilder",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Age-specific UI design",
+        "Accessibility-first interface creation",
+        "Multi-generational user experience",
+        "Interactive component design"
+      ],
+      "endpoints": {
+        "design_interface": "/api/v1/design",
+        "optimize_accessibility": "/api/v1/accessibility",
+        "health": "/health"
+      },
+      "dependencies": ["analyst", "safety_moderator"],
+      "resource_requirements": {
+        "cpu": "moderate",
+        "memory": "moderate",
+        "storage": "low",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 4,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "safety_moderator",
+      "agent_name": "SafetyModerator",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Content safety scanning",
+        "Age-appropriateness validation",
+        "Theological content moderation",
+        "User-generated content review"
+      ],
+      "endpoints": {
+        "moderate_content": "/api/v1/moderate",
+        "safety_check": "/api/v1/safety",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard"],
+      "resource_requirements": {
+        "cpu": "high",
+        "memory": "high",
+        "storage": "moderate",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 3,
+        "max_instances": 8,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "community_host",
+      "agent_name": "CommunityHost",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Family group coordination",
+        "Community event management",
+        "Shared activity facilitation",
+        "Prayer circle coordination"
+      ],
+      "endpoints": {
+        "create_activity": "/api/v1/activity",
+        "facilitate_session": "/api/v1/facilitate",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard", "safety_moderator", "ux_builder"],
+      "resource_requirements": {
+        "cpu": "moderate",
+        "memory": "moderate",
+        "storage": "moderate",
+        "network": "high"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 5,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "localizer",
+      "agent_name": "Localizer",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "Multi-language content translation",
+        "Cultural context adaptation",
+        "Regional biblical interpretation support",
+        "Accessibility text optimization"
+      ],
+      "endpoints": {
+        "translate": "/api/v1/translate",
+        "adapt_culture": "/api/v1/adapt",
+        "health": "/health"
+      },
+      "dependencies": ["theology_guard", "translation_services"],
+      "resource_requirements": {
+        "cpu": "high",
+        "memory": "high",
+        "storage": "moderate",
+        "network": "high"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 6,
+        "auto_scale": true
+      }
+    },
+    {
+      "agent_id": "analyst",
+      "agent_name": "Analyst",
+      "version": "1.0.0",
+      "status": "active",
+      "primary_functions": [
+        "User engagement analytics",
+        "Learning progress tracking",
+        "Content effectiveness analysis",
+        "Personalization recommendations"
+      ],
+      "endpoints": {
+        "analyze_engagement": "/api/v1/analyze",
+        "track_progress": "/api/v1/progress",
+        "health": "/health"
+      },
+      "dependencies": ["data_warehouse", "privacy_service"],
+      "resource_requirements": {
+        "cpu": "high",
+        "memory": "very_high",
+        "storage": "very_high",
+        "network": "moderate"
+      },
+      "scaling": {
+        "min_instances": 2,
+        "max_instances": 4,
+        "auto_scale": true
+      }
+    }
+  ],
+  "routing_rules": {
+    "content_generation": {
+      "primary_flow": ["theology_guard", "story_weaver", "visual_psalmist", "audio_psalmist"],
+      "validation_required": true,
+      "parallel_execution": ["visual_psalmist", "audio_psalmist"],
+      "fallback_strategy": "simplified_content"
+    },
+    "quiz_creation": {
+      "primary_flow": ["theology_guard", "quiz_master", "ux_builder"],
+      "validation_required": true,
+      "parallel_execution": [],
+      "fallback_strategy": "template_quiz"
+    },
+    "family_activity": {
+      "primary_flow": ["theology_guard", "community_host", "ux_builder"],
+      "validation_required": true,
+      "parallel_execution": ["map_cartographer"],
+      "fallback_strategy": "basic_activity"
+    },
+    "content_moderation": {
+      "primary_flow": ["safety_moderator", "theology_guard"],
+      "validation_required": true,
+      "parallel_execution": [],
+      "fallback_strategy": "human_review"
+    }
+  },
+  "health_monitoring": {
+    "check_interval_seconds": 30,
+    "timeout_seconds": 5,
+    "unhealthy_threshold": 3,
+    "recovery_threshold": 2
+  },
+  "load_balancing": {
+    "algorithm": "weighted_round_robin",
+    "health_aware": true,
+    "sticky_sessions": false
+  },
+  "security": {
+    "authentication_required": true,
+    "authorization_model": "rbac",
+    "data_encryption": "aes_256",
+    "audit_logging": true
+  },
+  "compliance": {
+    "coppa_compliant": true,
+    "gdpr_compliant": true,
+    "popia_compliant": true,
+    "privacy_by_design": true
+  },
+  "monitoring": {
+    "metrics_collection": true,
+    "distributed_tracing": true,
+    "log_aggregation": true,
+    "alerting_enabled": true
+  },
+  "deployment": {
+    "container_orchestration": "kubernetes",
+    "service_mesh": "istio",
+    "api_gateway": "kong",
+    "monitoring_stack": "prometheus_grafana"
+  }
+}

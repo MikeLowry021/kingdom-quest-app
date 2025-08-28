@@ -1,0 +1,270 @@
+{
+  "_source_id": 37,
+  "sources": {
+    "Typography and Color Theory for Christian and Religious Applications": {
+      "https://blog.churchart.com/best-fonts-for-church-publications-serif-vs-sans-serif-and-where-to-use-them/": {
+        "id": 1,
+        "publisher": "Church Art Blog",
+        "url": "https://blog.churchart.com/best-fonts-for-church-publications-serif-vs-sans-serif-and-where-to-use-them/",
+        "title": "Best Fonts for Church Publications: Serif vs. Sans Serif",
+        "info": "Comprehensive guide on serif vs sans-serif fonts for church publications, including specific recommendations like Merriweather and Nunito, with practical applications for different church materials"
+      },
+      "https://gracefiber.com/blogs/bible/colors-in-the-bible?srsltid=AfmBOookIJC1sioJwG8dWne2czzH7jnXkp7GqBnrCinYCLNKtHrjb3RG": {
+        "id": 2,
+        "publisher": "Grace Fiber",
+        "url": "https://gracefiber.com/blogs/bible/colors-in-the-bible?srsltid=AfmBOookIJC1sioJwG8dWne2czzH7jnXkp7GqBnrCinYCLNKtHrjb3RG",
+        "title": "Colors in the Bible: Symbolism, Meaning, and Spiritual Significance",
+        "info": "Detailed biblical color meanings focusing on blue (divinity, law, heavens), gold (divinity, kingship, glory), green (life, growth, restoration), and brown (humility, humanity, wilderness testing)"
+      },
+      "https://propaintinggoldcoast.com.au/church-and-religious-venue-paint-color-meanings-and-design-symbolism-tips/": {
+        "id": 3,
+        "publisher": "Pro Painting Gold Coast",
+        "url": "https://propaintinggoldcoast.com.au/church-and-religious-venue-paint-color-meanings-and-design-symbolism-tips/",
+        "title": "Church and Religious Venue Paint Color Meanings and Design Symbolism Tips",
+        "info": "Comprehensive guide to paint color meanings and design symbolism for churches and religious venues, including psychological impact and practical applications for colors like blue, gold, green, and specific design tips"
+      },
+      "https://www.color-meanings.com/biblical-meaning-colors/": {
+        "id": 4,
+        "publisher": "Color Meanings",
+        "url": "https://www.color-meanings.com/biblical-meaning-colors/",
+        "title": "Biblical Meaning of Colors",
+        "info": "Detailed biblical color meanings with spiritual significance of various colors including blue (Heaven, Holy Spirit), gold (Glory, divinity, kingship), green (Praise, growth, prosperity), and brown (End of season, people, pride)"
+      },
+      "https://faith-interactive.com/the-role-of-typography-in-church-branding-how-fonts-shape-user-experience/": {
+        "id": 5,
+        "publisher": "Faith Interactive",
+        "url": "https://faith-interactive.com/the-role-of-typography-in-church-branding-how-fonts-shape-user-experience/",
+        "title": "The Role of Typography in Church Branding: How Fonts Shape User Experience",
+        "info": "Typography's role in church branding as a 'silent storyteller' that shapes user perception and experience, with emphasis on accessibility and readability considerations for religious organizations"
+      },
+      "https://www.defininggrace.com/communication/simple-church-branding-part-3-fonts-say-more-than-you-think/": {
+        "id": 6,
+        "publisher": "Defining Grace",
+        "url": "https://www.defininggrace.com/communication/simple-church-branding-part-3-fonts-say-more-than-you-think/",
+        "title": "Simple Church Branding, Part 3: Fonts Say More Than You Think",
+        "info": "Church branding insights on how serif fonts feel traditional and formal while sans-serif fonts feel modern and informal, with specific recommendations for font pairing and church logo design"
+      },
+      "https://church.sethweber.com/2020/04/06/fonts-for-churches/": {
+        "id": 7,
+        "publisher": "Seth Weber",
+        "url": "https://church.sethweber.com/2020/04/06/fonts-for-churches/",
+        "title": "Fonts for Churches",
+        "info": "Font recommendations specifically for churches including Merriweather (serif), Oswald and Open Sans (sans-serif), with pricing information and usage guidelines for religious organizations"
+      }
+    },
+    "Motion Design Accessibility Research": {
+      "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html": {
+        "id": 8,
+        "publisher": "World Wide Web Consortium (W3C)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+        "title": "WCAG 2.2 Understanding SC 2.3.3: Animation from Interactions",
+        "info": "Comprehensive WCAG 2.2 Success Criterion 2.3.3 guidelines for Animation from Interactions, including AAA level requirements for motion animation triggered by interaction to be disableable unless essential. Provides specific implementation guidance, benefits for vestibular disorder users, and sufficient techniques including CSS reduce-motion query."
+      },
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion": {
+        "id": 9,
+        "publisher": "Mozilla Developer Network (MDN)",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion",
+        "title": "prefers-reduced-motion CSS Media Feature Documentation",
+        "info": "Technical documentation for the prefers-reduced-motion CSS media feature, including implementation examples, browser support, user settings configuration across different operating systems, and best practices for respecting user motion preferences. Covers values (reduce/no-preference) and practical implementation strategies."
+      },
+      "https://vestibular.org/blog/veda-website-accessibility-guide/": {
+        "id": 10,
+        "publisher": "Vestibular Disorders Association (VeDA)",
+        "url": "https://vestibular.org/blog/veda-website-accessibility-guide/",
+        "title": "Website Accessibility Guide for Vestibular Disorders",
+        "info": "Official accessibility guidelines from Vestibular Disorders Association covering motion sensitivity, scrolling considerations, screen brightness/contrast, visual clutter reduction, and specific tools for browsing comfort. Includes practical strategies for users with dizziness, vertigo, and visual motion sensitivity."
+      },
+      "https://web.dev/learn/accessibility/motion": {
+        "id": 11,
+        "publisher": "Web.dev (Google)",
+        "url": "https://web.dev/learn/accessibility/motion",
+        "title": "Animation and Motion Accessibility Guide",
+        "info": "Comprehensive guide to animation and motion accessibility covering vestibular disorders, ADHD, photosensitive epilepsy considerations. Includes WCAG flashing guidelines, browser support for prefers-reduced-motion, user-controlled mechanisms, and progressive enhancement strategies. Contains statistics on vestibular dysfunction prevalence (35% of adults by age 40)."
+      },
+      "https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/": {
+        "id": 12,
+        "publisher": "Smashing Magazine",
+        "url": "https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/",
+        "title": "Designing With Reduced Motion For Motion Sensitivities",
+        "info": "Detailed guide on designing with reduced motion for motion sensitivities, covering identification of problematic animations (large movements, zooms, spinning, parallax), creating reduced motion versions, custom toggles implementation, and combining prefers-reduced-motion with localStorage for intelligent user preferences."
+      },
+      "https://www.accessibilitychecker.org/blog/microinteractions/": {
+        "id": 13,
+        "publisher": "AccessibilityChecker.org",
+        "url": "https://www.accessibilitychecker.org/blog/microinteractions/",
+        "title": "Microinteractions: How to Make UI Feedback Accessible",
+        "info": "Accessibility considerations for microinteractions including guidelines for cognitive disabilities, motion sensitivity, and inclusive UI feedback patterns. Covers color contrast requirements (4.5:1 text, 3:1 non-text), touch target sizing (44px minimum), testing methodologies, and common design errors to avoid."
+      },
+      "https://www.numberanalytics.com/blog/loading-indicators-for-accessibility": {
+        "id": 14,
+        "publisher": "Number Analytics",
+        "url": "https://www.numberanalytics.com/blog/loading-indicators-for-accessibility",
+        "title": "Loading Indicators for Accessibility",
+        "info": "Comprehensive guide to loading indicators accessibility covering determinate vs indeterminate types, WCAG 2.1 color contrast requirements, animation motion sensitivity guidelines (avoid flashing >3x per second), screen reader compatibility, ARIA attributes usage, and testing best practices."
+      },
+      "https://www.smashingmagazine.com/2023/11/creating-accessible-ui-animations/": {
+        "id": 15,
+        "publisher": "Smashing Magazine",
+        "url": "https://www.smashingmagazine.com/2023/11/creating-accessible-ui-animations/",
+        "title": "Creating Accessible UI Animations - Mercado Libre Case Study",
+        "info": "Mercado Libre's comprehensive approach to accessible UI animations, including classification of animations into three groups (safe, unessential removable, essential adaptable), implementation strategies, design system integration, and team education approaches. Covers WCAG criteria 2.2.2, 2.3.1, 2.3.2, 2.3.3 with practical examples."
+      },
+      "https://www.aufaitux.com/blog/ui-ux-designing-for-children/": {
+        "id": 16,
+        "publisher": "Aufait UX",
+        "url": "https://www.aufaitux.com/blog/ui-ux-designing-for-children/",
+        "title": "Top 10 UI/UX Design Tips for Child-Friendly Interfaces",
+        "info": "Comprehensive UI/UX design principles for child-friendly interfaces covering age-appropriate content (ages 2-12), cognitive considerations, attention span data (8-12 minutes average), animation's role in engagement (60% learning retention increase), safety/privacy requirements, and co-design methodologies with children."
+      },
+      "https://developer.apple.com/design/human-interface-guidelines/motion": {
+        "id": 17,
+        "publisher": "Apple Developer",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
+        "title": "Motion - Apple Human Interface Guidelines",
+        "info": "Apple's Human Interface Guidelines for motion and animation emphasizing purposeful, fluid design that supports user experience. Covers best practices including making motion optional, providing feedback appropriately, avoiding gratuitous animation, and platform-specific considerations for visionOS, iOS, and watchOS."
+      },
+      "https://www.eleken.co/blog-posts/examples-of-ux-design-for-seniors": {
+        "id": 18,
+        "publisher": "Eleken",
+        "url": "https://www.eleken.co/blog-posts/examples-of-ux-design-for-seniors",
+        "title": "UX Design for Seniors: Examples and Tips",
+        "info": "Comprehensive guide to UX design for elderly users covering cognitive considerations, accessibility challenges (vision, movement, adaptation), and design principles including large UI elements, legible fonts, contrasting colors, simplified interfaces, and examples of senior-friendly applications."
+      },
+      "https://www.uxpin.com/studio/blog/designing-onboarding-microinteractions-guide/": {
+        "id": 19,
+        "publisher": "UXPin",
+        "url": "https://www.uxpin.com/studio/blog/designing-onboarding-microinteractions-guide/",
+        "title": "Designing Onboarding Microinteractions Guide",
+        "info": "Detailed guide to designing onboarding microinteractions focusing on simplicity, immediate feedback, and careful use of motion. Includes animation timing recommendations (200-300ms), accessibility considerations for motion sensitivity, and step-by-step design methodology with testing approaches."
+      }
+    },
+    "Multigenerational Digital Accessibility Guide": {
+      "https://www.w3.org/TR/WCAG21/": {
+        "id": 20,
+        "publisher": "W3C Web Accessibility Initiative",
+        "url": "https://www.w3.org/TR/WCAG21/",
+        "title": "Web Content Accessibility Guidelines (WCAG) 2.1",
+        "info": "Comprehensive WCAG 2.1 AA and AAA compliance requirements including 50+ success criteria, technical specifications for color contrast (4.5:1 AA, 7:1 AAA for normal text), font sizing, touch targets, and detailed guidelines for all disability types"
+      },
+      "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html": {
+        "id": 21,
+        "publisher": "W3C Web Accessibility Initiative",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "title": "Understanding Success Criterion 2.5.8: Target Size (Minimum)",
+        "info": "Official WCAG 2.2 touch target size specifications: minimum 24x24 CSS pixels with exceptions for spacing, inline elements, equivalent controls, user agent control, and essential presentations"
+      },
+      "https://webaim.org/articles/contrast/": {
+        "id": 22,
+        "publisher": "WebAIM",
+        "url": "https://webaim.org/articles/contrast/",
+        "title": "Color Contrast and Accessibility",
+        "info": "Detailed color contrast requirements: 4.5:1 for normal text, 3:1 for large text at AA level; 7:1 for normal text, 4.5:1 for large text at AAA level; plus non-text contrast requirements of 3:1"
+      },
+      "https://www.w3.org/WAI/older-users/": {
+        "id": 23,
+        "publisher": "W3C Web Accessibility Initiative",
+        "url": "https://www.w3.org/WAI/older-users/",
+        "title": "Older Users and Web Accessibility",
+        "info": "Age-related accessibility changes including vision (reduced contrast sensitivity), motor (reduced dexterity), hearing (difficulty with higher pitch), and cognitive (reduced short-term memory) considerations"
+      },
+      "https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility": {
+        "id": 24,
+        "publisher": "Mozilla Developer Network",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility",
+        "title": "Cognitive Accessibility Guide",
+        "info": "Comprehensive cognitive accessibility guidelines covering working memory, attention span, cognitive load reduction, WCAG mapping, and specific design patterns for users with cognitive disabilities"
+      },
+      "https://webaim.org/articles/motor/motordisabilities": {
+        "id": 25,
+        "publisher": "WebAIM",
+        "url": "https://webaim.org/articles/motor/motordisabilities",
+        "title": "Motor Disabilities Overview",
+        "info": "Motor disability types, adaptive technologies (one-handed keyboards, voice control, head wands), and design accommodations including large targets, keyboard accessibility, and error tolerance"
+      },
+      "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/": {
+        "id": 26,
+        "publisher": "W3C Web Accessibility Initiative",
+        "url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+        "title": "Developing a Keyboard Interface - ARIA Authoring Practices",
+        "info": "Keyboard navigation requirements, focus management, ARIA patterns, roving tabindex techniques, and screen reader compatibility guidelines for complex interactive components"
+      },
+      "https://www.smashingmagazine.com/2024/02/practical-guide-design-children/": {
+        "id": 27,
+        "publisher": "Smashing Magazine",
+        "url": "https://www.smashingmagazine.com/2024/02/practical-guide-design-children/",
+        "title": "A Practical Guide to Design for Children",
+        "info": "Children's design guidelines: minimum 18-19px text, 75x75px touch targets, age-specific requirements (2-year max range), parental controls, safety considerations, and cognitive development factors"
+      },
+      "https://webaim.org/articles/visual/colorblind": {
+        "id": 28,
+        "publisher": "WebAIM",
+        "url": "https://webaim.org/articles/visual/colorblind",
+        "title": "Color-blindness and Visual Disabilities",
+        "info": "Color blindness types (protanopia, deuteranopia, tritanopia), visual accessibility accommodations, and design principles for supporting users with various color vision deficiencies"
+      },
+      "https://developer.apple.com/design/human-interface-guidelines/accessibility": {
+        "id": 29,
+        "publisher": "Apple Inc.",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "title": "Apple Human Interface Guidelines - Accessibility",
+        "info": "Apple's accessibility requirements: minimum touch targets 44x44pt (iOS), Dynamic Type support (200% enlargement), color contrast ratios, and accommodations for vision, hearing, motor, and cognitive disabilities"
+      },
+      "https://web.dev/learn/accessibility/test-assistive-technology": {
+        "id": 30,
+        "publisher": "Google Developers - web.dev",
+        "url": "https://web.dev/learn/accessibility/test-assistive-technology",
+        "title": "Test with Assistive Technology",
+        "info": "Screen reader compatibility testing with JAWS, NVDA, VoiceOver including essential commands, testing methodologies, common accessibility issues, and assistive technology best practices"
+      },
+      "https://m2.material.io/design/usability/accessibility.html": {
+        "id": 31,
+        "publisher": "Google Material Design",
+        "url": "https://m2.material.io/design/usability/accessibility.html",
+        "title": "Material Design Accessibility Guidelines",
+        "info": "Google Material Design accessibility: 48x48dp minimum touch targets, 3:1 contrast for large text, 4.5:1 for small text, navigation patterns for assistive technology, and inclusive design guidelines"
+      },
+      "https://inclusive.microsoft.design/": {
+        "id": 32,
+        "publisher": "Microsoft Corporation",
+        "url": "https://inclusive.microsoft.design/",
+        "title": "Microsoft Inclusive Design Toolkit",
+        "info": "Microsoft's inclusive design methodology focusing on recognizing exclusion, learning from diversity, solving for one to extend to many, plus comprehensive toolkits for cognitive and mental health considerations"
+      },
+      "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html": {
+        "id": 33,
+        "publisher": "W3C Web Accessibility Initiative",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html",
+        "title": "Understanding Success Criterion 2.5.1: Pointer Gestures",
+        "info": "WCAG requirements for pointer gestures: single-pointer alternatives to multipoint/path-based gestures, accommodations for motor impairments, and essential gesture exceptions"
+      },
+      "https://www.boia.org/blog/what-is-wcag-em-an-introduction-to-accessibility-evaluation-methodology": {
+        "id": 34,
+        "publisher": "Bureau of Internet Accessibility",
+        "url": "https://www.boia.org/blog/what-is-wcag-em-an-introduction-to-accessibility-evaluation-methodology",
+        "title": "WCAG-EM Accessibility Evaluation Methodology",
+        "info": "Comprehensive WCAG-EM evaluation methodology: five-step process for accessibility audits including scope definition, exploration, sampling, auditing, and reporting"
+      },
+      "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions": {
+        "id": 35,
+        "publisher": "Mozilla Developer Network",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions",
+        "title": "ARIA Live Regions Guide",
+        "info": "ARIA live regions implementation for dynamic content accessibility including polite/assertive announcements, aria-atomic, aria-relevant, and screen reader compatibility"
+      },
+      "https://medium.com/design-bootcamp/your-guide-for-teenagers-7557898f2aa0": {
+        "id": 36,
+        "publisher": "Medium Design Bootcamp",
+        "url": "https://medium.com/design-bootcamp/your-guide-for-teenagers-7557898f2aa0",
+        "title": "Digital Accessibility Guide for Teenagers (13-17)",
+        "info": "Teenager accessibility requirements: 48x48px touch targets, 16px+ fonts, <3s loading times, mobile-first design, <8s attention span, authentic communication, and visual content preferences"
+      },
+      "https://webaim.org/standards/wcag/checklist": {
+        "id": 37,
+        "publisher": "WebAIM",
+        "url": "https://webaim.org/standards/wcag/checklist",
+        "title": "WCAG 2 Checklist",
+        "info": "Comprehensive WCAG 2.2 checklist covering 50+ success criteria across Perceivable, Operable, Understandable, and Robust principles with conformance levels A, AA, AAA"
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "quiz-adult-001",
+  "title": "The Covenant Promise",
+  "description": "Deep theological questions about God's covenant with Noah",
+  "difficulty": "advanced",
+  "questions": [
+    {
+      "id": "q-020",
+      "text": "What is the significance of the rainbow covenant in Genesis 9?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 9,
+        "verses": "12-17"
+      },
+      "options": [
+        {
+          "id": "opt-020",
+          "text": "God's unconditional promise never to destroy the earth by flood again",
+          "isCorrect": true,
+          "explanation": "Genesis 9:11 states 'And I will establish my covenant with you; neither shall all flesh be cut off any more by the waters of a flood; neither shall there any more be a flood to destroy the earth.'"
+        },
+        {
+          "id": "opt-021",
+          "text": "A conditional promise based on human righteousness",
+          "isCorrect": false,
+          "explanation": "The Noahic covenant is unconditional - it depends on God's faithfulness, not human performance."
+        },
+        {
+          "id": "opt-022",
+          "text": "A temporary agreement lasting only Noah's lifetime",
+          "isCorrect": false,
+          "explanation": "Genesis 9:12 calls it an 'everlasting covenant' between God and every living creature."
+        }
+      ],
+      "points": 3
+    },
+    {
+      "id": "q-021",
+      "text": "How does the flood narrative demonstrate both God's judgment and mercy?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 6,
+        "verses": "5-8"
+      },
+      "options": [
+        {
+          "id": "opt-023",
+          "text": "Judgment on wickedness, mercy in preserving the righteous remnant",
+          "isCorrect": true,
+          "explanation": "God judged the wickedness of mankind (Gen 6:5-7) but showed mercy by saving Noah and his family, preserving humanity and all creatures."
+        },
+        {
+          "id": "opt-024",
+          "text": "Pure judgment with no element of mercy",
+          "isCorrect": false,
+          "explanation": "God's mercy is clearly shown in His preservation of Noah, his family, and all the animals."
+        },
+        {
+          "id": "opt-025",
+          "text": "Only mercy with no real judgment",
+          "isCorrect": false,
+          "explanation": "The flood was indeed God's judgment on the wickedness that filled the earth."
+        }
+      ],
+      "points": 3
+    }
+  ],
+  "passingScore": 80,
+  "timeLimit": 0
+}

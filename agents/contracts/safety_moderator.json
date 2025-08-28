@@ -1,0 +1,246 @@
+{
+  "agent_name": "SafetyModerator",
+  "version": "1.0.0",
+  "description": "Monitors and moderates all content for safety, appropriateness, and compliance with Christian values",
+  "capabilities": [
+    "Content safety scanning",
+    "Age-appropriateness validation",
+    "Theological content moderation",
+    "User-generated content review",
+    "Community interaction monitoring"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["content_data", "moderation_context"],
+    "properties": {
+      "content_data": {
+        "type": "object",
+        "properties": {
+          "content_type": {
+            "type": "string",
+            "enum": ["text", "image", "audio", "video", "user_comment", "shared_content", "prayer_request"]
+          },
+          "content_payload": {"type": "string", "description": "The actual content to moderate"},
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "source": {"type": "string"},
+              "timestamp": {"type": "string"},
+              "content_id": {"type": "string"},
+              "user_id": {"type": "string"}
+            }
+          }
+        }
+      },
+      "moderation_context": {
+        "type": "object",
+        "properties": {
+          "target_age_group": {
+            "type": "string",
+            "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior", "all_ages"]
+          },
+          "content_category": {
+            "type": "string",
+            "enum": ["educational", "entertainment", "community", "prayer", "testimony", "question"]
+          },
+          "moderation_level": {
+            "type": "string",
+            "enum": ["strict", "moderate", "lenient"],
+            "default": "moderate"
+          },
+          "family_context": {"type": "boolean", "description": "Content will be viewed in family setting"}
+        }
+      },
+      "safety_criteria": {
+        "type": "object",
+        "properties": {
+          "theological_accuracy": {"type": "boolean", "default": true},
+          "age_appropriateness": {"type": "boolean", "default": true},
+          "language_appropriateness": {"type": "boolean", "default": true},
+          "violence_screening": {"type": "boolean", "default": true},
+          "personal_information_check": {"type": "boolean", "default": true},
+          "community_guidelines": {"type": "boolean", "default": true}
+        }
+      },
+      "escalation_settings": {
+        "type": "object",
+        "properties": {
+          "human_review_threshold": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.7},
+          "auto_block_threshold": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.9},
+          "notification_preferences": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["moderation_result", "safety_assessment"],
+    "properties": {
+      "moderation_result": {
+        "type": "object",
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": ["approved", "approved_with_modifications", "flagged_for_review", "rejected", "blocked"]
+          },
+          "confidence_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "processing_time_ms": {"type": "number"},
+          "review_priority": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "urgent"]
+          }
+        }
+      },
+      "safety_assessment": {
+        "type": "object",
+        "properties": {
+          "overall_safety_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "category_scores": {
+            "type": "object",
+            "properties": {
+              "theological_accuracy": {"type": "number", "minimum": 0, "maximum": 1},
+              "age_appropriateness": {"type": "number", "minimum": 0, "maximum": 1},
+              "language_safety": {"type": "number", "minimum": 0, "maximum": 1},
+              "content_sensitivity": {"type": "number", "minimum": 0, "maximum": 1},
+              "privacy_compliance": {"type": "number", "minimum": 0, "maximum": 1}
+            }
+          },
+          "detected_issues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "issue_type": {"type": "string"},
+                "severity": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+                "description": {"type": "string"},
+                "location": {"type": "string", "description": "Where in content the issue occurs"},
+                "suggested_action": {"type": "string"}
+              }
+            }
+          },
+          "positive_indicators": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Elements that enhance content safety and appropriateness"
+          }
+        }
+      },
+      "recommendations": {
+        "type": "object",
+        "properties": {
+          "content_modifications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "modification_type": {"type": "string"},
+                "original_text": {"type": "string"},
+                "suggested_replacement": {"type": "string"},
+                "justification": {"type": "string"}
+              }
+            }
+          },
+          "alternative_approaches": {"type": "array", "items": {"type": "string"}},
+          "educational_opportunities": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "compliance_status": {
+        "type": "object",
+        "properties": {
+          "coppa_compliance": {"type": "boolean"},
+          "family_safety_guidelines": {"type": "boolean"},
+          "christian_values_alignment": {"type": "boolean"},
+          "community_standards": {"type": "boolean"},
+          "privacy_requirements": {"type": "boolean"}
+        }
+      },
+      "escalation_actions": {
+        "type": "object",
+        "properties": {
+          "requires_human_review": {"type": "boolean"},
+          "notify_administrators": {"type": "boolean"},
+          "user_education_recommended": {"type": "boolean"},
+          "content_quarantine": {"type": "boolean"}
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "content_data": {
+      "content_type": "user_comment",
+      "content_payload": "I love this story about David! It reminds me that God helps us be brave even when we're scared. My mom says I can trust God too!",
+      "metadata": {
+        "source": "story_comments",
+        "timestamp": "2025-08-25T16:33:44Z",
+        "content_id": "comment_12345",
+        "user_id": "child_user_789"
+      }
+    },
+    "moderation_context": {
+      "target_age_group": "child_9_12",
+      "content_category": "community",
+      "moderation_level": "moderate",
+      "family_context": true
+    },
+    "safety_criteria": {
+      "theological_accuracy": true,
+      "age_appropriateness": true,
+      "language_appropriateness": true,
+      "personal_information_check": true
+    }
+  },
+  "sample_response": {
+    "moderation_result": {
+      "decision": "approved",
+      "confidence_score": 0.95,
+      "processing_time_ms": 234,
+      "review_priority": "low"
+    },
+    "safety_assessment": {
+      "overall_safety_score": 0.96,
+      "category_scores": {
+        "theological_accuracy": 0.98,
+        "age_appropriateness": 0.95,
+        "language_safety": 1.0,
+        "content_sensitivity": 0.92,
+        "privacy_compliance": 0.95
+      },
+      "detected_issues": [],
+      "positive_indicators": [
+        "Expresses biblical faith concepts appropriately for age",
+        "Shows healthy family relationship",
+        "Demonstrates learning from story content",
+        "Uses encouraging, positive language"
+      ]
+    },
+    "recommendations": {
+      "content_modifications": [],
+      "alternative_approaches": [],
+      "educational_opportunities": [
+        "Could encourage further discussion about trusting God",
+        "Opportunity to share similar Bible stories about courage"
+      ]
+    },
+    "compliance_status": {
+      "coppa_compliance": true,
+      "family_safety_guidelines": true,
+      "christian_values_alignment": true,
+      "community_standards": true,
+      "privacy_requirements": true
+    },
+    "escalation_actions": {
+      "requires_human_review": false,
+      "notify_administrators": false,
+      "user_education_recommended": false,
+      "content_quarantine": false
+    }
+  },
+  "error_codes": {
+    "9000": "Content moderation system unavailable",
+    "9001": "Unsupported content type for moderation",
+    "9002": "Content payload too large for processing",
+    "9003": "Severe safety violations detected - automatic block",
+    "9004": "Age verification required before moderation",
+    "9005": "Content requires specialized theological review"
+  }
+}

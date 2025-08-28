@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f8f4e3" />
+  <path d="M50,180 L350,180 L350,250 L50,250 Z" fill="#7bafd4" stroke="#5f8ca7" stroke-width="2" />
+  <path d="M0,200 L50,180 L50,250 L0,250 Z" fill="#7bafd4" stroke="#5f8ca7" stroke-width="2" />
+  <path d="M350,180 L400,200 L400,250 L350,250 Z" fill="#7bafd4" stroke="#5f8ca7" stroke-width="2" />
+  <path d="M70,160 L120,120 L170,160 Z" fill="#7d956d" stroke="#4a6741" stroke-width="2" />
+  <rect x="90" y="160" width="60" height="40" fill="#e6c88a" stroke="#8a7967" stroke-width="2" />
+  <path d="M230,160 L280,120 L330,160 Z" fill="#7d956d" stroke="#4a6741" stroke-width="2" />
+  <rect x="250" y="160" width="60" height="40" fill="#e6c88a" stroke="#8a7967" stroke-width="2" />
+  <path d="M140,130 L150,100 L160,130 Z" fill="#7d956d" stroke="#4a6741" stroke-width="2" />
+  <path d="M180,140 L200,80 L220,140 Z" fill="#7d956d" stroke="#4a6741" stroke-width="2" />
+  <path d="M240,130 L250,100 L260,130 Z" fill="#7d956d" stroke="#4a6741" stroke-width="2" />
+  <circle cx="200" cy="220" r="30" fill="#d4b483" stroke="#8a7967" stroke-width="2" />
+  <path d="M170,210 L230,210 L230,220 L170,220 Z" fill="#8a7967" />
+  <rect x="195" y="190" width="10" height="20" fill="#8a7967" />
+  <text x="200" y="275" font-family="Arial" font-size="16" text-anchor="middle" fill="#614b3a">Sea of Galilee</text>
+</svg>

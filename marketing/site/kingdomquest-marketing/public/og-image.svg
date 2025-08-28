@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Pattern overlay -->
+  <pattern id="pattern" patternUnits="userSpaceOnUse" width="60" height="60">
+    <circle cx="30" cy="30" r="2" fill="white" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#pattern)"/>
+  
+  <!-- Logo -->
+  <rect x="100" y="200" width="60" height="60" rx="12" fill="white"/>
+  <path d="M115 215 L135 235 L145 225" stroke="#3B82F6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="130" cy="235" r="8" fill="#3B82F6"/>
+  
+  <!-- Text -->
+  <text x="180" y="240" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white">KingdomQuest</text>
+  <text x="180" y="280" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.9)">Christian Educational App for Children</text>
+  
+  <!-- Tagline -->
+  <text x="100" y="350" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="white">Transform Your Child's Spiritual Journey</text>
+  <text x="100" y="390" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.8)">Interactive Bible stories, engaging quizzes, and meaningful family devotions</text>
+  
+  <!-- Features -->
+  <text x="100" y="450" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.9)">✓ 500+ Bible Stories   ✓ Family Devotions   ✓ Child-Safe Environment</text>
+  
+  <!-- CTA -->
+  <rect x="100" y="480" width="200" height="50" rx="25" fill="white"/>
+  <text x="200" y="510" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#3B82F6" text-anchor="middle">Start Free Today</text>
+  
+  <!-- Phone mockup -->
+  <rect x="800" y="100" width="200" height="400" rx="25" fill="#1F2937"/>
+  <rect x="810" y="110" width="180" height="380" rx="20" fill="white"/>
+  
+  <!-- App content -->
+  <rect x="820" y="150" width="160" height="30" rx="15" fill="#3B82F6"/>
+  <text x="900" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">KingdomQuest</text>
+  
+  <rect x="820" y="200" width="160" height="80" rx="10" fill="#F3F4F6"/>
+  <circle cx="900" cy="240" r="15" fill="#3B82F6"/>
+  <text x="900" y="270" font-family="Arial, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">Noah's Ark</text>
+</svg>

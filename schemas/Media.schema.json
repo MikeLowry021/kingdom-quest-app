@@ -1,0 +1,86 @@
+{
+  "$id": "https://kingdomquest.example/schemas/Media.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A media item in the KingdomQuest app",
+  "properties": {
+    "altText": {
+      "description": "Alternative text for accessibility",
+      "type": "string"
+    },
+    "attribution": {
+      "description": "Attribution or credit information",
+      "type": "string"
+    },
+    "caption": {
+      "description": "Caption for the media item",
+      "type": "string"
+    },
+    "contentType": {
+      "description": "MIME type of the media",
+      "type": "string"
+    },
+    "createdAt": {
+      "description": "Creation timestamp",
+      "format": "date-time",
+      "type": "string"
+    },
+    "duration": {
+      "description": "Duration in seconds (for audio/video)",
+      "type": "number"
+    },
+    "filename": {
+      "description": "Original filename",
+      "type": "string"
+    },
+    "id": {
+      "description": "Unique identifier for the media item",
+      "type": "string"
+    },
+    "size": {
+      "description": "File size in bytes",
+      "type": "integer"
+    },
+    "tags": {
+      "description": "Tags for categorizing the media",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "description": "Title of the media item",
+      "type": "string"
+    },
+    "type": {
+      "description": "Type of media",
+      "enum": [
+        "image",
+        "audio",
+        "video",
+        "document"
+      ],
+      "type": "string"
+    },
+    "updatedAt": {
+      "description": "Last update timestamp",
+      "format": "date-time",
+      "type": "string"
+    },
+    "url": {
+      "description": "URL to access the media",
+      "format": "uri",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "url",
+    "contentType",
+    "createdAt",
+    "updatedAt"
+  ],
+  "title": "Media",
+  "type": "object",
+  "version": "1.0.0"
+}

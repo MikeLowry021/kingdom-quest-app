@@ -1,0 +1,493 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KingdomQuest Questpack Bundle Schema",
+  "description": "JSON schema for .questpack bundle format used for importing and exporting remixed quests",
+  "type": "object",
+  "required": [
+    "format_version",
+    "questpack_id",
+    "metadata",
+    "quest",
+    "attribution",
+    "assets"
+  ],
+  "properties": {
+    "format_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the questpack format (e.g., '1.0.0')"
+    },
+    "questpack_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this questpack bundle"
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "title",
+        "description",
+        "age_tier",
+        "target_length",
+        "created_at",
+        "creator"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100,
+          "description": "Display title of the remixed quest"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 500,
+          "description": "Brief description of the quest content and learning objectives"
+        },
+        "age_tier": {
+          "type": "string",
+          "enum": [
+            "early_childhood",
+            "elementary",
+            "middle_school",
+            "high_school"
+          ],
+          "description": "Target age group for the quest"
+        },
+        "target_length": {
+          "type": "string",
+          "enum": [
+            "short",
+            "medium",
+            "long"
+          ],
+          "description": "Expected completion time (short: 5-10min, medium: 15-20min, long: 25-30min+)"
+        },
+        "theme": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Optional thematic focus or customization applied"
+        },
+        "biblical_references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[1-3]?\\s?[A-Za-z]+\\s\\d+:\\d+(-\\d+)?$"
+          },
+          "description": "Array of Bible verse references (e.g., 'John 3:16', '1 Corinthians 13:4-8')"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of questpack creation"
+        },
+        "creator": {
+          "type": "object",
+          "required": ["name", "type"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "description": "Name of the person or organization who created this remix"
+            },
+            "type": {
+              "type": "string",
+              "enum": ["individual", "family", "church", "organization"],
+              "description": "Type of creator entity"
+            },
+            "contact": {
+              "type": "string",
+              "format": "email",
+              "description": "Optional contact email for the creator"
+            }
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 30
+          },
+          "maxItems": 10,
+          "description": "Optional tags for categorization and discovery"
+        }
+      }
+    },
+    "quest": {
+      "type": "object",
+      "required": [
+        "story",
+        "questions",
+        "discussion_prompts"
+      ],
+      "properties": {
+        "story": {
+          "type": "object",
+          "required": ["title", "content", "scenes"],
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 100,
+              "description": "Title of the Biblical story"
+            },
+            "content": {
+              "type": "string",
+              "minLength": 100,
+              "maxLength": 5000,
+              "description": "Main narrative content of the story"
+            },
+            "scenes": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {
+                "type": "object",
+                "required": ["scene_id", "title", "content"],
+                "properties": {
+                  "scene_id": {
+                    "type": "string",
+                    "pattern": "^scene_\\d+$",
+                    "description": "Unique identifier for the scene (e.g., 'scene_1')"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 100,
+                    "description": "Title of this story scene"
+                  },
+                  "content": {
+                    "type": "string",
+                    "minLength": 50,
+                    "maxLength": 1000,
+                    "description": "Content of this story scene"
+                  },
+                  "image_asset": {
+                    "type": "string",
+                    "description": "Optional filename of associated image asset"
+                  },
+                  "audio_asset": {
+                    "type": "string",
+                    "description": "Optional filename of associated audio asset"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "questions": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "required": ["question_id", "question", "type", "correct_answer"],
+            "properties": {
+              "question_id": {
+                "type": "string",
+                "pattern": "^q_\\d+$",
+                "description": "Unique identifier for the question (e.g., 'q_1')"
+              },
+              "question": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 200,
+                "description": "The question text"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["multiple_choice", "true_false", "fill_blank", "matching"],
+                "description": "Type of question format"
+              },
+              "options": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "description": "Array of answer options (required for multiple_choice)"
+              },
+              "correct_answer": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100,
+                "description": "The correct answer or answer key"
+              },
+              "explanation": {
+                "type": "string",
+                "maxLength": 300,
+                "description": "Optional explanation of the correct answer"
+              }
+            }
+          }
+        },
+        "discussion_prompts": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "required": ["prompt_id", "prompt", "category"],
+            "properties": {
+              "prompt_id": {
+                "type": "string",
+                "pattern": "^dp_\\d+$",
+                "description": "Unique identifier for the discussion prompt (e.g., 'dp_1')"
+              },
+              "prompt": {
+                "type": "string",
+                "minLength": 10,
+                "maxLength": 300,
+                "description": "The discussion question or prompt text"
+              },
+              "category": {
+                "type": "string",
+                "enum": ["comprehension", "application", "reflection", "prayer"],
+                "description": "Category of discussion prompt"
+              },
+              "age_specific": {
+                "type": "boolean",
+                "description": "Whether this prompt is tailored to the specific age tier"
+              }
+            }
+          }
+        }
+      }
+    },
+    "attribution": {
+      "type": "object",
+      "required": [
+        "original_quest_id",
+        "original_creator",
+        "remix_history"
+      ],
+      "properties": {
+        "original_quest_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "ID of the original quest that was remixed"
+        },
+        "original_creator": {
+          "type": "object",
+          "required": ["name", "attribution_text"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "description": "Name of the original quest creator"
+            },
+            "attribution_text": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 200,
+              "description": "Required attribution text for the original creator"
+            },
+            "copyright_info": {
+              "type": "string",
+              "maxLength": 100,
+              "description": "Copyright information if applicable"
+            }
+          }
+        },
+        "remix_history": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["version", "creator", "created_at", "changes"],
+            "properties": {
+              "version": {
+                "type": "string",
+                "pattern": "^\\d+\\.\\d+$",
+                "description": "Version number of this remix (e.g., '1.0', '2.1')"
+              },
+              "creator": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 100,
+                "description": "Name of the person who created this version"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO 8601 timestamp of version creation"
+              },
+              "changes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 5,
+                  "maxLength": 200
+                },
+                "description": "Array of change descriptions for this version"
+              }
+            }
+          }
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["filename", "description", "usage"],
+            "properties": {
+              "filename": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9_-]+\\.(jpg|jpeg|png|webp|svg)$",
+                "description": "Filename of the image asset"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 100,
+                "description": "Description of the image content"
+              },
+              "usage": {
+                "type": "string",
+                "enum": ["scene_illustration", "character_portrait", "background", "icon", "decoration"],
+                "description": "How the image is used in the quest"
+              },
+              "alt_text": {
+                "type": "string",
+                "maxLength": 200,
+                "description": "Alternative text for accessibility"
+              }
+            }
+          }
+        },
+        "audio": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["filename", "description", "usage"],
+            "properties": {
+              "filename": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9_-]+\\.(mp3|wav|ogg|m4a)$",
+                "description": "Filename of the audio asset"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 5,
+                "maxLength": 100,
+                "description": "Description of the audio content"
+              },
+              "usage": {
+                "type": "string",
+                "enum": ["narration", "background_music", "sound_effect", "voice_character"],
+                "description": "How the audio is used in the quest"
+              },
+              "duration_seconds": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1800,
+                "description": "Duration of the audio file in seconds"
+              }
+            }
+          }
+        }
+      }
+    },
+    "moderation": {
+      "type": "object",
+      "description": "AI moderation results and approval status",
+      "required": ["status", "theology_guard", "safety_moderator"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["approved", "pending", "requires_review", "rejected"],
+          "description": "Overall moderation status"
+        },
+        "theology_guard": {
+          "type": "object",
+          "required": ["score", "passed", "reviewed_at"],
+          "properties": {
+            "score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Theological accuracy score (0-1, higher is better)"
+            },
+            "passed": {
+              "type": "boolean",
+              "description": "Whether content passed theological review"
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Array of identified theological concerns"
+            },
+            "reviewed_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Timestamp of theological review"
+            }
+          }
+        },
+        "safety_moderator": {
+          "type": "object",
+          "required": ["score", "passed", "reviewed_at"],
+          "properties": {
+            "score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Child safety score (0-1, higher is better)"
+            },
+            "passed": {
+              "type": "boolean",
+              "description": "Whether content passed safety review"
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Array of identified safety concerns"
+            },
+            "reviewed_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Timestamp of safety review"
+            }
+          }
+        },
+        "manual_review": {
+          "type": "object",
+          "properties": {
+            "required": {
+              "type": "boolean",
+              "description": "Whether manual human review is required"
+            },
+            "reviewer": {
+              "type": "string",
+              "description": "Name/ID of human reviewer if applicable"
+            },
+            "reviewed_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Timestamp of manual review"
+            },
+            "notes": {
+              "type": "string",
+              "maxLength": 1000,
+              "description": "Notes from manual review process"
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

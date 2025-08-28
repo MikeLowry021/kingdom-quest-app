@@ -1,0 +1,146 @@
+[
+  {
+    "id": "jerusalem",
+    "name": "Jerusalem",
+    "description": "The holy city and capital of ancient Israel. Site of the Temple and many biblical events across both testaments.",
+    "era": "oldTestament",
+    "coordinates": {
+      "lat": 31.7683,
+      "lng": 35.2137
+    },
+    "scriptures": [
+      "1 Kings 11:36",
+      "Psalm 122:6",
+      "Matthew 23:37",
+      "Luke 13:34"
+    ],
+    "image": "/images/map/locations/jerusalem.png",
+    "relatedQuestId": "jerusalem-temple"
+  },
+  {
+    "id": "bethlehem",
+    "name": "Bethlehem",
+    "description": "Birthplace of Jesus Christ and King David. Located in Judea, about 6 miles south of Jerusalem.",
+    "era": "newTestament",
+    "coordinates": {
+      "lat": 31.7054,
+      "lng": 35.2024
+    },
+    "scriptures": [
+      "Micah 5:2",
+      "Matthew 2:1",
+      "Luke 2:4-7",
+      "Ruth 1:1-2"
+    ],
+    "image": "/images/map/locations/bethlehem.png",
+    "relatedQuestId": "birth-of-jesus"
+  },
+  {
+    "id": "nazareth",
+    "name": "Nazareth",
+    "description": "Childhood home of Jesus. A small village in Galilee where Jesus grew up after returning from Egypt.",
+    "era": "newTestament",
+    "coordinates": {
+      "lat": 32.7021,
+      "lng": 35.2978
+    },
+    "scriptures": [
+      "Matthew 2:23",
+      "Luke 1:26-27",
+      "Luke 2:39-40",
+      "John 1:46"
+    ],
+    "image": "/images/map/locations/bethlehem.png",
+    "relatedQuestId": "life-of-jesus"
+  },
+  {
+    "id": "sea-of-galilee",
+    "name": "Sea of Galilee",
+    "description": "Freshwater lake where Jesus performed many miracles, including walking on water and calming the storm.",
+    "era": "newTestament",
+    "coordinates": {
+      "lat": 32.8268,
+      "lng": 35.5716
+    },
+    "scriptures": [
+      "Matthew 4:18",
+      "Matthew 8:23-27",
+      "Matthew 14:22-33",
+      "John 21:1-14"
+    ],
+    "image": "/images/map/locations/sea-of-galilee.png",
+    "relatedQuestId": "galilee-miracles"
+  },
+  {
+    "id": "jericho",
+    "name": "Jericho",
+    "description": "One of the oldest inhabited cities in the world. The Israelites famously marched around its walls.",
+    "era": "oldTestament",
+    "coordinates": {
+      "lat": 31.8667,
+      "lng": 35.4441
+    },
+    "scriptures": [
+      "Joshua 6:1-27",
+      "Luke 19:1-10",
+      "2 Kings 2:4-5",
+      "Mark 10:46-52"
+    ],
+    "image": "/images/map/locations/jerusalem.png",
+    "relatedQuestId": "walls-of-jericho"
+  },
+  {
+    "id": "mount-sinai",
+    "name": "Mount Sinai",
+    "description": "The mountain where Moses received the Ten Commandments from God.",
+    "era": "oldTestament",
+    "coordinates": {
+      "lat": 28.5392,
+      "lng": 33.9729
+    },
+    "scriptures": [
+      "Exodus 19:1-25",
+      "Exodus 20:1-21",
+      "Exodus 24:12-18",
+      "Deuteronomy 5:1-22"
+    ],
+    "image": "/images/map/locations/jerusalem.png",
+    "relatedQuestId": "ten-commandments"
+  },
+  {
+    "id": "babylon",
+    "name": "Babylon",
+    "description": "Ancient city where the Israelites were exiled. Site of the Tower of Babel and Nebuchadnezzar's kingdom.",
+    "era": "oldTestament",
+    "coordinates": {
+      "lat": 32.5436,
+      "lng": 44.4275
+    },
+    "scriptures": [
+      "Genesis 11:1-9",
+      "Daniel 1:1-7",
+      "Daniel 3:1-30",
+      "Jeremiah 29:1-14"
+    ],
+    "image": "/images/map/locations/jerusalem.png",
+    "relatedQuestId": "daniel-babylon"
+  },
+  {
+    "id": "mount-of-olives",
+    "name": "Mount of Olives",
+    "description": "Hill east of Jerusalem where Jesus often taught, prayed before His arrest, and ascended to heaven.",
+    "era": "newTestament",
+    "coordinates": {
+      "lat": 31.7788,
+      "lng": 35.2425
+    },
+    "scriptures": [
+      "Matthew 24:3",
+      "Matthew 26:36-46",
+      "Luke 22:39-46",
+      "Acts 1:9-12"
+    ],
+    "image": "/images/map/locations/bethlehem.png",
+    "relatedQuestId": "garden-gethsemane"
+  }
+]

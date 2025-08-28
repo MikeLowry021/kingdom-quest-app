@@ -1,0 +1,279 @@
+{
+  "agent_name": "Localizer",
+  "version": "1.0.0",
+  "description": "Provides multilingual content translation and cultural adaptation for global accessibility",
+  "capabilities": [
+    "Multi-language content translation",
+    "Cultural context adaptation",
+    "Regional biblical interpretation support",
+    "Accessibility text optimization",
+    "Localized user interface elements"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["content_data", "target_locale"],
+    "properties": {
+      "content_data": {
+        "type": "object",
+        "properties": {
+          "content_type": {
+            "type": "string",
+            "enum": ["story_text", "ui_elements", "quiz_questions", "prayer_text", "instructions", "biblical_references"]
+          },
+          "source_content": {"type": "string", "description": "Original text to be localized"},
+          "source_language": {"type": "string", "default": "en"},
+          "content_context": {
+            "type": "object",
+            "properties": {
+              "biblical_story": {"type": "string"},
+              "target_age_group": {"type": "string"},
+              "formality_level": {"type": "string", "enum": ["casual", "formal", "reverent"]},
+              "content_purpose": {"type": "string", "enum": ["education", "worship", "entertainment", "instruction"]}
+            }
+          },
+          "special_elements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "element_type": {"type": "string", "enum": ["biblical_name", "place_name", "theological_term", "cultural_reference"]},
+                "original_text": {"type": "string"},
+                "translation_notes": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "target_locale": {
+        "type": "object",
+        "properties": {
+          "language_code": {"type": "string", "description": "ISO 639-1 language code (e.g., 'es', 'fr', 'zh')"},
+          "region_code": {"type": "string", "description": "ISO 3166-1 country code (e.g., 'MX', 'CA', 'CN')"},
+          "cultural_context": {
+            "type": "string",
+            "enum": ["western", "eastern", "african", "latin_american", "middle_eastern", "asian_pacific"]
+          },
+          "religious_tradition": {
+            "type": "string",
+            "enum": ["protestant", "catholic", "orthodox", "evangelical", "pentecostal", "non_denominational"],
+            "default": "non_denominational"
+          }
+        }
+      },
+      "localization_preferences": {
+        "type": "object",
+        "properties": {
+          "translation_style": {
+            "type": "string",
+            "enum": ["literal", "dynamic_equivalent", "paraphrase", "culturally_adapted"],
+            "default": "dynamic_equivalent"
+          },
+          "biblical_version_preference": {
+            "type": "string",
+            "description": "Preferred Bible version for the target language"
+          },
+          "maintain_theological_accuracy": {"type": "boolean", "default": true},
+          "adapt_cultural_examples": {"type": "boolean", "default": true},
+          "preserve_original_meaning": {"type": "boolean", "default": true}
+        }
+      },
+      "accessibility_requirements": {
+        "type": "object",
+        "properties": {
+          "reading_level": {"type": "string", "enum": ["elementary", "intermediate", "advanced"]},
+          "right_to_left_support": {"type": "boolean"},
+          "character_encoding": {"type": "string", "default": "UTF-8"},
+          "voice_synthesis_optimization": {"type": "boolean", "default": false}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["localized_content", "translation_metadata"],
+    "properties": {
+      "localized_content": {
+        "type": "object",
+        "properties": {
+          "translated_text": {"type": "string"},
+          "alternative_translations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "version": {"type": "string"},
+                "text": {"type": "string"},
+                "context_note": {"type": "string"}
+              }
+            }
+          },
+          "cultural_adaptations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "original_element": {"type": "string"},
+                "adapted_element": {"type": "string"},
+                "adaptation_reason": {"type": "string"}
+              }
+            }
+          },
+          "pronunciation_guides": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "term": {"type": "string"},
+                "pronunciation": {"type": "string"},
+                "audio_available": {"type": "boolean"}
+              }
+            }
+          }
+        }
+      },
+      "translation_metadata": {
+        "type": "object",
+        "properties": {
+          "translation_quality_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "cultural_appropriateness_score": {"type": "number", "minimum": 0, "maximum": 1},
+          "theological_accuracy_verified": {"type": "boolean"},
+          "reading_level_achieved": {"type": "string"},
+          "character_count": {"type": "integer"},
+          "estimated_reading_time_seconds": {"type": "number"}
+        }
+      },
+      "linguistic_analysis": {
+        "type": "object",
+        "properties": {
+          "complexity_metrics": {
+            "type": "object",
+            "properties": {
+              "sentence_length_avg": {"type": "number"},
+              "vocabulary_difficulty": {"type": "string"},
+              "grammatical_complexity": {"type": "string"}
+            }
+          },
+          "cultural_sensitivity_notes": {"type": "array", "items": {"type": "string"}},
+          "theological_considerations": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "quality_assurance": {
+        "type": "object",
+        "properties": {
+          "review_status": {"type": "string", "enum": ["auto_approved", "requires_review", "expert_review_needed"]},
+          "potential_issues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "issue_type": {"type": "string"},
+                "severity": {"type": "string", "enum": ["low", "medium", "high"]},
+                "description": {"type": "string"},
+                "suggested_resolution": {"type": "string"}
+              }
+            }
+          },
+          "human_review_recommended": {"type": "boolean"},
+          "native_speaker_validation_needed": {"type": "boolean"}
+        }
+      },
+      "localization_assets": {
+        "type": "object",
+        "properties": {
+          "text_direction": {"type": "string", "enum": ["ltr", "rtl"]},
+          "font_recommendations": {"type": "array", "items": {"type": "string"}},
+          "ui_layout_adjustments": {"type": "array", "items": {"type": "string"}},
+          "cultural_color_preferences": {"type": "object"},
+          "region_specific_imagery_notes": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "content_data": {
+      "content_type": "story_text",
+      "source_content": "Young David picked up five smooth stones from the brook. With faith in his heart and God's strength as his guide, he stepped forward to face the giant Goliath.",
+      "source_language": "en",
+      "content_context": {
+        "biblical_story": "David and Goliath",
+        "target_age_group": "child_9_12",
+        "formality_level": "casual",
+        "content_purpose": "education"
+      },
+      "special_elements": [
+        {"element_type": "biblical_name", "original_text": "David", "translation_notes": "Keep biblical name consistent"},
+        {"element_type": "biblical_name", "original_text": "Goliath", "translation_notes": "Maintain recognition of famous giant"}
+      ]
+    },
+    "target_locale": {
+      "language_code": "es",
+      "region_code": "MX",
+      "cultural_context": "latin_american",
+      "religious_tradition": "catholic"
+    },
+    "localization_preferences": {
+      "translation_style": "dynamic_equivalent",
+      "biblical_version_preference": "Reina-Valera 1960",
+      "maintain_theological_accuracy": true,
+      "adapt_cultural_examples": true
+    },
+    "accessibility_requirements": {
+      "reading_level": "elementary",
+      "voice_synthesis_optimization": true
+    }
+  },
+  "sample_response": {
+    "localized_content": {
+      "translated_text": "El joven David tomó cinco piedras lisas del arroyo. Con fe en su corazón y la fuerza de Dios como su guía, se adelantó para enfrentar al gigante Goliat.",
+      "alternative_translations": [
+        {
+          "version": "more_formal",
+          "text": "El joven David recogió cinco piedras pulidas del arroyo. Con fe en su corazón y el poder de Dios como guía, avanzó para confrontar al gigante Goliat.",
+          "context_note": "More formal vocabulary suitable for older children"
+        }
+      ],
+      "cultural_adaptations": [],
+      "pronunciation_guides": [
+        {"term": "Goliat", "pronunciation": "go-lee-AHT", "audio_available": true}
+      ]
+    },
+    "translation_metadata": {
+      "translation_quality_score": 0.94,
+      "cultural_appropriateness_score": 0.96,
+      "theological_accuracy_verified": true,
+      "reading_level_achieved": "elementary",
+      "character_count": 139,
+      "estimated_reading_time_seconds": 12.5
+    },
+    "linguistic_analysis": {
+      "complexity_metrics": {
+        "sentence_length_avg": 18.5,
+        "vocabulary_difficulty": "elementary",
+        "grammatical_complexity": "simple"
+      },
+      "cultural_sensitivity_notes": ["Content appropriate for Latin American Catholic context"],
+      "theological_considerations": ["Maintains biblical narrative integrity"]
+    },
+    "quality_assurance": {
+      "review_status": "auto_approved",
+      "potential_issues": [],
+      "human_review_recommended": false,
+      "native_speaker_validation_needed": false
+    },
+    "localization_assets": {
+      "text_direction": "ltr",
+      "font_recommendations": ["Roboto", "Open Sans", "Noto Sans"],
+      "ui_layout_adjustments": ["Spanish text typically 15-20% longer than English"],
+      "cultural_color_preferences": {"warm_earth_tones_preferred": true},
+      "region_specific_imagery_notes": ["Consider Mexican/Latin American cultural visual elements"]
+    }
+  },
+  "error_codes": {
+    "11000": "Unsupported language or locale combination",
+    "11001": "Translation quality below acceptable threshold",
+    "11002": "Cultural adaptation conflicts with theological accuracy",
+    "11003": "Biblical version not available for target language",
+    "11004": "Content contains untranslatable cultural elements",
+    "11005": "Accessibility requirements cannot be met for target locale"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "agent_name": "AudioPsalmist",
+  "version": "1.0.0",
+  "description": "Creates narration, music, and audio experiences for biblical content with diverse voice options",
+  "capabilities": [
+    "Story narration generation",
+    "Biblical music composition",
+    "Multi-language audio support",
+    "Age-appropriate voice selection",
+    "Accessibility audio features"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["audio_request", "target_age_group"],
+    "properties": {
+      "audio_request": {
+        "type": "object",
+        "properties": {
+          "content_type": {"type": "string", "enum": ["narration", "background_music", "sound_effects", "prayer_guide", "song"]},
+          "text_content": {"type": "string", "description": "Text to be converted to audio"},
+          "mood": {"type": "string", "enum": ["peaceful", "joyful", "dramatic", "contemplative", "celebratory"]},
+          "duration_preference": {"type": "string", "enum": ["short", "medium", "long"]}
+        }
+      },
+      "target_age_group": {
+        "type": "string",
+        "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]
+      },
+      "voice_preferences": {
+        "type": "object",
+        "properties": {
+          "gender": {"type": "string", "enum": ["male", "female", "child", "any"]},
+          "accent": {"type": "string"},
+          "speaking_pace": {"type": "string", "enum": ["slow", "normal", "fast"], "default": "normal"},
+          "emotional_tone": {"type": "string", "enum": ["warm", "authoritative", "gentle", "enthusiastic"]}
+        }
+      },
+      "language_settings": {
+        "type": "object",
+        "properties": {
+          "primary_language": {"type": "string", "default": "en"},
+          "pronunciation_guide": {"type": "array", "items": {"type": "object"}}
+        }
+      },
+      "accessibility_features": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["audio_descriptions", "slow_speech", "clear_pronunciation", "pause_markers"]
+        }
+      },
+      "technical_specs": {
+        "type": "object",
+        "properties": {
+          "format": {"type": "string", "enum": ["mp3", "wav", "ogg"], "default": "mp3"},
+          "quality": {"type": "string", "enum": ["standard", "high", "premium"], "default": "high"},
+          "include_timestamps": {"type": "boolean", "default": false}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["audio_assets", "metadata"],
+    "properties": {
+      "audio_assets": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "asset_id": {"type": "string"},
+            "file_path": {"type": "string"},
+            "asset_type": {"type": "string", "enum": ["narration", "music", "sound_effect", "combined"]},
+            "duration_seconds": {"type": "number"},
+            "file_size_kb": {"type": "number"},
+            "format": {"type": "string"},
+            "quality_metrics": {
+              "type": "object",
+              "properties": {
+                "clarity_score": {"type": "number"},
+                "volume_level": {"type": "number"},
+                "background_noise_level": {"type": "number"}
+              }
+            }
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "voice_profile": {
+            "type": "object",
+            "properties": {
+              "voice_name": {"type": "string"},
+              "characteristics": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "content_analysis": {
+            "type": "object",
+            "properties": {
+              "reading_level": {"type": "string"},
+              "theological_content_verified": {"type": "boolean"},
+              "age_appropriateness_score": {"type": "number"}
+            }
+          },
+          "production_notes": {"type": "array", "items": {"type": "string"}},
+          "timestamps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "time_seconds": {"type": "number"},
+                "text_segment": {"type": "string"},
+                "marker_type": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "accessibility_features": {
+        "type": "object",
+        "properties": {
+          "audio_descriptions_included": {"type": "boolean"},
+          "speech_rate_adjustable": {"type": "boolean"},
+          "transcript_available": {"type": "boolean"},
+          "caption_file_path": {"type": "string"}
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "audio_request": {
+      "content_type": "narration",
+      "text_content": "Young David picked up five smooth stones from the brook. With faith in his heart and God's strength as his guide, he stepped forward to face the giant.",
+      "mood": "dramatic",
+      "duration_preference": "medium"
+    },
+    "target_age_group": "child_9_12",
+    "voice_preferences": {
+      "gender": "male",
+      "speaking_pace": "normal",
+      "emotional_tone": "warm"
+    },
+    "language_settings": {
+      "primary_language": "en"
+    },
+    "accessibility_features": ["clear_pronunciation", "pause_markers"],
+    "technical_specs": {
+      "format": "mp3",
+      "quality": "high",
+      "include_timestamps": true
+    }
+  },
+  "sample_response": {
+    "audio_assets": [
+      {
+        "asset_id": "david_stones_narration",
+        "file_path": "audio/stories/david_stones.mp3",
+        "asset_type": "narration",
+        "duration_seconds": 18.5,
+        "file_size_kb": 296,
+        "format": "mp3",
+        "quality_metrics": {
+          "clarity_score": 0.95,
+          "volume_level": 0.8,
+          "background_noise_level": 0.02
+        }
+      }
+    ],
+    "metadata": {
+      "voice_profile": {
+        "voice_name": "Samuel_Storyteller",
+        "characteristics": ["warm", "clear", "engaging", "age_appropriate"]
+      },
+      "content_analysis": {
+        "reading_level": "grade_4",
+        "theological_content_verified": true,
+        "age_appropriateness_score": 0.98
+      },
+      "production_notes": ["Emphasis added on 'faith in his heart'", "Dramatic pause before 'stepped forward'"],
+      "timestamps": [
+        {"time_seconds": 0.0, "text_segment": "Young David picked up five smooth stones", "marker_type": "sentence_start"},
+        {"time_seconds": 8.2, "text_segment": "With faith in his heart and God's strength as his guide", "marker_type": "emphasis"}
+      ]
+    },
+    "accessibility_features": {
+      "audio_descriptions_included": false,
+      "speech_rate_adjustable": true,
+      "transcript_available": true,
+      "caption_file_path": "captions/david_stones.srt"
+    }
+  },
+  "error_codes": {
+    "5000": "Audio generation failed",
+    "5001": "Unsupported language or accent",
+    "5002": "Content too long for selected format",
+    "5003": "Voice profile unavailable",
+    "5004": "Audio quality below acceptable threshold",
+    "5005": "Text content contains inappropriate material"
+  }
+}

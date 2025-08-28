@@ -1,0 +1,35 @@
+{
+  "id": "quiz-children-008",
+  "title": "Noah's Ark Quiz 8",
+  "description": "Questions about Noah's Ark for children - Part 8",
+  "difficulty": "beginner",
+  "questions": [
+    {
+      "id": "q-080",
+      "text": "True or False: Noah obeyed everything God told him to do.",
+      "type": "true-false",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 6,
+        "verses": "22"
+      },
+      "options": [
+        {
+          "id": "opt-080",
+          "text": "True",
+          "isCorrect": true,
+          "explanation": "Genesis 6:22 says 'Thus did Noah; according to all that God commanded him, so did he.'"
+        },
+        {
+          "id": "opt-081",
+          "text": "False",
+          "isCorrect": false,
+          "explanation": "Noah was completely obedient to God's commands."
+        }
+      ],
+      "points": 1
+    }
+  ],
+  "passingScore": 50,
+  "timeLimit": 0
+}

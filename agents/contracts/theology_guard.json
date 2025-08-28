@@ -1,0 +1,124 @@
+{
+  "agent_name": "TheologyGuard",
+  "version": "1.0.0",
+  "description": "Validates all content against Christian theological principles and biblical accuracy",
+  "capabilities": [
+    "Scriptural accuracy validation",
+    "Theological content review",
+    "Doctrine compliance checking",
+    "Biblical reference verification",
+    "Content sanctification"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["content", "content_type"],
+    "properties": {
+      "content": {
+        "type": "string",
+        "description": "Content to be validated"
+      },
+      "content_type": {
+        "type": "string",
+        "enum": ["story", "quiz_question", "prayer", "lesson", "user_generated"],
+        "description": "Type of content being validated"
+      },
+      "target_age_group": {
+        "type": "string",
+        "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]
+      },
+      "biblical_references": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "Expected biblical references to validate"
+      },
+      "validation_level": {
+        "type": "string",
+        "enum": ["strict", "moderate", "lenient"],
+        "default": "moderate"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["validation_result", "is_approved"],
+    "properties": {
+      "validation_result": {
+        "type": "string",
+        "enum": ["approved", "approved_with_modifications", "rejected"]
+      },
+      "is_approved": {"type": "boolean"},
+      "confidence_score": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "theological_accuracy": {
+        "type": "object",
+        "properties": {
+          "biblical_alignment": {"type": "number", "minimum": 0, "maximum": 1},
+          "doctrinal_soundness": {"type": "number", "minimum": 0, "maximum": 1},
+          "age_appropriateness": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      },
+      "suggested_modifications": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "issue": {"type": "string"},
+            "suggested_change": {"type": "string"},
+            "biblical_justification": {"type": "string"}
+          }
+        }
+      },
+      "verified_references": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "reference": {"type": "string"},
+            "verse_text": {"type": "string"},
+            "context_relevance": {"type": "number"}
+          }
+        }
+      },
+      "warnings": {
+        "type": "array",
+        "items": {"type": "string"}
+      }
+    }
+  },
+  "sample_request": {
+    "content": "David trusted in God's strength, not his own, when facing the giant Goliath. With just a small stone and unwavering faith, he defeated his enemy.",
+    "content_type": "story",
+    "target_age_group": "child_9_12",
+    "biblical_references": ["1 Samuel 17:45-47"],
+    "validation_level": "moderate"
+  },
+  "sample_response": {
+    "validation_result": "approved",
+    "is_approved": true,
+    "confidence_score": 0.95,
+    "theological_accuracy": {
+      "biblical_alignment": 0.98,
+      "doctrinal_soundness": 0.92,
+      "age_appropriateness": 0.95
+    },
+    "suggested_modifications": [],
+    "verified_references": [
+      {
+        "reference": "1 Samuel 17:45",
+        "verse_text": "David said to the Philistine, 'You come against me with sword and spear and javelin, but I come against you in the name of the Lord Almighty...'",
+        "context_relevance": 0.98
+      }
+    ],
+    "warnings": []
+  },
+  "error_codes": {
+    "2000": "Content contains theological inaccuracies",
+    "2001": "Biblical references could not be verified",
+    "2002": "Content inappropriate for target age group",
+    "2003": "Doctrinal concerns detected",
+    "2004": "Content validation service unavailable"
+  }
+}

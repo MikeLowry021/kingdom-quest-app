@@ -1,0 +1,258 @@
+{
+  "agent_name": "UXBuilder",
+  "version": "1.0.0",
+  "description": "Creates age-appropriate user interfaces and interaction designs optimized for different user groups",
+  "capabilities": [
+    "Age-specific UI design",
+    "Accessibility-first interface creation",
+    "Multi-generational user experience",
+    "Interactive component design",
+    "Responsive design optimization"
+  ],
+  "input_schema": {
+    "type": "object",
+    "required": ["ui_request", "target_demographics"],
+    "properties": {
+      "ui_request": {
+        "type": "object",
+        "properties": {
+          "component_type": {
+            "type": "string",
+            "enum": ["story_interface", "quiz_layout", "prayer_guide", "family_dashboard", "navigation_menu", "progress_tracker"]
+          },
+          "functionality_requirements": {"type": "array", "items": {"type": "string"}},
+          "content_integration": {
+            "type": "object",
+            "properties": {
+              "text_content": {"type": "boolean"},
+              "visual_media": {"type": "boolean"},
+              "audio_content": {"type": "boolean"},
+              "interactive_elements": {"type": "boolean"}
+            }
+          },
+          "branding_requirements": {
+            "type": "object",
+            "properties": {
+              "color_scheme": {"type": "string"},
+              "typography_style": {"type": "string"},
+              "brand_elements": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      },
+      "target_demographics": {
+        "type": "object",
+        "properties": {
+          "primary_age_group": {
+            "type": "string",
+            "enum": ["child_6_8", "child_9_12", "teen_13_17", "adult", "senior"]
+          },
+          "secondary_users": {"type": "array", "items": {"type": "string"}},
+          "family_mode_required": {"type": "boolean"},
+          "device_preferences": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["mobile", "tablet", "desktop", "smart_tv"]}
+          }
+        }
+      },
+      "accessibility_standards": {
+        "type": "object",
+        "properties": {
+          "wcag_level": {"type": "string", "enum": ["AA", "AAA"], "default": "AA"},
+          "specific_needs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["screen_reader", "high_contrast", "large_text", "voice_control", "motor_impairment", "cognitive_support"]
+            }
+          },
+          "language_support": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "interaction_patterns": {
+        "type": "object",
+        "properties": {
+          "input_methods": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["touch", "click", "voice", "gesture", "keyboard"]}
+          },
+          "feedback_types": {
+            "type": "array",
+            "items": {"type": "string", "enum": ["visual", "audio", "haptic", "verbal_praise"]}
+          },
+          "complexity_level": {"type": "string", "enum": ["simple", "moderate", "advanced"], "default": "moderate"}
+        }
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "required": ["ui_components", "design_specifications"],
+    "properties": {
+      "ui_components": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "component_id": {"type": "string"},
+            "component_name": {"type": "string"},
+            "component_type": {"type": "string"},
+            "html_structure": {"type": "string"},
+            "css_styles": {"type": "string"},
+            "javascript_behavior": {"type": "string"},
+            "accessibility_attributes": {"type": "object"},
+            "responsive_breakpoints": {
+              "type": "object",
+              "properties": {
+                "mobile": {"type": "string"},
+                "tablet": {"type": "string"},
+                "desktop": {"type": "string"}
+              }
+            }
+          }
+        }
+      },
+      "design_specifications": {
+        "type": "object",
+        "properties": {
+          "color_palette": {
+            "type": "object",
+            "properties": {
+              "primary_colors": {"type": "array", "items": {"type": "string"}},
+              "secondary_colors": {"type": "array", "items": {"type": "string"}},
+              "accessibility_ratios": {"type": "object"}
+            }
+          },
+          "typography_system": {
+            "type": "object",
+            "properties": {
+              "font_families": {"type": "array", "items": {"type": "string"}},
+              "font_sizes": {"type": "object"},
+              "line_heights": {"type": "object"},
+              "readability_scores": {"type": "object"}
+            }
+          },
+          "spacing_system": {"type": "object"},
+          "animation_guidelines": {"type": "object"},
+          "interaction_states": {
+            "type": "object",
+            "properties": {
+              "hover": {"type": "string"},
+              "focus": {"type": "string"},
+              "active": {"type": "string"},
+              "disabled": {"type": "string"}
+            }
+          }
+        }
+      },
+      "user_experience_notes": {
+        "type": "object",
+        "properties": {
+          "age_appropriate_features": {"type": "array", "items": {"type": "string"}},
+          "cognitive_load_considerations": {"type": "array", "items": {"type": "string"}},
+          "engagement_strategies": {"type": "array", "items": {"type": "string"}},
+          "learning_reinforcement": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "accessibility_compliance": {
+        "type": "object",
+        "properties": {
+          "wcag_conformance": {"type": "string"},
+          "tested_assistive_technologies": {"type": "array", "items": {"type": "string"}},
+          "keyboard_navigation_flow": {"type": "array", "items": {"type": "string"}},
+          "screen_reader_compatibility": {"type": "boolean"}
+        }
+      },
+      "testing_recommendations": {
+        "type": "object",
+        "properties": {
+          "user_testing_scenarios": {"type": "array", "items": {"type": "string"}},
+          "performance_benchmarks": {"type": "object"},
+          "browser_compatibility": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "sample_request": {
+    "ui_request": {
+      "component_type": "quiz_layout",
+      "functionality_requirements": ["question_display", "answer_selection", "progress_tracking", "immediate_feedback"],
+      "content_integration": {
+        "text_content": true,
+        "visual_media": true,
+        "audio_content": false,
+        "interactive_elements": true
+      },
+      "branding_requirements": {
+        "color_scheme": "warm_earth_tones",
+        "typography_style": "friendly_readable",
+        "brand_elements": ["kingdom_quest_logo", "biblical_iconography"]
+      }
+    },
+    "target_demographics": {
+      "primary_age_group": "child_9_12",
+      "family_mode_required": true,
+      "device_preferences": ["tablet", "mobile"]
+    },
+    "accessibility_standards": {
+      "wcag_level": "AA",
+      "specific_needs": ["large_text", "high_contrast", "screen_reader"],
+      "language_support": ["en", "es"]
+    },
+    "interaction_patterns": {
+      "input_methods": ["touch", "voice"],
+      "feedback_types": ["visual", "audio", "verbal_praise"],
+      "complexity_level": "simple"
+    }
+  },
+  "sample_response": {
+    "ui_components": [
+      {
+        "component_id": "quiz_container",
+        "component_name": "Interactive Quiz Layout",
+        "component_type": "quiz_layout",
+        "html_structure": "<div class='quiz-container' role='main' aria-label='Bible Quiz'>...",
+        "css_styles": ".quiz-container { font-size: 18px; line-height: 1.6; background: #f7f5f3; }...",
+        "javascript_behavior": "QuizController handles answer selection with audio feedback...",
+        "accessibility_attributes": {"aria-live": "polite", "role": "main", "tabindex": "0"},
+        "responsive_breakpoints": {
+          "mobile": "Single column, large touch targets",
+          "tablet": "Two column layout with illustration panel",
+          "desktop": "Three column with extended content area"
+        }
+      }
+    ],
+    "design_specifications": {
+      "color_palette": {
+        "primary_colors": ["#8B4513", "#DEB887", "#F4A460"],
+        "secondary_colors": ["#228B22", "#4169E1", "#FFD700"],
+        "accessibility_ratios": {"text_background_ratio": "7.2:1", "focus_indicator_ratio": "4.8:1"}
+      },
+      "typography_system": {
+        "font_families": ["OpenDyslexic", "Arial", "sans-serif"],
+        "font_sizes": {"body": "18px", "heading": "24px", "large_text_mode": "22px"},
+        "readability_scores": {"flesch_reading_ease": 85, "grade_level": 4}
+      }
+    },
+    "user_experience_notes": {
+      "age_appropriate_features": ["Large, colorful buttons", "Encouraging animations", "Simple language"],
+      "cognitive_load_considerations": ["One question at a time", "Clear progress indicators", "Minimal distractions"],
+      "engagement_strategies": ["Reward animations", "Biblical character mascot", "Achievement badges"],
+      "learning_reinforcement": ["Immediate positive feedback", "Gentle correction messages", "Biblical verse rewards"]
+    },
+    "accessibility_compliance": {
+      "wcag_conformance": "AA",
+      "tested_assistive_technologies": ["VoiceOver", "TalkBack", "NVDA"],
+      "keyboard_navigation_flow": ["Tab through answers", "Enter to select", "Space for audio replay"],
+      "screen_reader_compatibility": true
+    }
+  },
+  "error_codes": {
+    "8000": "Invalid UI component type requested",
+    "8001": "Accessibility requirements cannot be met",
+    "8002": "Device compatibility issues detected",
+    "8003": "Age-inappropriate design elements",
+    "8004": "Branding guidelines conflict with accessibility",
+    "8005": "Responsive design constraints exceeded"
+  }
+}

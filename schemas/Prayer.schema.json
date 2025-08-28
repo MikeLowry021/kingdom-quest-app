@@ -1,0 +1,107 @@
+{
+  "$id": "https://kingdomquest.example/schemas/Prayer.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A prayer template in the KingdomQuest app",
+  "properties": {
+    "ageRating": {
+      "description": "Target age group for the prayer",
+      "enum": [
+        "all",
+        "children",
+        "youth",
+        "adult"
+      ],
+      "type": "string"
+    },
+    "bibleReference": {
+      "properties": {
+        "book": {
+          "description": "Bible book name",
+          "type": "string"
+        },
+        "chapter": {
+          "description": "Chapter number",
+          "type": "integer"
+        },
+        "translation": {
+          "default": "NIV",
+          "description": "Bible translation used",
+          "type": "string"
+        },
+        "verses": {
+          "description": "Verse range (e.g., '1-10')",
+          "type": "string"
+        }
+      },
+      "required": [
+        "book",
+        "chapter",
+        "verses"
+      ],
+      "type": "object"
+    },
+    "category": {
+      "description": "Prayer category",
+      "enum": [
+        "praise",
+        "thanksgiving",
+        "confession",
+        "supplication",
+        "intercession"
+      ],
+      "type": "string"
+    },
+    "content": {
+      "description": "Full prayer text",
+      "type": "string"
+    },
+    "createdAt": {
+      "description": "Creation timestamp",
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "description": "Unique identifier for the prayer",
+      "type": "string"
+    },
+    "isTemplate": {
+      "default": false,
+      "description": "Whether this is a template prayer or user-created",
+      "type": "boolean"
+    },
+    "mediaItems": {
+      "description": "Media items associated with this prayer (background music, images)",
+      "items": {
+        "$ref": "Media.schema.json"
+      },
+      "type": "array"
+    },
+    "tags": {
+      "description": "Topical tags for categorizing the prayer",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "title": {
+      "description": "Title of the prayer",
+      "type": "string"
+    },
+    "updatedAt": {
+      "description": "Last update timestamp",
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "content",
+    "category",
+    "createdAt",
+    "updatedAt"
+  ],
+  "title": "Prayer",
+  "type": "object",
+  "version": "1.0.0"
+}

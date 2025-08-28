@@ -1,0 +1,30 @@
+{
+  "name": "KingdomQuest",
+  "short_name": "KingdomQuest",
+  "description": "Christian educational app for children featuring interactive Bible stories, quizzes, and family devotions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "kids", "lifestyle", "books"],
+  "lang": "en-US",
+  "scope": "/"
+}

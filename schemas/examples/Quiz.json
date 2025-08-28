@@ -1,0 +1,122 @@
+{
+  "description": "Test your knowledge of Jesus' teachings on prayer",
+  "difficulty": "intermediate",
+  "id": "quiz-002",
+  "passingScore": 70,
+  "questions": [
+    {
+      "bibleReference": {
+        "book": "Matthew",
+        "chapter": 6,
+        "verses": "9-13"
+      },
+      "id": "q-003",
+      "options": [
+        {
+          "explanation": "The Lord's Prayer begins with 'Our Father in heaven'.",
+          "id": "opt-009",
+          "isCorrect": true,
+          "text": "Our Father in heaven"
+        },
+        {
+          "explanation": "The Lord's Prayer doesn't begin with 'Heavenly King'.",
+          "id": "opt-010",
+          "isCorrect": false,
+          "text": "Heavenly King"
+        },
+        {
+          "explanation": "The Lord's Prayer doesn't begin with 'Almighty God'.",
+          "id": "opt-011",
+          "isCorrect": false,
+          "text": "Almighty God"
+        },
+        {
+          "explanation": "The Lord's Prayer doesn't begin with 'Lord of all'.",
+          "id": "opt-012",
+          "isCorrect": false,
+          "text": "Lord of all"
+        }
+      ],
+      "points": 1,
+      "text": "How does the Lord's Prayer begin?",
+      "type": "multiple-choice"
+    },
+    {
+      "bibleReference": {
+        "book": "Luke",
+        "chapter": 11,
+        "verses": "5-8"
+      },
+      "id": "q-004",
+      "options": [
+        {
+          "explanation": "False - Jesus taught about persistence in prayer.",
+          "id": "opt-013",
+          "isCorrect": false,
+          "text": "True"
+        },
+        {
+          "explanation": "Jesus taught that we should be persistent in prayer, using the parable of a friend at midnight.",
+          "id": "opt-014",
+          "isCorrect": true,
+          "text": "False"
+        }
+      ],
+      "points": 1,
+      "text": "True or False: Jesus taught that we should only pray once for something and then stop asking.",
+      "type": "true-false"
+    },
+    {
+      "bibleReference": {
+        "book": "Matthew",
+        "chapter": 6,
+        "verses": "7"
+      },
+      "id": "q-005",
+      "options": [
+        {
+          "explanation": "Jesus taught against meaningless repetition, not against all repetition in prayer.",
+          "id": "opt-015",
+          "isCorrect": false,
+          "text": "True"
+        },
+        {
+          "explanation": "Jesus warned against meaningless repetition ('babbling'), not all repetition. Meaningful repetition can be appropriate.",
+          "id": "opt-016",
+          "isCorrect": true,
+          "text": "False"
+        }
+      ],
+      "points": 1,
+      "text": "True or False: Jesus taught that all repetition in prayer is wrong.",
+      "type": "true-false"
+    },
+    {
+      "bibleReference": {
+        "book": "Luke",
+        "chapter": 18,
+        "verses": "9-14"
+      },
+      "id": "q-006",
+      "options": [
+        {
+          "explanation": "Jesus taught that the humble tax collector who recognized his sinfulness was justified, not the proud Pharisee.",
+          "id": "opt-017",
+          "isCorrect": true,
+          "text": "The tax collector"
+        },
+        {
+          "explanation": "The Pharisee's prayer was self-righteous, focusing on his own good deeds.",
+          "id": "opt-018",
+          "isCorrect": false,
+          "text": "The Pharisee"
+        }
+      ],
+      "points": 2,
+      "text": "In Jesus' parable of the Pharisee and the tax collector praying in the temple, who went home justified before God?",
+      "type": "multiple-choice"
+    }
+  ],
+  "timeLimit": 300,
+  "title": "Jesus' Teachings on Prayer"
+}

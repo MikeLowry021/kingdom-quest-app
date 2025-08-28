@@ -1,0 +1,41 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "Update brand color system in main application",
+        "details": "1. Update Tailwind config with exact brand colors (Royal Navy Blue #1e3a5f, Gold #d4af37, Sandstone Beige #b8a082, Emerald Green #10b981). 2. Update CSS custom properties to match brand specifications. 3. Replace generic blue/gold colors with brand-accurate colors. 4. Ensure WCAG AA+ compliance (7:1 contrast ratios). 5. Update semantic color tokens for success, warning, error states.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Implement proper brand typography system",
+        "details": "1. Configure Crimson Pro font for headings and formal elements. 2. Configure Nunito font for body text and UI elements. 3. Update font loading and CSS font stacks. 4. Ensure accessibility compliance with minimum 16px base font size. 5. Test typography across all age tiers for readability.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "Update logo implementation across application",
+        "details": "1. Audit all logo placements in the main app. 2. Replace with correct brand logo variations (horizontal, vertical, app icon). 3. Ensure proper sizing and clear space guidelines. 4. Update favicon and app icons with brand-compliant versions. 5. Verify accessibility requirements (alt text, contrast).",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "Apply brand system to marketing site",
+        "details": "1. Update marketing site color palette to match brand guidelines. 2. Implement brand typography (Crimson Pro, Nunito) across marketing site. 3. Replace marketing site logos with brand-compliant versions. 4. Ensure visual consistency between main app and marketing site. 5. Test responsive behavior and accessibility compliance.",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "5": {
+        "id": "5",
+        "content": "Comprehensive brand compliance audit and documentation",
+        "details": "1. Test visual consistency across all pages and components. 2. Verify accessibility compliance (color contrast, touch targets, typography). 3. Cross-browser and device testing for brand consistency. 4. Document any remaining brand implementation gaps. 5. Create brand compliance checklist for future development.",
+        "status": "completed",
+        "priority": "low"
+      }
+    }
+  }
+}

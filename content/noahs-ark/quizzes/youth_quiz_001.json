@@ -1,0 +1,72 @@
+{
+  "id": "quiz-youth-001",
+  "title": "Noah's Obedience",
+  "description": "Questions about faith and obedience for youth",
+  "difficulty": "intermediate",
+  "questions": [
+    {
+      "id": "q-010",
+      "text": "Why was Noah chosen by God to build the ark?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 6,
+        "verses": "8-9"
+      },
+      "options": [
+        {
+          "id": "opt-010",
+          "text": "He found grace in God's eyes and was righteous",
+          "isCorrect": true,
+          "explanation": "Genesis 6:8-9 says 'But Noah found grace in the eyes of the LORD... Noah was a just man and perfect in his generations, and Noah walked with God.'"
+        },
+        {
+          "id": "opt-011",
+          "text": "He was the strongest man alive",
+          "isCorrect": false,
+          "explanation": "God didn't choose Noah for his physical strength, but for his righteousness."
+        },
+        {
+          "id": "opt-012",
+          "text": "He volunteered for the job",
+          "isCorrect": false,
+          "explanation": "God specifically chose Noah, Noah didn't volunteer."
+        }
+      ],
+      "points": 2
+    },
+    {
+      "id": "q-011",
+      "text": "What does it mean that Noah 'walked with God'?",
+      "type": "multiple-choice",
+      "bibleReference": {
+        "book": "Genesis",
+        "chapter": 6,
+        "verses": "9"
+      },
+      "options": [
+        {
+          "id": "opt-013",
+          "text": "He lived in close fellowship and obedience to God",
+          "isCorrect": true,
+          "explanation": "Walking with God means having a close relationship with Him and following His ways faithfully."
+        },
+        {
+          "id": "opt-014",
+          "text": "He physically walked alongside God",
+          "isCorrect": false,
+          "explanation": "This is a spiritual description of Noah's relationship with God, not a physical one."
+        },
+        {
+          "id": "opt-015",
+          "text": "He was God's messenger",
+          "isCorrect": false,
+          "explanation": "While Noah was obedient to God, 'walking with God' describes his personal relationship with God."
+        }
+      ],
+      "points": 2
+    }
+  ],
+  "passingScore": 70,
+  "timeLimit": 0
+}

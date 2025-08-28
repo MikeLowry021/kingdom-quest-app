@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://kingdomquest.example/schemas/Scene.schema.json",
+  "title": "Scene",
+  "description": "A single scene within a biblical story in the KingdomQuest app",
+  "type": "object",
+  "version": "1.0.0",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the scene"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the scene"
+    },
+    "narrative": {
+      "type": "string",
+      "description": "Main narrative text of the scene"
+    },
+    "mediaItems": {
+      "type": "array",
+      "items": {
+        "$ref": "Media.schema.json"
+      },
+      "description": "Media items associated with this scene (images, audio, etc.)"
+    },
+    "mapMarker": {
+      "$ref": "MapMarker.schema.json",
+      "description": "Geographic location marker for this scene"
+    },
+    "order": {
+      "type": "integer",
+      "description": "Order of this scene within the story"
+    },
+    "interactions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "choice",
+              "prayer",
+              "reflection",
+              "activity"
+            ],
+            "description": "Type of interaction"
+          },
+          "content": {
+            "type": "string",
+            "description": "Content for the interaction"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "Option text"
+                },
+                "nextSceneId": {
+                  "type": "string",
+                  "description": "ID of the next scene if this option is chosen"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "content"
+        ]
+      },
+      "description": "Interactive elements within this scene"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "narrative",
+    "order"
+  ]
+}

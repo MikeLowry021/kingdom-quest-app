@@ -1,0 +1,60 @@
+[
+  {
+    "title": "The Good Shepherd",
+    "description": "Jesus teaches about being the Good Shepherd who protects His sheep.",
+    "bibleReference": {
+      "book": "John",
+      "chapter": 10,
+      "verses": "1-16"
+    },
+    "ageRating": "children",
+    "difficulty": "beginner",
+    "themes": ["love", "protection", "guidance"],
+    "scenes": [
+      {
+        "title": "The Shepherd's Voice",
+        "content": "Jesus said, 'My sheep hear my voice, and I know them, and they follow me.'",
+        "interactions": ["prayer", "reflection"],
+        "mediaUrls": []
+      },
+      {
+        "title": "Safe in His Care",
+        "content": "The Good Shepherd protects His sheep from danger and leads them to green pastures.",
+        "interactions": ["discussion", "drawing"],
+        "mediaUrls": []
+      }
+    ]
+  },
+  {
+    "title": "David and Goliath",
+    "description": "Young David trusts God to help him defeat the giant Goliath.",
+    "bibleReference": {
+      "book": "1 Samuel",
+      "chapter": 17,
+      "verses": "1-58"
+    },
+    "ageRating": "children",
+    "difficulty": "intermediate", 
+    "themes": ["courage", "faith", "trust"],
+    "scenes": [
+      {
+        "title": "The Giant's Challenge",
+        "content": "Goliath challenged the Israelite army, but they were all afraid except young David.",
+        "interactions": ["quiz", "discussion"],
+        "mediaUrls": []
+      },
+      {
+        "title": "David's Faith",
+        "content": "David said, 'The Lord will deliver me from this giant!' and he trusted God completely.",
+        "interactions": ["prayer", "song"],
+        "mediaUrls": []
+      },
+      {
+        "title": "Victory Through Faith",
+        "content": "With just a stone and sling, David defeated Goliath because God was with him.",
+        "interactions": ["celebration", "memory_verse"],
+        "mediaUrls": []
+      }
+    ]
+  }
+]
