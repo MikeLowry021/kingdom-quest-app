@@ -1,0 +1,129 @@
+/* Age-specific styling for adaptive UI */
+
+/* Global motion preferences */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* High contrast mode */
+.high-contrast {
+  --tw-ring-color: #000;
+}
+
+.high-contrast * {
+  border-color: #000 !important;
+}
+
+.high-contrast button {
+  border-width: 2px !important;
+}
+
+/* Age tier specific styles */
+.age-tier-toddler,
+.age-tier-preschool {
+  --font-size-base: 1.25rem;
+  --touch-target-min: 4rem;
+  --spacing-base: 2rem;
+}
+
+.age-tier-elementary {
+  --font-size-base: 1.125rem;
+  --touch-target-min: 3rem;
+  --spacing-base: 1.5rem;
+}
+
+.age-tier-preteen,
+.age-tier-early-teen {
+  --font-size-base: 1rem;
+  --touch-target-min: 2.5rem;
+  --spacing-base: 1.25rem;
+}
+
+/* Audio-first interface */
+.audio-first .sr-only {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.5rem !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+/* Focus styles for better accessibility */
+.age-tier-toddler *:focus,
+.age-tier-preschool *:focus {
+  outline: 4px solid #3b82f6;
+  outline-offset: 4px;
+}
+
+.age-tier-elementary *:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+/* Button sizing based on age tier */
+.age-tier-toddler button,
+.age-tier-preschool button {
+  min-height: 4rem;
+  min-width: 4rem;
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+}
+
+.age-tier-elementary button {
+  min-height: 3rem;
+  min-width: 3rem;
+  font-size: 1.125rem;
+  padding: 0.75rem 1.25rem;
+}
+
+/* Loading animations - respect motion preferences */
+@keyframes gentle-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.reduce-motion .animate-spin {
+  animation: none;
+}
+
+.age-tier-toddler .animate-spin,
+.age-tier-preschool .animate-spin {
+  animation: gentle-spin 2s linear infinite;
+}
+
+/* Progress indicators for kids */
+.age-tier-toddler .progress-bar,
+.age-tier-preschool .progress-bar,
+.age-tier-elementary .progress-bar {
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Card spacing for different age groups */
+.age-tier-toddler .card,
+.age-tier-preschool .card {
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+  border-width: 3px;
+}
+
+.age-tier-elementary .card {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  border-width: 2px;
+}

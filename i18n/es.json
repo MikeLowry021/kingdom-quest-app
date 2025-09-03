@@ -1,0 +1,594 @@
+{
+  "_metadata": {
+    "language": "Español",
+    "locale": "es",
+    "version": "1.0.0",
+    "lastUpdated": "2025-08-26",
+    "completeness": 100,
+    "direction": "ltr"
+  },
+  "nav": {
+    "home": "Inicio",
+    "stories": "Historias",
+    "quizzes": "Cuestionarios",
+    "mapExplorer": "Explorador de Mapas",
+    "familyAltar": "Altar Familiar",
+    "profile": "Perfil",
+    "admin": "Administración",
+    "signOut": "Cerrar Sesión",
+    "menu": "Menú",
+    "close": "Cerrar"
+  },
+  "brand": {
+    "name": "BúsquedaDelReino",
+    "tagline": "Aprendizaje Bíblico Adaptativo",
+    "description": "Historias y lecciones bíblicas apropiadas para la edad que se adaptan a tu jornada de aprendizaje. Aprendizaje cristiano interactivo para toda la familia."
+  },
+  "auth": {
+    "signIn": "Iniciar Sesión",
+    "signUp": "Registrarse",
+    "logIn": "Iniciar Sesión",
+    "email": "Correo Electrónico",
+    "emailAddress": "Dirección de Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "magicLink": "Enlace Mágico",
+    "sendMagicLink": "Enviar Enlace Mágico",
+    "startYourJourney": "Comienza Tu Jornada",
+    "registrationSuccessful": "¡Registro exitoso! Por favor revisa tu correo para confirmar tu cuenta.",
+    "magicLinkSent": "¡Enlace mágico enviado! Por favor revisa tu correo.",
+    "errors": {
+      "invalidEmail": "Por favor ingresa una dirección de correo válida",
+      "weakPassword": "La contraseña debe tener al menos 8 caracteres",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "signInFailed": "No se pudo iniciar sesión. Verifica tus credenciales.",
+      "signUpFailed": "No se pudo registrar. Inténtalo de nuevo.",
+      "magicLinkFailed": "No se pudo enviar el enlace mágico. Inténtalo de nuevo.",
+      "accountNotConfirmed": "Por favor revisa tu correo para confirmar tu cuenta antes de iniciar sesión.",
+      "emailVerified": "Correo verificado",
+      "emailNotVerified": "Correo no verificado"
+    },
+    "placeholders": {
+      "email": "Ingresa tu dirección de correo",
+      "password": "Ingresa tu contraseña",
+      "confirmPassword": "Confirma tu contraseña"
+    }
+  },
+  "home": {
+    "title": "Bienvenido a Tu Jornada Espiritual",
+    "subtitle": "Aprendizaje Bíblico Adaptativo para Toda la Familia",
+    "description": "Historias y lecciones apropiadas para la edad que crecen con tu jornada espiritual.",
+    "features": {
+      "biblicalStories": "Historias Bíblicas",
+      "biblicalStoriesDesc": "Participa en narrativas bíblicas apropiadas para tu edad",
+      "interactiveQuizzes": "Cuestionarios Interactivos",
+      "interactiveQuizzesDesc": "Pon a prueba tu conocimiento con evaluaciones adaptativas",
+      "familyDevotions": "Devocionales Familiares",
+      "familyDevotionsDesc": "Fortalece los lazos familiares a través de la oración y adoración"
+    },
+    "cta": {
+      "getStarted": "Comenzar",
+      "exploreStories": "Explorar Historias",
+      "takeQuiz": "Tomar Cuestionario",
+      "familyTime": "Tiempo Familiar"
+    },
+    "loading": "Cargando tu jornada espiritual...",
+    "welcomeBack": "¡Bienvenido de vuelta, {name}!",
+    "continueJourney": "Continúa Tu Jornada"
+  },
+  "stories": {
+    "title": "Historias Bíblicas",
+    "subtitle": "Descubre la sabiduría eterna de las Escrituras",
+    "selectAge": "Seleccionar Grupo de Edad",
+    "selectStory": "Seleccionar una Historia",
+    "difficulty": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado"
+    },
+    "ageGroups": {
+      "preschool": "Preescolar (3-5)",
+      "elementary": "Primaria (6-11)",
+      "teen": "Adolescente (12-17)",
+      "adult": "Adulto (18+)",
+      "family": "Familia (Todas las Edades)"
+    },
+    "categories": {
+      "creation": "Creación",
+      "patriarchs": "Patriarcas",
+      "exodus": "Éxodo",
+      "judges": "Jueces",
+      "kings": "Reyes y Profetas",
+      "wisdom": "Literatura Sapiencial",
+      "gospels": "Vida de Jesús",
+      "apostles": "Iglesia Primitiva",
+      "revelation": "Tiempos Finales"
+    },
+    "actions": {
+      "read": "Leer Historia",
+      "listen": "Escuchar",
+      "watch": "Ver",
+      "interactive": "Modo Interactivo",
+      "takeQuiz": "Tomar Cuestionario",
+      "share": "Compartir",
+      "favorite": "Añadir a Favoritos"
+    },
+    "status": {
+      "completed": "Completado",
+      "inProgress": "En Progreso",
+      "new": "Nuevo",
+      "locked": "Bloqueado"
+    }
+  },
+  "quiz": {
+    "title": "Cuestionarios Interactivos",
+    "subtitle": "Pon a prueba tu conocimiento bíblico",
+    "selectQuiz": "Seleccionar un Cuestionario",
+    "difficulty": "Nivel de Dificultad",
+    "questions": "Preguntas",
+    "timeEstimate": "Tiempo Estimado",
+    "startQuiz": "Comenzar Cuestionario",
+    "nextQuestion": "Siguiente Pregunta",
+    "previousQuestion": "Pregunta Anterior",
+    "submitAnswer": "Enviar Respuesta",
+    "submitQuiz": "Enviar Cuestionario",
+    "retakeQuiz": "Repetir Cuestionario",
+    "viewResults": "Ver Resultados",
+    "results": {
+      "congratulations": "¡Felicitaciones!",
+      "score": "Tu Puntuación: {score}%",
+      "correct": "Respuestas Correctas: {correct}/{total}",
+      "time": "Tiempo Tomado: {time}",
+      "performance": {
+        "excellent": "¡Excelente! Tienes un entendimiento sólido de las Escrituras.",
+        "good": "¡Buen trabajo! Vas por buen camino.",
+        "needsImprovement": "¡Sigue estudiando! Cada paso en la fe importa.",
+        "tryAgain": "¡No te rindas! Revisa el material e inténtalo de nuevo."
+      }
+    },
+    "feedback": {
+      "correct": "¡Correcto!",
+      "incorrect": "No es del todo correcto.",
+      "explanation": "Explicación:",
+      "scripture": "Referencia Bíblica:"
+    },
+    "adaptive": {
+      "adjustingDifficulty": "Ajustando dificultad según tu rendimiento...",
+      "levelUp": "¡Excelente trabajo! Avanzando a un nivel más difícil.",
+      "levelDown": "Probemos algunas preguntas más fáciles para generar confianza."
+    }
+  },
+  "altar": {
+    "title": "Altar Familiar",
+    "subtitle": "Fortalece la fundación espiritual de tu familia",
+    "description": "Fortalece la fundación espiritual de tu familia a través de la oración, las escrituras y actividades significativas.",
+    "tabs": {
+      "devotion": "Devoción Diaria",
+      "prayers": "Diario de Oración",
+      "challenges": "Desafíos Familiares"
+    },
+    "devotion": {
+      "todaysReading": "Lectura de Hoy",
+      "scripture": "Escritura",
+      "reflection": "Reflexión",
+      "prayer": "Oración",
+      "familyActivity": "Actividad Familiar"
+    },
+    "prayers": {
+      "title": "Diario de Oración",
+      "newPrayer": "Nueva Oración",
+      "prayerTitle": "Título de la Oración",
+      "prayerContent": "Contenido de la Oración",
+      "savePrayer": "Guardar Oración",
+      "category": "Categoría",
+      "categories": {
+        "thanksgiving": "Acción de Gracias",
+        "supplication": "Súplica",
+        "intercession": "Intercesión",
+        "confession": "Confesión",
+        "praise": "Alabanza"
+      },
+      "prayerSaved": "¡Oración guardada exitosamente!",
+      "prayerSaveFailed": "No se pudo guardar la oración. Inténtalo de nuevo.",
+      "noTitle": "Entrada de Oración"
+    },
+    "challenges": {
+      "title": "Desafíos Familiares",
+      "weekly": "Desafío de Esta Semana",
+      "progress": "Progreso",
+      "complete": "Marcar como Completado",
+      "completed": "¡Completado!",
+      "nextChallenge": "Siguiente Desafío"
+    },
+    "streak": {
+      "current": "Racha Actual",
+      "days": "días",
+      "longest": "Racha Más Larga",
+      "keepItUp": "¡Sigue así!"
+    },
+    "badges": {
+      "title": "Insignias Obtenidas",
+      "faithful": "Siervo Fiel",
+      "scholar": "Erudito Bíblico",
+      "intercessor": "Guerrero de Oración",
+      "teacher": "Maestro Familiar"
+    },
+    "requiresAuth": {
+      "title": "Altar Familiar",
+      "description": "Por favor inicia sesión para acceder a las devociones familiares"
+    }
+  },
+  "profile": {
+    "title": "Perfil",
+    "personalInfo": "Información Personal",
+    "familySettings": "Configuración Familiar",
+    "preferences": "Preferencias",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "ageGroup": "Grupo de Edad",
+    "language": "Idioma",
+    "theme": "Tema",
+    "notifications": "Notificaciones",
+    "privacy": "Configuración de Privacidad",
+    "saveChanges": "Guardar Cambios",
+    "changesSaved": "¡Cambios guardados exitosamente!",
+    "family": {
+      "title": "Miembros de la Familia",
+      "addMember": "Añadir Miembro de la Familia",
+      "inviteMember": "Invitar Miembro de la Familia",
+      "role": "Rol",
+      "roles": {
+        "parent": "Padre/Madre",
+        "child": "Hijo/Hija",
+        "guardian": "Tutor"
+      },
+      "permissions": "Permisos",
+      "remove": "Eliminar",
+      "edit": "Editar"
+    },
+    "achievements": {
+      "title": "Logros",
+      "storiesCompleted": "Historias Completadas",
+      "quizzesCompleted": "Cuestionarios Completados",
+      "prayersOffered": "Oraciones Ofrecidas",
+      "streakDays": "Racha de Devoción"
+    }
+  },
+  "map": {
+    "title": "Mapa de la Jornada",
+    "subtitle": "Explora las tierras de la Biblia",
+    "description": "Descubre lugares bíblicos y sigue las jornadas de fe.",
+    "locations": {
+      "jerusalem": "Jerusalén",
+      "bethlehem": "Belén",
+      "nazareth": "Nazaret",
+      "capernaum": "Capernaúm",
+      "jericho": "Jericó",
+      "damascus": "Damasco",
+      "antioch": "Antioquía",
+      "corinth": "Corinto",
+      "ephesus": "Éfeso",
+      "rome": "Roma"
+    },
+    "features": {
+      "stories": "Historias Relacionadas",
+      "timeline": "Línea de Tiempo Histórica",
+      "culture": "Contexto Cultural",
+      "geography": "Geografía",
+      "archaeology": "Evidencia Arqueológica"
+    },
+    "journey": {
+      "start": "Comenzar Jornada",
+      "continue": "Continuar Jornada",
+      "complete": "Jornada Completada",
+      "progress": "Progreso de la Jornada"
+    }
+  },
+  "admin": {
+    "title": "Administración",
+    "dashboard": "Panel de Control",
+    "users": "Usuarios",
+    "content": "Gestión de Contenido",
+    "analytics": "Analítica",
+    "settings": "Configuración del Sistema",
+    "reports": "Informes",
+    "moderation": "Moderación de Contenido",
+    "backup": "Respaldo y Restauración"
+  },
+  "quiz": {
+    "title": "Cuestionarios Bíblicos",
+    "subtitle": "Pon a prueba tu conocimiento con estos cuestionarios temáticos de la Biblia",
+    "difficulty": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio", 
+      "advanced": "Avanzado"
+    },
+    "timeLimit": {
+      "minutes": "{count} minutos",
+      "noLimit": "Sin límite de tiempo"
+    },
+    "actions": {
+      "start": "Comenzar Cuestionario",
+      "continue": "Continuar Cuestionario",
+      "restart": "Reiniciar Cuestionario",
+      "finish": "Finalizar Cuestionario"
+    },
+    "results": "Resultados del Cuestionario",
+    "score": "Respondiste correctamente {correct} de {total} preguntas",
+    "questionProgress": "Pregunta {current} de {total}"
+  },
+  "altar": {
+    "title": "Altar Familiar",
+    "subtitle": "Fortalece la base espiritual de tu familia a través de la oración, las escrituras y actividades significativas",
+    "signInPrompt": "Por favor inicia sesión para acceder a las devociones familiares",
+    "tabs": {
+      "devotion": "Devoción",
+      "prayer": "Oración",
+      "journal": "Diario"
+    },
+    "todaysScripture": "Escritura de Hoy",
+    "reflection": "Reflexión",
+    "familyDiscussion": "Discusión Familiar",
+    "discussionQuestions": "Preguntas de Discusión:",
+    "prayerRequest": "Petición de Oración",
+    "prayerTitle": "Título de Oración",
+    "prayerContent": "Contenido de Oración",
+    "savePrayer": "Guardar Oración",
+    "prayerSaved": "¡Oración guardada exitosamente!",
+    "reflectionText": "El amor de Dios es el fundamento de nuestra fe. Considera cómo este versículo habla de la profundidad del amor divino y el sacrificio.",
+    "questions": {
+      "godsLove": "¿Qué significa el amor de Dios para ti personalmente?",
+      "showLove": "¿Cómo podemos mostrar amor a otros en nuestra vida diaria?",
+      "familyFaith": "¿Cuáles son algunas formas en que nuestra familia puede demostrar fe?"
+    }
+  },
+  "map": {
+    "title": "Explorador de Mapas Bíblicos",
+    "subtitle": "Explora lugares clave de los tiempos bíblicos",
+    "description": "Haz clic en los marcadores para aprender más sobre la importancia histórica de cada lugar y referencias escriturales relacionadas",
+    "loadError": "Error al cargar el mapa. Por favor inténtalo de nuevo más tarde",
+    "legend": {
+      "cities": "Ciudades Bíblicas",
+      "temples": "Templos y Lugares Sagrados",
+      "routes": "Rutas de Viaje"
+    }
+  },
+  "profile": {
+    "title": "Perfil de Usuario",
+    "subtitle": "Gestiona la configuración de tu cuenta y preferencias",
+    "placeholder": "Este es un marcador de posición estático para la página de perfil",
+    "signInPrompt": "Por favor inicia sesión para ver tu perfil"
+  },
+  "admin": {
+    "title": "Panel de Administración",
+    "subtitle": "Herramientas administrativas y gestión del sistema",
+    "placeholder": "Este es un marcador de posición estático para el panel de administración",
+    "accessPrompt": "Por favor inicia sesión con credenciales de administrador para acceder a esta área"
+  },
+  "billing": {
+    "title": "Facturación y Suscripciones",
+    "subtitle": "Elige el plan que sea adecuado para tu jornada espiritual",
+    "currentPlan": "Plan Actual",
+    "upgrade": "Actualizar Plan",
+    "downgrade": "Degradar Plan",
+    "cancel": "Cancelar Suscripción",
+    "billing_history": "Historial de Facturación",
+    "payment_methods": "Métodos de Pago",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "description": "Perfecto para individuos que comienzan su jornada de fe",
+        "features": [
+          "Historias Bíblicas Principales",
+          "Cuestionarios Básicos",
+          "Altar Familiar",
+          "Soporte Comunitario"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Crecimiento espiritual mejorado con contenido premium",
+        "features": [
+          "Todo en Gratis",
+          "Paquetes de Búsqueda de Lujo",
+          "Contenido Multimedia Extra",
+          "Acceso Sin Conexión",
+          "Soporte Prioritario",
+          "Análisis Avanzado"
+        ]
+      },
+      "church": {
+        "name": "Iglesia",
+        "description": "Gestión integral de iglesia y construcción de comunidad",
+        "features": [
+          "Todo en Premium",
+          "Panel de Administración",
+          "Marca Personalizada",
+          "Análisis de Usuarios",
+          "SLA de Privacidad",
+          "Gestión de Usuarios",
+          "Inscripción Masiva",
+          "Soporte Dedicado"
+        ]
+      }
+    },
+    "pricing": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "save_with_annual": "Ahorra 2 meses con facturación anual",
+      "per_month": "por mes",
+      "per_year": "por año",
+      "billed_monthly": "Facturado mensualmente",
+      "billed_annually": "Facturado anualmente"
+    },
+    "actions": {
+      "choose_plan": "Elegir Plan",
+      "current_plan": "Plan Actual",
+      "upgrade_now": "Actualizar Ahora",
+      "manage_subscription": "Gestionar Suscripción",
+      "cancel_subscription": "Cancelar Suscripción",
+      "update_payment": "Actualizar Método de Pago",
+      "download_invoice": "Descargar Factura"
+    },
+    "features": {
+      "unlock_feature": "Desbloquear Característica Premium",
+      "premium_required": "Premium Requerido",
+      "church_required": "Plan de Iglesia Requerido",
+      "upgrade_benefits": "Desbloquea herramientas de crecimiento espiritual mejoradas y contenido premium",
+      "learn_more": "Aprender Más",
+      "upgrade_now": "Actualizar Ahora"
+    },
+    "payment": {
+      "secure_payment": "Pago Seguro con Yoco",
+      "processing": "Procesando pago...",
+      "success": "¡Pago exitoso!",
+      "failed": "Pago falló. Por favor inténtalo de nuevo.",
+      "cancelled": "Pago cancelado.",
+      "card_details": "Detalles de Tarjeta",
+      "cardholder_name": "Nombre del Portador",
+      "card_number": "Número de Tarjeta",
+      "expiry_date": "Fecha de Vencimiento",
+      "cvv": "CVV",
+      "billing_address": "Dirección de Facturación"
+    },
+    "subscription": {
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "cancelled": "Cancelado",
+      "past_due": "Vencido",
+      "trial": "Prueba",
+      "expires": "Vence",
+      "renews": "Renueva",
+      "cancel_at_period_end": "Se cancelará al final del período",
+      "reactivate": "Reactivar Suscripción"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "success": "¡Éxito!",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Añadir",
+    "remove": "Quitar",
+    "continue": "Continuar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "finish": "Finalizar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "view": "Ver",
+    "download": "Descargar",
+    "upload": "Subir",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "refresh": "Actualizar",
+    "retry": "Reintentar",
+    "yes": "Sí",
+    "no": "No",
+    "ok": "Aceptar",
+    "confirm": "Confirmar",
+    "submit": "Enviar",
+    "apply": "Aplicar",
+    "reset": "Restablecer",
+    "clear": "Limpiar",
+    "select": "Seleccionar",
+    "choose": "Elegir",
+    "optional": "Opcional",
+    "required": "Requerido",
+    "recommended": "Recomendado",
+    "new": "Nuevo",
+    "popular": "Popular",
+    "featured": "Destacado",
+    "comingSoon": "Próximamente",
+    "notAvailable": "No Disponible",
+    "maintenance": "En Mantenimiento",
+    "backToHome": "← Volver al Inicio",
+    "returnToHome": "← Regresar al Inicio",
+    "loadingAuth": "Cargando autenticación...",
+    "signInRequired": "Por favor inicia sesión para acceder a esta área",
+    "adminRequired": "Por favor inicia sesión con credenciales de administrador para acceder a esta área",
+    "settings": "Configuración",
+    "users": "Usuarios",
+    "reports": "Informes",
+    "status": "Estado"
+  },
+  "errors": {
+    "pageNotFound": "Página no encontrada",
+    "serverError": "Ocurrió un error del servidor",
+    "networkError": "Error de conexión de red",
+    "unauthorized": "No estás autorizado para acceder a esta página",
+    "forbidden": "Acceso prohibido",
+    "validationError": "Por favor revisa tu entrada",
+    "timeout": "La solicitud ha caducado",
+    "offline": "Parece que estás desconectado",
+    "somethingWentWrong": "Algo salió mal",
+    "tryAgain": "Por favor inténtalo de nuevo",
+    "contactSupport": "Si el problema persiste, contacta al soporte",
+    "goHome": "Ir al Inicio",
+    "goBack": "Volver",
+    "refresh": "Actualizar Página"
+  },
+  "dateTime": {
+    "now": "ahora",
+    "today": "hoy",
+    "yesterday": "ayer",
+    "tomorrow": "mañana",
+    "thisWeek": "esta semana",
+    "lastWeek": "la semana pasada",
+    "nextWeek": "la próxima semana",
+    "thisMonth": "este mes",
+    "lastMonth": "el mes pasado",
+    "nextMonth": "el próximo mes",
+    "minutes": "{count} minutos",
+    "hours": "{count} horas",
+    "days": "{count} días",
+    "weeks": "{count} semanas",
+    "months": "{count} meses",
+    "years": "{count} años"
+  },
+  "forms": {
+    "validation": {
+      "required": "Este campo es requerido",
+      "email": "Por favor ingresa una dirección de correo válida",
+      "minLength": "Debe tener al menos {min} caracteres",
+      "maxLength": "No debe tener más de {max} caracteres",
+      "minValue": "Debe ser al menos {min}",
+      "maxValue": "No debe ser más de {max}",
+      "pattern": "Formato inválido",
+      "numeric": "Debe ser un número",
+      "alphanumeric": "Debe contener solo letras y números",
+      "url": "Por favor ingresa una URL válida",
+      "phone": "Por favor ingresa un número de teléfono válido"
+    },
+    "placeholders": {
+      "search": "Buscar...",
+      "selectOption": "Seleccionar una opción",
+      "enterText": "Ingresar texto",
+      "chooseFile": "Elegir archivo",
+      "optional": "Opcional"
+    }
+  },
+  "accessibility": {
+    "skipToMain": "Saltar al contenido principal",
+    "skipToNav": "Saltar a la navegación",
+    "openMenu": "Abrir menú de navegación",
+    "closeMenu": "Cerrar menú de navegación",
+    "previousPage": "Ir a la página anterior",
+    "nextPage": "Ir a la página siguiente",
+    "currentPage": "Página actual",
+    "loading": "El contenido se está cargando",
+    "searchResults": "Resultados de búsqueda",
+    "noResults": "No se encontraron resultados",
+    "expandSection": "Expandir sección",
+    "collapseSection": "Colapsar sección",
+    "sortBy": "Ordenar por {criteria}",
+    "filterBy": "Filtrar por {criteria}",
+    "language": "Idioma: {language}",
+    "toggleLanguage": "Alternar selector de idioma"
+  }
+}

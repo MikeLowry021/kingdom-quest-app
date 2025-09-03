@@ -1,0 +1,698 @@
+{
+  "_metadata": {
+    "language": "English",
+    "locale": "en",
+    "version": "1.0.0",
+    "lastUpdated": "2025-08-26",
+    "completeness": 100,
+    "direction": "ltr"
+  },
+  "nav": {
+    "home": "Home",
+    "stories": "Stories",
+    "quizzes": "Quizzes",
+    "mapExplorer": "Map Explorer",
+    "familyAltar": "Family Altar",
+    "profile": "Profile",
+    "admin": "Admin",
+    "signOut": "Sign Out",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "brand": {
+    "name": "KingdomQuest",
+    "tagline": "Adaptive Biblical Learning",
+    "description": "Age-appropriate biblical stories and lessons that adapt to your learning journey. Interactive Christian learning for the whole family."
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "logIn": "Log In",
+    "email": "Email",
+    "emailAddress": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "magicLink": "Magic Link",
+    "sendMagicLink": "Send Magic Link",
+    "startYourJourney": "Start Your Journey",
+    "registrationSuccessful": "Registration successful! Please check your email to confirm your account.",
+    "magicLinkSent": "Magic link sent! Please check your email.",
+    "errors": {
+      "invalidEmail": "Please enter a valid email address",
+      "weakPassword": "Password must be at least 8 characters",
+      "passwordMismatch": "Passwords do not match",
+      "signInFailed": "Failed to sign in. Please check your credentials.",
+      "signUpFailed": "Failed to sign up. Please try again.",
+      "magicLinkFailed": "Failed to send magic link. Please try again.",
+      "accountNotConfirmed": "Please check your email to confirm your account before signing in.",
+      "emailVerified": "Email verified",
+      "emailNotVerified": "Email not verified"
+    },
+    "placeholders": {
+      "email": "Enter your email address",
+      "password": "Enter your password",
+      "confirmPassword": "Confirm your password"
+    }
+  },
+  "home": {
+    "title": "Welcome to Your Spiritual Journey",
+    "subtitle": "Adaptive Biblical Learning for the Whole Family",
+    "description": "Age-appropriate stories and lessons that grow with your spiritual journey.",
+    "features": {
+      "biblicalStories": "Biblical Stories",
+      "biblicalStoriesDesc": "Engage with age-appropriate biblical narratives",
+      "interactiveQuizzes": "Interactive Quizzes",
+      "interactiveQuizzesDesc": "Test your knowledge with adaptive assessments",
+      "familyDevotions": "Family Devotions",
+      "familyDevotionsDesc": "Strengthen family bonds through prayer and worship"
+    },
+    "cta": {
+      "getStarted": "Get Started",
+      "exploreStories": "Explore Stories",
+      "takeQuiz": "Take a Quiz",
+      "familyTime": "Family Time"
+    },
+    "loading": "Loading your spiritual journey...",
+    "welcomeBack": "Welcome back, {name}!",
+    "continueJourney": "Continue Your Journey"
+  },
+  "stories": {
+    "title": "Biblical Stories",
+    "subtitle": "Discover the timeless wisdom of Scripture",
+    "selectAge": "Select Age Group",
+    "selectStory": "Select a Story",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "ageGroups": {
+      "preschool": "Preschool (3-5)",
+      "elementary": "Elementary (6-11)",
+      "teen": "Teen (12-17)",
+      "adult": "Adult (18+)",
+      "family": "Family (All Ages)"
+    },
+    "categories": {
+      "creation": "Creation",
+      "patriarchs": "Patriarchs",
+      "exodus": "Exodus",
+      "judges": "Judges",
+      "kings": "Kings & Prophets",
+      "wisdom": "Wisdom Literature",
+      "gospels": "Life of Jesus",
+      "apostles": "Early Church",
+      "revelation": "End Times"
+    },
+    "actions": {
+      "read": "Read Story",
+      "listen": "Listen",
+      "watch": "Watch",
+      "interactive": "Interactive Mode",
+      "takeQuiz": "Take Quiz",
+      "share": "Share",
+      "favorite": "Add to Favorites"
+    },
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "new": "New",
+      "locked": "Locked"
+    }
+  },
+  "quiz": {
+    "title": "Interactive Quizzes",
+    "subtitle": "Test your biblical knowledge",
+    "selectQuiz": "Select a Quiz",
+    "difficulty": "Difficulty Level",
+    "questions": "Questions",
+    "timeEstimate": "Estimated Time",
+    "startQuiz": "Start Quiz",
+    "nextQuestion": "Next Question",
+    "previousQuestion": "Previous Question",
+    "submitAnswer": "Submit Answer",
+    "submitQuiz": "Submit Quiz",
+    "retakeQuiz": "Retake Quiz",
+    "viewResults": "View Results",
+    "results": {
+      "congratulations": "Congratulations!",
+      "score": "Your Score: {score}%",
+      "correct": "Correct Answers: {correct}/{total}",
+      "time": "Time Taken: {time}",
+      "performance": {
+        "excellent": "Excellent! You have a strong understanding of Scripture.",
+        "good": "Good work! You're on the right track.",
+        "needsImprovement": "Keep studying! Every step in faith matters.",
+        "tryAgain": "Don't give up! Review the material and try again."
+      }
+    },
+    "feedback": {
+      "correct": "Correct!",
+      "incorrect": "Not quite right.",
+      "explanation": "Explanation:",
+      "scripture": "Scripture Reference:"
+    },
+    "adaptive": {
+      "adjustingDifficulty": "Adjusting difficulty based on your performance...",
+      "levelUp": "Great job! Moving to a higher difficulty level.",
+      "levelDown": "Let's try some easier questions to build confidence."
+    }
+  },
+  "altar": {
+    "title": "Family Altar",
+    "subtitle": "Strengthen your family's spiritual foundation",
+    "description": "Strengthen your family's spiritual foundation through prayer, scripture, and meaningful activities.",
+    "tabs": {
+      "devotion": "Daily Devotion",
+      "prayers": "Prayer Journal",
+      "challenges": "Family Challenges"
+    },
+    "devotion": {
+      "todaysReading": "Today's Reading",
+      "scripture": "Scripture",
+      "reflection": "Reflection",
+      "prayer": "Prayer",
+      "familyActivity": "Family Activity"
+    },
+    "prayers": {
+      "title": "Prayer Journal",
+      "newPrayer": "New Prayer",
+      "prayerTitle": "Prayer Title",
+      "prayerContent": "Prayer Content",
+      "savePrayer": "Save Prayer",
+      "category": "Category",
+      "categories": {
+        "thanksgiving": "Thanksgiving",
+        "supplication": "Supplication",
+        "intercession": "Intercession",
+        "confession": "Confession",
+        "praise": "Praise"
+      },
+      "prayerSaved": "Prayer saved successfully!",
+      "prayerSaveFailed": "Failed to save prayer. Please try again.",
+      "noTitle": "Prayer Entry"
+    },
+    "challenges": {
+      "title": "Family Challenges",
+      "weekly": "This Week's Challenge",
+      "progress": "Progress",
+      "complete": "Mark Complete",
+      "completed": "Completed!",
+      "nextChallenge": "Next Challenge"
+    },
+    "streak": {
+      "current": "Current Streak",
+      "days": "days",
+      "longest": "Longest Streak",
+      "keepItUp": "Keep it up!"
+    },
+    "badges": {
+      "title": "Badges Earned",
+      "faithful": "Faithful Servant",
+      "scholar": "Bible Scholar",
+      "intercessor": "Prayer Warrior",
+      "teacher": "Family Teacher"
+    },
+    "requiresAuth": {
+      "title": "Family Altar",
+      "description": "Please sign in to access family devotions"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "personalInfo": "Personal Information",
+    "familySettings": "Family Settings",
+    "preferences": "Preferences",
+    "name": "Name",
+    "email": "Email",
+    "ageGroup": "Age Group",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "privacy": "Privacy Settings",
+    "saveChanges": "Save Changes",
+    "changesSaved": "Changes saved successfully!",
+    "family": {
+      "title": "Family Members",
+      "addMember": "Add Family Member",
+      "inviteMember": "Invite Family Member",
+      "role": "Role",
+      "roles": {
+        "parent": "Parent",
+        "child": "Child",
+        "guardian": "Guardian"
+      },
+      "permissions": "Permissions",
+      "remove": "Remove",
+      "edit": "Edit"
+    },
+    "achievements": {
+      "title": "Achievements",
+      "storiesCompleted": "Stories Completed",
+      "quizzesCompleted": "Quizzes Completed",
+      "prayersOffered": "Prayers Offered",
+      "streakDays": "Devotion Streak"
+    }
+  },
+  "map": {
+    "title": "Journey Map",
+    "subtitle": "Explore the lands of the Bible",
+    "description": "Discover biblical locations and follow the journeys of faith.",
+    "locations": {
+      "jerusalem": "Jerusalem",
+      "bethlehem": "Bethlehem",
+      "nazareth": "Nazareth",
+      "capernaum": "Capernaum",
+      "jericho": "Jericho",
+      "damascus": "Damascus",
+      "antioch": "Antioch",
+      "corinth": "Corinth",
+      "ephesus": "Ephesus",
+      "rome": "Rome"
+    },
+    "features": {
+      "stories": "Related Stories",
+      "timeline": "Historical Timeline",
+      "culture": "Cultural Context",
+      "geography": "Geography",
+      "archaeology": "Archaeological Evidence"
+    },
+    "journey": {
+      "start": "Start Journey",
+      "continue": "Continue Journey",
+      "complete": "Journey Complete",
+      "progress": "Journey Progress"
+    }
+  },
+  "admin": {
+    "title": "Administration",
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "content": "Content Management",
+    "analytics": "Analytics",
+    "settings": "System Settings",
+    "reports": "Reports",
+    "moderation": "Content Moderation",
+    "backup": "Backup & Restore",
+    "church": {
+      "title": "Church Admin Dashboard",
+      "subtitle": "Manage your church community, analytics, and branding",
+      "profile": "Church Profile",
+      "members": "Members",
+      "analytics": "Analytics",
+      "branding": "Branding",
+      "settings": "Settings",
+      "member_management": "Member Management",
+      "invite_member": "Invite Member",
+      "church_analytics": "Church Analytics",
+      "popular_stories": "Popular Stories",
+      "member_progress": "Member Progress",
+      "total_members": "Total Members",
+      "active_this_week": "Active This Week",
+      "stories_completed": "Stories Completed",
+      "engagement_rate": "Engagement Rate",
+      "church_profile_branding": "Church Profile & Branding",
+      "customize_church_identity": "Customize your church's identity and branding settings",
+      "invite_members_description": "Manage your church members and send invitations",
+      "analytics_description": "Insights into your congregation's spiritual journey",
+      "church_plan_active": "Church Plan Active",
+      "no_members_yet": "No members yet",
+      "invite_first_member": "Invite your first member to get started"
+    }
+  },
+  "billing": {
+    "title": "Billing & Subscriptions",
+    "subtitle": "Choose the plan that's right for your spiritual journey",
+    "currentPlan": "Current Plan",
+    "upgrade": "Upgrade Plan",
+    "downgrade": "Downgrade Plan",
+    "cancel": "Cancel Subscription",
+    "billing_history": "Billing History",
+    "payment_methods": "Payment Methods",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Perfect for individuals starting their faith journey",
+        "features": [
+          "Core Biblical Stories",
+          "Basic Quizzes",
+          "Family Altar",
+          "Community Support"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Enhanced spiritual growth with premium content",
+        "features": [
+          "Everything in Free",
+          "Deluxe Quest Packs",
+          "Extra Media Content",
+          "Offline Access",
+          "Priority Support",
+          "Advanced Analytics"
+        ]
+      },
+      "church": {
+        "name": "Church",
+        "description": "Comprehensive church management and community building",
+        "features": [
+          "Everything in Premium",
+          "Admin Dashboard",
+          "Custom Branding",
+          "User Analytics",
+          "Privacy SLA",
+          "User Management",
+          "Bulk Enrollment",
+          "Dedicated Support"
+        ]
+      }
+    },
+    "pricing": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "save_with_annual": "Save 2 months with annual billing",
+      "per_month": "per month",
+      "per_year": "per year",
+      "billed_monthly": "Billed monthly",
+      "billed_annually": "Billed annually"
+    },
+    "actions": {
+      "choose_plan": "Choose Plan",
+      "current_plan": "Current Plan",
+      "upgrade_now": "Upgrade Now",
+      "manage_subscription": "Manage Subscription",
+      "cancel_subscription": "Cancel Subscription",
+      "update_payment": "Update Payment Method",
+      "download_invoice": "Download Invoice"
+    },
+    "features": {
+      "unlock_feature": "Unlock Premium Feature",
+      "premium_required": "Premium Required",
+      "church_required": "Church Plan Required",
+      "upgrade_benefits": "Unlock enhanced spiritual growth tools and premium content",
+      "learn_more": "Learn More",
+      "upgrade_now": "Upgrade Now"
+    },
+    "payment": {
+      "secure_payment": "Secure Payment with Yoco",
+      "processing": "Processing payment...",
+      "success": "Payment successful!",
+      "failed": "Payment failed. Please try again.",
+      "cancelled": "Payment cancelled.",
+      "card_details": "Card Details",
+      "cardholder_name": "Cardholder Name",
+      "card_number": "Card Number",
+      "expiry_date": "Expiry Date",
+      "cvv": "CVV",
+      "billing_address": "Billing Address"
+    },
+    "subscription": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "cancelled": "Cancelled",
+      "past_due": "Past Due",
+      "trial": "Trial",
+      "expires": "Expires",
+      "renews": "Renews",
+      "cancel_at_period_end": "Will cancel at period end",
+      "reactivate": "Reactivate Subscription"
+    }
+  },
+  "quiz": {
+    "title": "Biblical Quizzes",
+    "subtitle": "Test your knowledge with these Bible-themed quizzes",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate", 
+      "advanced": "Advanced"
+    },
+    "timeLimit": {
+      "minutes": "{count} minutes",
+      "noLimit": "No time limit"
+    },
+    "actions": {
+      "start": "Start Quiz",
+      "continue": "Continue Quiz",
+      "restart": "Restart Quiz",
+      "finish": "Finish Quiz"
+    },
+    "results": "Quiz Results",
+    "score": "You answered {correct} out of {total} questions correctly",
+    "questionProgress": "Question {current} of {total}"
+  },
+  "altar": {
+    "title": "Family Altar",
+    "subtitle": "Strengthen your family's spiritual foundation through prayer, scripture, and meaningful activities",
+    "signInPrompt": "Please sign in to access family devotions",
+    "tabs": {
+      "devotion": "Devotion",
+      "prayer": "Prayer",
+      "journal": "Journal"
+    },
+    "todaysScripture": "Today's Scripture",
+    "reflection": "Reflection",
+    "familyDiscussion": "Family Discussion",
+    "discussionQuestions": "Discussion Questions:",
+    "prayerRequest": "Prayer Request",
+    "prayerTitle": "Prayer Title",
+    "prayerContent": "Prayer Content",
+    "savePrayer": "Save Prayer",
+    "prayerSaved": "Prayer saved successfully!",
+    "reflectionText": "God's love is the foundation of our faith. Consider how this verse speaks to the depth of divine love and sacrifice.",
+    "questions": {
+      "godsLove": "What does God's love mean to you personally?",
+      "showLove": "How can we show love to others in our daily lives?",
+      "familyFaith": "What are some ways our family can demonstrate faith?"
+    }
+  },
+  "map": {
+    "title": "Biblical Map Explorer",
+    "subtitle": "Explore key locations from biblical times",
+    "description": "Click on markers to learn more about each location's historical significance and related scripture references",
+    "loadError": "Failed to load map. Please try again later",
+    "legend": {
+      "cities": "Biblical Cities",
+      "temples": "Temples & Sacred Places",
+      "routes": "Journey Routes"
+    }
+  },
+  "profile": {
+    "title": "User Profile",
+    "subtitle": "Manage your account settings and preferences",
+    "placeholder": "This is a static placeholder for the profile page",
+    "signInPrompt": "Please sign in to view your profile"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "subtitle": "Administrative tools and system management",
+    "placeholder": "This is a static placeholder for the admin dashboard",
+    "accessPrompt": "Please sign in with administrator credentials to access this area"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "finish": "Finish",
+    "close": "Close",
+    "open": "Open",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "retry": "Retry",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "confirm": "Confirm",
+    "submit": "Submit",
+    "apply": "Apply",
+    "reset": "Reset",
+    "clear": "Clear",
+    "select": "Select",
+    "choose": "Choose",
+    "optional": "Optional",
+    "required": "Required",
+    "recommended": "Recommended",
+    "new": "New",
+    "popular": "Popular",
+    "featured": "Featured",
+    "comingSoon": "Coming Soon",
+    "notAvailable": "Not Available",
+    "maintenance": "Under Maintenance",
+    "backToHome": "← Back to Home",
+    "returnToHome": "← Return to Home",
+    "loadingAuth": "Loading authentication...",
+    "signInRequired": "Please sign in to access this area",
+    "adminRequired": "Please sign in with administrator credentials to access this area",
+    "settings": "Settings",
+    "users": "Users",
+    "reports": "Reports",
+    "status": "Status"
+  },
+  "errors": {
+    "pageNotFound": "Page not found",
+    "serverError": "Server error occurred",
+    "networkError": "Network connection error",
+    "unauthorized": "You are not authorized to access this page",
+    "forbidden": "Access forbidden",
+    "validationError": "Please check your input",
+    "timeout": "Request timed out",
+    "offline": "You appear to be offline",
+    "somethingWentWrong": "Something went wrong",
+    "tryAgain": "Please try again",
+    "contactSupport": "If the problem persists, please contact support",
+    "goHome": "Go to Home",
+    "goBack": "Go Back",
+    "refresh": "Refresh Page"
+  },
+  "dateTime": {
+    "now": "now",
+    "today": "today",
+    "yesterday": "yesterday",
+    "tomorrow": "tomorrow",
+    "thisWeek": "this week",
+    "lastWeek": "last week",
+    "nextWeek": "next week",
+    "thisMonth": "this month",
+    "lastMonth": "last month",
+    "nextMonth": "next month",
+    "minutes": "{count} minutes",
+    "hours": "{count} hours",
+    "days": "{count} days",
+    "weeks": "{count} weeks",
+    "months": "{count} months",
+    "years": "{count} years"
+  },
+  "forms": {
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "minLength": "Must be at least {min} characters",
+      "maxLength": "Must be no more than {max} characters",
+      "minValue": "Must be at least {min}",
+      "maxValue": "Must be no more than {max}",
+      "pattern": "Invalid format",
+      "numeric": "Must be a number",
+      "alphanumeric": "Must contain only letters and numbers",
+      "url": "Please enter a valid URL",
+      "phone": "Please enter a valid phone number"
+    },
+    "placeholders": {
+      "search": "Search...",
+      "selectOption": "Select an option",
+      "enterText": "Enter text",
+      "chooseFile": "Choose file",
+      "optional": "Optional"
+    }
+  },
+  "churchAdmin": {
+    "title": "Church Admin Dashboard",
+    "subtitle": "Manage your church community, analytics, and branding",
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "churchBranding": "Church Branding",
+    "brandingDescription": "Customize your church's visual identity and information",
+    "brandingUpdated": "Church branding updated successfully!",
+    "brandingUpdateFailed": "Failed to update church branding. Please try again.",
+    "basicInformation": "Basic Information",
+    "churchName": "Church Name",
+    "enterChurchName": "Enter your church name",
+    "pastorName": "Pastor Name",
+    "enterPastorName": "Enter pastor's name",
+    "churchAddress": "Church Address",
+    "enterChurchAddress": "Enter church address",
+    "churchPhone": "Phone Number",
+    "enterChurchPhone": "Enter phone number",
+    "churchEmail": "Church Email",
+    "enterChurchEmail": "Enter church email",
+    "denomination": "Denomination",
+    "enterDenomination": "Enter denomination",
+    "churchSize": "Church Size",
+    "selectChurchSize": "Select church size",
+    "smallChurch": "Small (Under 100)",
+    "mediumChurch": "Medium (100-500)",
+    "largeChurch": "Large (500-2000)",
+    "megaChurch": "Mega Church (2000+)",
+    "visualBranding": "Visual Branding",
+    "logoUrl": "Logo URL",
+    "enterLogoUrl": "Enter logo URL",
+    "primaryColor": "Primary Color",
+    "secondaryColor": "Secondary Color",
+    "customMessage": "Custom Message",
+    "enterCustomMessage": "Enter a custom welcome message for your church",
+    "saveBranding": "Save Branding",
+    "loadingAnalytics": "Loading analytics...",
+    "analyticsLoadFailed": "Failed to load analytics data",
+    "totalMembers": "Total Members",
+    "activePrayers": "Active Prayers (30 days)",
+    "totalDonations": "Total Donations (30 days)",
+    "activeStreaks": "Members with Active Streaks",
+    "weeklyEngagement": "Weekly Engagement",
+    "engagementDescription": "Daily active users and prayer activity over the last 7 days",
+    "donationBreakdown": "Donation Breakdown",
+    "donationDescription": "Distribution of donations by type",
+    "spiritualMetrics": "Spiritual Metrics",
+    "spiritualDescription": "Key spiritual engagement indicators for your congregation",
+    "averageStreak": "Average Streak (Days)",
+    "totalPrayers": "Total Prayers (30 days)",
+    "completedQuizzes": "Completed Quizzes (30 days)",
+    "activeUsers": "Active Users",
+    "prayers": "Prayers",
+    "privacySettings": "Privacy & SLA Settings",
+    "privacyDescription": "Manage data privacy, retention, and service level agreements",
+    "privacySLA": "Privacy SLA Agreement",
+    "privacySLADescription": "Accept privacy service level agreement and data handling policies",
+    "privacySLARequired": "Privacy SLA agreement is required to continue using church admin features",
+    "dataRetention": "Data Retention Policy",
+    "dataRetentionDescription": "How long to retain church member data and activity records",
+    "90days": "90 Days",
+    "180days": "180 Days",
+    "1year": "1 Year",
+    "2years": "2 Years",
+    "3years": "3 Years",
+    "indefinite": "Indefinite (Manual Deletion)",
+    "allowAnalytics": "Enable Analytics Collection",
+    "analyticsDescription": "Allow collection of anonymized usage data for improved service delivery",
+    "allowExternalSharing": "Allow External Data Sharing",
+    "externalSharingDescription": "Permit sharing of anonymized data with trusted ministry partners for research",
+    "complianceInfo": "Compliance Information",
+    "popiCompliance": "Full POPI Act compliance for South African data protection",
+    "gdprCompliance": "GDPR compliance for international data handling",
+    "dataSecurityMeasures": "Enterprise-grade data security and encryption",
+    "auditTrailMaintained": "Complete audit trail maintained for all data operations",
+    "savePrivacySettings": "Save Privacy Settings",
+    "privacySettingsUpdated": "Privacy settings updated successfully!",
+    "privacyUpdateFailed": "Failed to update privacy settings. Please try again."
+  },
+  "accessibility": {
+    "skipToMain": "Skip to main content",
+    "skipToNav": "Skip to navigation",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "previousPage": "Go to previous page",
+    "nextPage": "Go to next page",
+    "currentPage": "Current page",
+    "loading": "Content is loading",
+    "searchResults": "Search results",
+    "noResults": "No results found",
+    "expandSection": "Expand section",
+    "collapseSection": "Collapse section",
+    "sortBy": "Sort by {criteria}",
+    "filterBy": "Filter by {criteria}",
+    "language": "Language: {language}",
+    "toggleLanguage": "Toggle language selector"
+  }
+}

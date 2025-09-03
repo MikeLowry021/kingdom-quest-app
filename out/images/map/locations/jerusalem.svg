@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f8f4e3" />
+  <path d="M200,50 L160,100 L240,100 Z" fill="#d4b483" stroke="#8a7967" stroke-width="2" />
+  <rect x="170" y="100" width="60" height="80" fill="#d4b483" stroke="#8a7967" stroke-width="2" />
+  <rect x="180" y="120" width="15" height="25" fill="#614b3a" />
+  <rect x="205" y="120" width="15" height="25" fill="#614b3a" />
+  <path d="M120,150 L280,150 L280,200 L120,200 Z" fill="#e6c88a" stroke="#8a7967" stroke-width="2" />
+  <rect x="140" y="170" width="20" height="30" fill="#614b3a" />
+  <rect x="180" y="170" width="20" height="30" fill="#614b3a" />
+  <rect x="220" y="170" width="20" height="30" fill="#614b3a" />
+  <rect x="260" y="170" width="20" height="30" fill="#614b3a" />
+  <path d="M100,200 L300,200 L300,220 L100,220 Z" fill="#d4b483" stroke="#8a7967" stroke-width="2" />
+  <circle cx="200" cy="70" r="15" fill="#e6c88a" stroke="#8a7967" stroke-width="2" />
+  <text x="200" y="250" font-family="Arial" font-size="16" text-anchor="middle" fill="#614b3a">Ancient Jerusalem with Temple</text>
+</svg>

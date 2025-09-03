@@ -1,0 +1,594 @@
+{
+  "_metadata": {
+    "language": "Afrikaans",
+    "locale": "af",
+    "version": "1.0.0",
+    "lastUpdated": "2025-08-26",
+    "completeness": 100,
+    "direction": "ltr"
+  },
+  "nav": {
+    "home": "Tuis",
+    "stories": "Verhale",
+    "quizzes": "Kwisse",
+    "mapExplorer": "Kaartverkenner",
+    "familyAltar": "Gesinsaltaar",
+    "profile": "Profiel",
+    "admin": "Administrasie",
+    "signOut": "Meld Af",
+    "menu": "Kieslys",
+    "close": "Sluit"
+  },
+  "brand": {
+    "name": "KoninkrykSoektog",
+    "tagline": "Aanpasbare Bybelse Leer",
+    "description": "Ouderdom-toepaslike bybelse verhale en lesse wat by jou leerpad aanpas. Interaktiewe Christelike leer vir die hele gesin."
+  },
+  "auth": {
+    "signIn": "Meld Aan",
+    "signUp": "Registreer",
+    "logIn": "Meld Aan",
+    "email": "E-pos",
+    "emailAddress": "E-posadres",
+    "password": "Wagwoord",
+    "confirmPassword": "Bevestig Wagwoord",
+    "magicLink": "Towerlink",
+    "sendMagicLink": "Stuur Towerlink",
+    "startYourJourney": "Begin Jou Reis",
+    "registrationSuccessful": "Registrasie suksesvol! Kyk asseblief jou e-pos om jou rekening te bevestig.",
+    "magicLinkSent": "Towerlink gestuur! Kyk asseblief jou e-pos.",
+    "errors": {
+      "invalidEmail": "Voer asseblief 'n geldige e-posadres in",
+      "weakPassword": "Wagwoord moet ten minste 8 karakters wees",
+      "passwordMismatch": "Wagwoorde stem nie ooreen nie",
+      "signInFailed": "Kon nie aanmeld nie. Kyk asseblief jou inloginbesonderhede.",
+      "signUpFailed": "Kon nie registreer nie. Probeer asseblief weer.",
+      "magicLinkFailed": "Kon nie towerlink stuur nie. Probeer asseblief weer.",
+      "accountNotConfirmed": "Kyk asseblief jou e-pos om jou rekening te bevestig voor aanmelding.",
+      "emailVerified": "E-pos geverifieer",
+      "emailNotVerified": "E-pos nie geverifieer nie"
+    },
+    "placeholders": {
+      "email": "Voer jou e-posadres in",
+      "password": "Voer jou wagwoord in",
+      "confirmPassword": "Bevestig jou wagwoord"
+    }
+  },
+  "home": {
+    "title": "Welkom by Jou Geestelike Reis",
+    "subtitle": "Aanpasbare Bybelse Leer vir die Hele Gesin",
+    "description": "Ouderdom-toepaslike verhale en lesse wat saam met jou geestelike reis groei.",
+    "features": {
+      "biblicalStories": "Bybelse Verhale",
+      "biblicalStoriesDesc": "Raak betrokke by ouderdom-toepaslike bybelse narratiewe",
+      "interactiveQuizzes": "Interaktiewe Kwisse",
+      "interactiveQuizzesDesc": "Toets jou kennis met aanpasbare assesserings",
+      "familyDevotions": "Gesinsandagte",
+      "familyDevotionsDesc": "Versterk gesinsbande deur gebed en aanbidding"
+    },
+    "cta": {
+      "getStarted": "Begin",
+      "exploreStories": "Verken Verhale",
+      "takeQuiz": "Neem 'n Kwis",
+      "familyTime": "Gesinstyd"
+    },
+    "loading": "Laai jou geestelike reis...",
+    "welcomeBack": "Welkom terug, {name}!",
+    "continueJourney": "Sit Jou Reis Voort"
+  },
+  "stories": {
+    "title": "Bybelse Verhale",
+    "subtitle": "Ontdek die tydlose wysheid van die Skrif",
+    "selectAge": "Kies Ouderdomsgroep",
+    "selectStory": "Kies 'n Verhaal",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermedier",
+      "advanced": "Gevorderd"
+    },
+    "ageGroups": {
+      "preschool": "Voorskool (3-5)",
+      "elementary": "Laerskool (6-11)",
+      "teen": "Tiener (12-17)",
+      "adult": "Volwasse (18+)",
+      "family": "Gesin (Alle Ouderdomme)"
+    },
+    "categories": {
+      "creation": "Skepping",
+      "patriarchs": "Aartsvaders",
+      "exodus": "Eksodus",
+      "judges": "Rigters",
+      "kings": "Konings & Profete",
+      "wisdom": "Wysheidsliteratuur",
+      "gospels": "Lewe van Jesus",
+      "apostles": "Vroee Kerk",
+      "revelation": "Eindtyd"
+    },
+    "actions": {
+      "read": "Lees Verhaal",
+      "listen": "Luister",
+      "watch": "Kyk",
+      "interactive": "Interaktiewe Modus",
+      "takeQuiz": "Neem Kwis",
+      "share": "Deel",
+      "favorite": "Voeg by Gunstelinge"
+    },
+    "status": {
+      "completed": "Voltooi",
+      "inProgress": "Besig",
+      "new": "Nuut",
+      "locked": "Gesluit"
+    }
+  },
+  "quiz": {
+    "title": "Interaktiewe Kwisse",
+    "subtitle": "Toets jou bybelse kennis",
+    "selectQuiz": "Kies 'n Kwis",
+    "difficulty": "Moeilikheidsgraad",
+    "questions": "Vrae",
+    "timeEstimate": "Geskatte Tyd",
+    "startQuiz": "Begin Kwis",
+    "nextQuestion": "Volgende Vraag",
+    "previousQuestion": "Vorige Vraag",
+    "submitAnswer": "Dien Antwoord In",
+    "submitQuiz": "Dien Kwis In",
+    "retakeQuiz": "Herhaal Kwis",
+    "viewResults": "Bekyk Resultate",
+    "results": {
+      "congratulations": "Baie geluk!",
+      "score": "Jou Telling: {score}%",
+      "correct": "Korrekte Antwoorde: {correct}/{total}",
+      "time": "Tyd Geneem: {time}",
+      "performance": {
+        "excellent": "Uitstekend! Jy het 'n sterk begrip van die Skrif.",
+        "good": "Goeie werk! Jy is op die regte pad.",
+        "needsImprovement": "Hou aan studeer! Elke stap in geloof tel.",
+        "tryAgain": "Moenie opgee nie! Hersien die materiaal en probeer weer."
+      }
+    },
+    "feedback": {
+      "correct": "Korrek!",
+      "incorrect": "Nie heeltemal reg nie.",
+      "explanation": "Verduideliking:",
+      "scripture": "Skrifverwysing:"
+    },
+    "adaptive": {
+      "adjustingDifficulty": "Pas moeilikheidsgraad aan volgens jou prestasie...",
+      "levelUp": "Goeie werk! Beweeg na 'n hoer moeilikheidsgraad.",
+      "levelDown": "Kom ons probeer 'n paar makliker vrae om vertroue op te bou."
+    }
+  },
+  "altar": {
+    "title": "Gesinsaltaar",
+    "subtitle": "Versterk jou gesin se geestelike fondament",
+    "description": "Versterk jou gesin se geestelike fondament deur gebed, skrif, en betekenisvolle aktiwiteite.",
+    "tabs": {
+      "devotion": "Daaglikse Andagte",
+      "prayers": "Gebedsdagboek",
+      "challenges": "Gesinsuitdagings"
+    },
+    "devotion": {
+      "todaysReading": "Vandag se Lees",
+      "scripture": "Skrif",
+      "reflection": "Oordenking",
+      "prayer": "Gebed",
+      "familyActivity": "Gesinsaktiwiteit"
+    },
+    "prayers": {
+      "title": "Gebedsdagboek",
+      "newPrayer": "Nuwe Gebed",
+      "prayerTitle": "Gebedsopskrif",
+      "prayerContent": "Gebedsinhoud",
+      "savePrayer": "Stoor Gebed",
+      "category": "Kategorie",
+      "categories": {
+        "thanksgiving": "Danksegging",
+        "supplication": "Smeking",
+        "intercession": "Voorbidding",
+        "confession": "Belydenis",
+        "praise": "Lof"
+      },
+      "prayerSaved": "Gebed suksesvol gestoor!",
+      "prayerSaveFailed": "Kon nie gebed stoor nie. Probeer asseblief weer.",
+      "noTitle": "Gebedsnotering"
+    },
+    "challenges": {
+      "title": "Gesinsuitdagings",
+      "weekly": "Hierdie Week se Uitdaging",
+      "progress": "Vordering",
+      "complete": "Merk as Voltooi",
+      "completed": "Voltooi!",
+      "nextChallenge": "Volgende Uitdaging"
+    },
+    "streak": {
+      "current": "Huidige Reeks",
+      "days": "dae",
+      "longest": "Langste Reeks",
+      "keepItUp": "Hou so aan!"
+    },
+    "badges": {
+      "title": "Kentekens Verdien",
+      "faithful": "Getroue Dienskneg",
+      "scholar": "Bybelgeleerde",
+      "intercessor": "Gebedsstryder",
+      "teacher": "Gesinsonderwyser"
+    },
+    "requiresAuth": {
+      "title": "Gesinsaltaar",
+      "description": "Meld asseblief aan om toegang tot gesinsandagte te kry"
+    }
+  },
+  "profile": {
+    "title": "Profiel",
+    "personalInfo": "Persoonlike Inligting",
+    "familySettings": "Gesinsinstellings",
+    "preferences": "Voorkeure",
+    "name": "Naam",
+    "email": "E-pos",
+    "ageGroup": "Ouderdomsgroep",
+    "language": "Taal",
+    "theme": "Tema",
+    "notifications": "Kennisgewings",
+    "privacy": "Privaatheidsinstellings",
+    "saveChanges": "Stoor Veranderinge",
+    "changesSaved": "Veranderinge suksesvol gestoor!",
+    "family": {
+      "title": "Gesinslede",
+      "addMember": "Voeg Gesinslid By",
+      "inviteMember": "Nooi Gesinslid",
+      "role": "Rol",
+      "roles": {
+        "parent": "Ouer",
+        "child": "Kind",
+        "guardian": "Voog"
+      },
+      "permissions": "Toestemmings",
+      "remove": "Verwyder",
+      "edit": "Redigeer"
+    },
+    "achievements": {
+      "title": "Prestasies",
+      "storiesCompleted": "Verhale Voltooi",
+      "quizzesCompleted": "Kwisse Voltooi",
+      "prayersOffered": "Gebede Opgedra",
+      "streakDays": "Andagtereeks"
+    }
+  },
+  "map": {
+    "title": "Reiskaart",
+    "subtitle": "Verken die lande van die Bybel",
+    "description": "Ontdek bybelse plekke en volg die reise van geloof.",
+    "locations": {
+      "jerusalem": "Jerusalem",
+      "bethlehem": "Betlehem",
+      "nazareth": "Nasaret",
+      "capernaum": "Kapernaum",
+      "jericho": "Jerigo",
+      "damascus": "Damaskus",
+      "antioch": "Antiogië",
+      "corinth": "Korinte",
+      "ephesus": "Efese",
+      "rome": "Rome"
+    },
+    "features": {
+      "stories": "Verwante Verhale",
+      "timeline": "Historiese Tydlyn",
+      "culture": "Kulturele Konteks",
+      "geography": "Geografie",
+      "archaeology": "Argeologiese Bewyse"
+    },
+    "journey": {
+      "start": "Begin Reis",
+      "continue": "Sit Reis Voort",
+      "complete": "Reis Voltooi",
+      "progress": "Reisvordering"
+    }
+  },
+  "admin": {
+    "title": "Administrasie",
+    "dashboard": "Instrumentebord",
+    "users": "Gebruikers",
+    "content": "Inhoudsbestuur",
+    "analytics": "Analise",
+    "settings": "Stelselinstellings",
+    "reports": "Verslae",
+    "moderation": "Inhoudsmoderering",
+    "backup": "Rugsteun & Herstel"
+  },
+  "quiz": {
+    "title": "Bybelse Kwisse",
+    "subtitle": "Toets jou kennis met hierdie Bybel-gebaseerde kwisse",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediêr", 
+      "advanced": "Gevorderd"
+    },
+    "timeLimit": {
+      "minutes": "{count} minute",
+      "noLimit": "Geen tydsbeperking"
+    },
+    "actions": {
+      "start": "Begin Kwis",
+      "continue": "Gaan Voort met Kwis",
+      "restart": "Herbegin Kwis",
+      "finish": "Voltooi Kwis"
+    },
+    "results": "Kwis Resultate",
+    "score": "Jy het {correct} uit {total} vrae korrek beantwoord",
+    "questionProgress": "Vraag {current} van {total}"
+  },
+  "altar": {
+    "title": "Gesinsaltaar",
+    "subtitle": "Versterk jou gesin se geestelike grondslag deur gebed, skrif, en betekenisvolle aktiwiteite",
+    "signInPrompt": "Meld asseblief aan om toegang tot gesinsandagte te verkry",
+    "tabs": {
+      "devotion": "Andagte",
+      "prayer": "Gebed",
+      "journal": "Joernaal"
+    },
+    "todaysScripture": "Vandag se Skrif",
+    "reflection": "Besinning",
+    "familyDiscussion": "Gesinsbespreking",
+    "discussionQuestions": "Besprekingsvrae:",
+    "prayerRequest": "Gebedversoek",
+    "prayerTitle": "Gebedtitel",
+    "prayerContent": "Gebedinhoud",
+    "savePrayer": "Stoor Gebed",
+    "prayerSaved": "Gebed suksesvol gestoor!",
+    "reflectionText": "God se liefde is die grondslag van ons geloof. Oorweeg hoe hierdie vers spreek tot die diepte van goddelike liefde en opoffering.",
+    "questions": {
+      "godsLove": "Wat beteken God se liefde vir jou persoonlik?",
+      "showLove": "Hoe kan ons liefde aan ander toon in ons daaglikse lewe?",
+      "familyFaith": "Wat is party maniere waarop ons gesin geloof kan demonstreer?"
+    }
+  },
+  "map": {
+    "title": "Bybelse Kaartverkenner",
+    "subtitle": "Verken sleutelplekke uit bybelse tye",
+    "description": "Klik op merkers om meer te leer oor elke plek se historiese betekenis en verwante skrifverwysings",
+    "loadError": "Kon nie kaart laai nie. Probeer asseblief weer later",
+    "legend": {
+      "cities": "Bybelse Stede",
+      "temples": "Tempels & Heilige Plekke",
+      "routes": "Reisroetes"
+    }
+  },
+  "profile": {
+    "title": "Gebruikerprofiel",
+    "subtitle": "Bestuur jou rekeninginstellings en voorkeure",
+    "placeholder": "Dit is 'n statiese plekhouer vir die profielbladsy",
+    "signInPrompt": "Meld asseblief aan om jou profiel te bekyk"
+  },
+  "admin": {
+    "title": "Adminpaneel",
+    "subtitle": "Administratiewe hulpmiddels en stelselbestuur",
+    "placeholder": "Dit is 'n statiese plekhouer vir die adminpaneel",
+    "accessPrompt": "Meld asseblief aan met administrateurreferensies om hierdie area te benader"
+  },
+  "billing": {
+    "title": "Rekenings & Intekeninge",
+    "subtitle": "Kies die plan wat reg is vir jou geestelike reis",
+    "currentPlan": "Huidige Plan",
+    "upgrade": "Opgradeer Plan",
+    "downgrade": "Afgradeer Plan",
+    "cancel": "Kanselleer Intekening",
+    "billing_history": "Rekeninggeskiedenis",
+    "payment_methods": "Betalingsmetodes",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "description": "Perfek vir individue wat hul geloofsreis begin",
+        "features": [
+          "Kern Bybelse Verhale",
+          "Basiese Kwisse",
+          "Gesinsaltaar",
+          "Gemeenskapsondersteuning"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Verhoogde geestelike groei met premium inhoud",
+        "features": [
+          "Alles in Gratis",
+          "Luukse Soektogpakke",
+          "Ekstra Media-inhoud",
+          "Vanlyn Toegang",
+          "Prioriteit Ondersteuning",
+          "Gevorderde Analitiese"
+        ]
+      },
+      "church": {
+        "name": "Kerk",
+        "description": "Omvattende kerkbestuur en gemeenskapsbou",
+        "features": [
+          "Alles in Premium",
+          "Administrasie Paneelbord",
+          "Pasgemaakte Handelsmerk",
+          "Gebruiker Analitiese",
+          "Privaatheid SLA",
+          "Gebruikersbestuur",
+          "Grootmaat Inskrywing",
+          "Toegewyde Ondersteuning"
+        ]
+      }
+    },
+    "pricing": {
+      "monthly": "Maandeliks",
+      "annually": "Jaarliks",
+      "save_with_annual": "Spaar 2 maande met jaarlikse rekeningkuns",
+      "per_month": "per maand",
+      "per_year": "per jaar",
+      "billed_monthly": "Maandeliks gerekening",
+      "billed_annually": "Jaarliks gerekening"
+    },
+    "actions": {
+      "choose_plan": "Kies Plan",
+      "current_plan": "Huidige Plan",
+      "upgrade_now": "Opgradeer Nou",
+      "manage_subscription": "Bestuur Intekening",
+      "cancel_subscription": "Kanselleer Intekening",
+      "update_payment": "Werk Betalingsmetode By",
+      "download_invoice": "Laai Faktuur Af"
+    },
+    "features": {
+      "unlock_feature": "Ontsluit Premium Kenmerk",
+      "premium_required": "Premium Vereis",
+      "church_required": "Kerkplan Vereis",
+      "upgrade_benefits": "Ontsluit verhoogde geestelike groeihulpmiddels en premium inhoud",
+      "learn_more": "Leer Meer",
+      "upgrade_now": "Opgradeer Nou"
+    },
+    "payment": {
+      "secure_payment": "Veilige Betaling met Yoco",
+      "processing": "Verwerk betaling...",
+      "success": "Betaling suksesvol!",
+      "failed": "Betaling misluk. Probeer asseblief weer.",
+      "cancelled": "Betaling gekanselleer.",
+      "card_details": "Kaartbesonderhede",
+      "cardholder_name": "Kaarthouer Naam",
+      "card_number": "Kaartnommer",
+      "expiry_date": "Vervaldatum",
+      "cvv": "CVV",
+      "billing_address": "Rekeningadres"
+    },
+    "subscription": {
+      "active": "Aktief",
+      "inactive": "Nie-aktief",
+      "cancelled": "Gekanselleer",
+      "past_due": "Agterstallig",
+      "trial": "Proef",
+      "expires": "Verstryk",
+      "renews": "Vernuwe",
+      "cancel_at_period_end": "Sal kanselleer aan einde van periode",
+      "reactivate": "Heraktiveer Intekening"
+    }
+  },
+  "common": {
+    "loading": "Laai...",
+    "error": "'n Fout het voorgekom",
+    "success": "Sukses!",
+    "save": "Stoor",
+    "cancel": "Kanselleer",
+    "delete": "Skrap",
+    "edit": "Redigeer",
+    "add": "Voeg By",
+    "remove": "Verwyder",
+    "continue": "Gaan Voort",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "finish": "Klaar",
+    "close": "Sluit",
+    "open": "Maak Oop",
+    "view": "Bekyk",
+    "download": "Aflaai",
+    "upload": "Oplaai",
+    "search": "Soek",
+    "filter": "Filter",
+    "sort": "Sorteer",
+    "refresh": "Verfris",
+    "retry": "Probeer Weer",
+    "yes": "Ja",
+    "no": "Nee",
+    "ok": "Regso",
+    "confirm": "Bevestig",
+    "submit": "Dien In",
+    "apply": "Pas Toe",
+    "reset": "Herstel",
+    "clear": "Maak Skoon",
+    "select": "Kies",
+    "choose": "Kies",
+    "optional": "Opsioneel",
+    "required": "Verpligtend",
+    "recommended": "Aanbeveel",
+    "new": "Nuut",
+    "popular": "Gewild",
+    "featured": "Uitgelig",
+    "comingSoon": "Kom Binnekort",
+    "notAvailable": "Nie Beskikbaar Nie",
+    "maintenance": "Onder Onderhoud",
+    "backToHome": "← Terug na Tuis",
+    "returnToHome": "← Keer Terug na Tuis",
+    "loadingAuth": "Laai verifikasie...",
+    "signInRequired": "Meld asseblief aan om hierdie area te benader",
+    "adminRequired": "Meld asseblief aan met administrateurreferensies om hierdie area te benader",
+    "settings": "Instellings",
+    "users": "Gebruikers",
+    "reports": "Verslae",
+    "status": "Status"
+  },
+  "errors": {
+    "pageNotFound": "Bladsy nie gevind nie",
+    "serverError": "Bedienerfout het voorgekom",
+    "networkError": "Netwerkverbindingsfout",
+    "unauthorized": "Jy is nie gemagtig om hierdie bladsy te besoek nie",
+    "forbidden": "Toegang verbode",
+    "validationError": "Kyk asseblief jou invoer",
+    "timeout": "Versoek het uitgetel",
+    "offline": "Dit lyk of jy nie verbind is nie",
+    "somethingWentWrong": "Iets het verkeerd geloop",
+    "tryAgain": "Probeer asseblief weer",
+    "contactSupport": "As die probleem aanhou, kontak asseblief ondersteuning",
+    "goHome": "Gaan na Tuis",
+    "goBack": "Gaan Terug",
+    "refresh": "Verfris Bladsy"
+  },
+  "dateTime": {
+    "now": "nou",
+    "today": "vandag",
+    "yesterday": "gister",
+    "tomorrow": "more",
+    "thisWeek": "hierdie week",
+    "lastWeek": "verlede week",
+    "nextWeek": "volgende week",
+    "thisMonth": "hierdie maand",
+    "lastMonth": "verlede maand",
+    "nextMonth": "volgende maand",
+    "minutes": "{count} minute",
+    "hours": "{count} ure",
+    "days": "{count} dae",
+    "weeks": "{count} weke",
+    "months": "{count} maande",
+    "years": "{count} jaar"
+  },
+  "forms": {
+    "validation": {
+      "required": "Hierdie veld is verpligtend",
+      "email": "Voer asseblief 'n geldige e-posadres in",
+      "minLength": "Moet ten minste {min} karakters wees",
+      "maxLength": "Mag nie meer as {max} karakters wees nie",
+      "minValue": "Moet ten minste {min} wees",
+      "maxValue": "Mag nie meer as {max} wees nie",
+      "pattern": "Ongeldige formaat",
+      "numeric": "Moet 'n nommer wees",
+      "alphanumeric": "Moet net letters en nommers bevat",
+      "url": "Voer asseblief 'n geldige URL in",
+      "phone": "Voer asseblief 'n geldige telefoonnommer in"
+    },
+    "placeholders": {
+      "search": "Soek...",
+      "selectOption": "Kies 'n opsie",
+      "enterText": "Voer teks in",
+      "chooseFile": "Kies leer",
+      "optional": "Opsioneel"
+    }
+  },
+  "accessibility": {
+    "skipToMain": "Spring na hoofinhoud",
+    "skipToNav": "Spring na navigasie",
+    "openMenu": "Maak navigasiekieslys oop",
+    "closeMenu": "Sluit navigasiekieslys",
+    "previousPage": "Gaan na vorige bladsy",
+    "nextPage": "Gaan na volgende bladsy",
+    "currentPage": "Huidige bladsy",
+    "loading": "Inhoud laai",
+    "searchResults": "Soekresultate",
+    "noResults": "Geen resultate gevind nie",
+    "expandSection": "Brei seksie uit",
+    "collapseSection": "Vou seksie toe",
+    "sortBy": "Sorteer volgens {criteria}",
+    "filterBy": "Filter volgens {criteria}",
+    "language": "Taal: {language}",
+    "toggleLanguage": "Wissel taalkiesder"
+  }
+}
